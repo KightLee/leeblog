@@ -1,0 +1,84 @@
+2020-01-15 09:44:45.013  INFO 3048 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 3048 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-15 09:44:45.020 DEBUG 3048 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-15 09:44:45.024  INFO 3048 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-15 09:44:46.260  WARN 3048 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.lx.leeblog]' package. Please check your configuration.
+2020-01-15 09:44:47.014  INFO 3048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-15 09:44:47.033  INFO 3048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-15 09:44:47.034  INFO 3048 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-15 09:44:47.306  INFO 3048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-15 09:44:47.309  INFO 3048 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2159 ms
+2020-01-15 09:44:47.712  INFO 3048 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-15 09:44:47.830  INFO 3048 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-15 09:44:48.334  INFO 3048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-15 09:44:48.337  INFO 3048 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 4.52 seconds (JVM running for 6.576)
+2020-01-15 09:45:07.268  INFO 3048 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-15 09:45:07.269  INFO 3048 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-15 09:45:07.278  INFO 3048 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-01-15 09:47:52.288  INFO 2660 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 2660 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-15 09:47:52.296 DEBUG 2660 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-15 09:47:52.297  INFO 2660 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-15 09:47:53.505  WARN 2660 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.lx.leeblog]' package. Please check your configuration.
+2020-01-15 09:47:54.447  INFO 2660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-15 09:47:54.525  INFO 2660 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-15 09:47:54.541  INFO 2660 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-15 09:47:54.853  INFO 2660 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-15 09:47:54.853  INFO 2660 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2492 ms
+2020-01-15 09:47:55.416  INFO 2660 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-15 09:47:55.556  INFO 2660 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-15 09:47:56.103  INFO 2660 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-15 09:47:56.272  INFO 2660 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.851 seconds (JVM running for 8.644)
+2020-01-15 09:49:28.780  INFO 2660 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-15 09:49:28.780  INFO 2660 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-15 09:49:28.791  INFO 2660 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-01-15 09:52:46.514  INFO 2660 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-15 09:53:09.110  INFO 5236 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 5236 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-15 09:53:09.117 DEBUG 5236 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-15 09:53:09.118  INFO 5236 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-15 09:53:10.365  WARN 5236 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.lx.leeblog]' package. Please check your configuration.
+2020-01-15 09:53:11.191  INFO 5236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-15 09:53:11.207  INFO 5236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-15 09:53:11.207  INFO 5236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-15 09:53:11.353  INFO 5236 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-15 09:53:11.353  INFO 5236 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2147 ms
+2020-01-15 09:53:11.681  INFO 5236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-15 09:53:11.790  INFO 5236 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-15 09:53:12.177  INFO 5236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-15 09:53:12.177  INFO 5236 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 4.384 seconds (JVM running for 6.212)
+2020-01-15 09:53:43.297  INFO 5236 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-15 09:53:43.297  INFO 5236 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-15 09:53:43.308  INFO 5236 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-01-15 09:57:09.844  INFO 5236 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-15 09:57:16.918  INFO 2900 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 2900 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-15 09:57:16.928 DEBUG 2900 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-15 09:57:16.929  INFO 2900 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-15 09:57:18.439  WARN 2900 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.lx.leeblog]' package. Please check your configuration.
+2020-01-15 09:57:19.242  INFO 2900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-15 09:57:19.260  INFO 2900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-15 09:57:19.262  INFO 2900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-15 09:57:19.465  INFO 2900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-15 09:57:19.466  INFO 2900 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2418 ms
+2020-01-15 09:57:19.966  INFO 2900 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-15 09:57:20.283  INFO 2900 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-15 09:57:21.223  INFO 2900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-15 09:57:21.392  INFO 2900 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.695 seconds (JVM running for 7.453)
+2020-01-15 09:57:23.900  INFO 2900 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-15 09:57:23.901  INFO 2900 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-15 09:57:23.914  INFO 2900 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-01-15 10:02:08.486  INFO 2900 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-15 10:02:19.439  INFO 5460 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 5460 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-15 10:02:19.454 DEBUG 5460 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-15 10:02:19.456  INFO 5460 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-15 10:02:20.979  WARN 5460 --- [main] o.m.s.mapper.ClassPathMapperScanner      : No MyBatis mapper was found in '[com.lx.leeblog]' package. Please check your configuration.
+2020-01-15 10:02:22.802  INFO 5460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-15 10:02:22.842  INFO 5460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-15 10:02:22.842  INFO 5460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-15 10:02:23.126  INFO 5460 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-15 10:02:23.137  INFO 5460 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3481 ms
+2020-01-15 10:02:23.518  INFO 5460 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-15 10:02:23.657  INFO 5460 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-15 10:02:24.153  INFO 5460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-15 10:02:24.153  INFO 5460 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.928 seconds (JVM running for 8.347)
+2020-01-15 10:03:15.278  INFO 5460 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-15 10:03:15.279  INFO 5460 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-15 10:03:15.287  INFO 5460 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-01-15 10:21:13.843  INFO 5460 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
