@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8">
 		<title>后台</title>
 		<meta name="renderer" content="webkit">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<link rel="stylesheet" href="../../static/admin/css/layui.css" media="all">
-		<link rel="stylesheet" href="../../static/admin/css/me.css" />
+		<link rel="stylesheet" href="../../static/admin/css/layui.css" th:href="@{/admin/css/layui.css}" media="all">
+		<link rel="stylesheet" href="../../static/admin/css/me.css" th:href="@{/admin/css/me.css}"/>
 	</head>
 	<body class="layui-layout-body">
 
@@ -80,7 +80,7 @@
 			<!-- 主体显示 -->
 			<div class="layui-body">
 				<div class="layadmin-tabsbody-item layui-show">
-				  <iframe src="http://www.baidu.com" frameborder="0" class="layadmin-iframe"></iframe>
+				  <iframe src="user.html" th:src="@{/admin//useradmin}" frameborder="0" class="layadmin-iframe"></iframe>
 				</div>
 			</div>
 			<div class="layui-footer" style="font-size: 6px;color: #aaaaaa;">
@@ -88,7 +88,7 @@
 			</div>
 		</div>
 
-		<script type="text/javascript" src="../../static/admin/layui.all.js" />
+		<script type="text/javascript" src="../../static/admin/layui.all.js" th:src="@{/admin/layui.all.js}"/>
 		<script>
 		layui.use('element', function(){
 		  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块

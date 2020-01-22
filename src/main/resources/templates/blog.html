@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="UTF-8">
 		<title>博客页</title>
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="../static/css/blog.css" />
-		<link rel="stylesheet" type="text/css" href="../static/css/typo.css" />
-		<link rel="stylesheet" type="text/css" href="../static/css/animate.css"/>
-		<link rel="stylesheet" type="text/css" href="../static/prism/prism.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/blog.css" th:href="/css/blog.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/typo.css" th:href="/css/typo.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/animate.css" th:href="/css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/prism/prism.css" th:href="/prism/prism.css"/>
 	</head>
 	<body>
 		<nav class="navbar navbar-default" style="box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);">
@@ -173,6 +173,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-		<script src="../static/prism/prism.js"></script>
+		<script src="../static/prism/prism.js" th:src="@{/prism/prism.js}"></script>
 	</body>
 </html>

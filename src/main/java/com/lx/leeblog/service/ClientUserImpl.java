@@ -1,0 +1,22 @@
+package com.lx.leeblog.service;
+
+import com.lx.leeblog.dao.UserMapper;
+import com.lx.leeblog.pojo.User;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+/**
+ * create by @author lixing on 2020/1/20 22:19
+ */
+@Service
+public class ClientUserImpl implements ClientUser {
+
+    @Autowired
+    private UserMapper userMapper;
+
+    @Override
+    public Integer addUser(User user) {
+        int state = userMapper.insert(user);
+        return state;
+    }
+}
