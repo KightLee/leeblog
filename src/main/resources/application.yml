@@ -17,3 +17,9 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.lx.leeblog.pojo
   config-location: classpath:mybatis-config.xml
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  pageSizeZero: true
+

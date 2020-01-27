@@ -7,4 +7,5 @@ import com.lx.leeblog.pojo.User;
  */
 public interface ClientUser {
     Integer addUser(User user);
+    User selectUserByUsername(String username);
 }

@@ -12,15 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
  */
 @Controller
 public class IndexController {
-    @Autowired
-    private ClientUser clientUser;
+
     @GetMapping("/index")
     public String index() {
         return "index";
-    }
-
-    @PostMapping("/addUser")
-    public void addUser(User user) {
-        clientUser.addUser(user);
     }
 }

@@ -19,4 +19,10 @@ public class ClientUserImpl implements ClientUser {
         int state = userMapper.insert(user);
         return state;
     }
+
+    @Override
+    public User selectUserByUsername(String username) {
+        User user = userMapper.selectByUsername(username);
+        return user;
+    }
 }

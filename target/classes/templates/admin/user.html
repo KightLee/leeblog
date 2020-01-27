@@ -59,7 +59,7 @@
 
 <script src="../../static/admin/layui.all.js" th:src="@{/admin/layui.all.js}"></script>
 <script>
-    layui.use(['jquery', 'layer', 'form', 'table'], function () {
+    layui.use(['jquery', 'layer', 'laypage', 'form', 'table'], function () {
         var $ = layui.jquery;
         var layer = layui.layer;
         var form = layui.form;
@@ -70,7 +70,7 @@
             , toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
             , title: '用户数据表'
             , page: true
-            , limits: [10, 20, 30]
+            , limits: [2, 10, 20, 30]
             , cols: [
                 [
                     {type: 'checkbox', fixed: 'left'}
@@ -104,11 +104,13 @@
                     break;
             }
         });
+        /* 监听checkbox*/
         table.on("checkbox(userTable)", function (obj) {
             console.log(obj.checked);
             console.log(obj.data);
             console.log(obj.type);
         });
+        /* 监听工具栏*/
         table.on('tool(userTable)', function (obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
             var data = obj.data; //获得当前行数据
             var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
@@ -149,12 +151,14 @@
                 ,'密码必须6到12位，且不能出现空格'
             ]
         });
+        /* 提交表单*/
         form.on('submit(dosubmit)',function(obj){
             // alert('ok');
             // 序列化表单数据
             var param = $('#datafrm').serialize();
             alert(param);
         });
+        /* 新增功能*/
         function openAddUser() {
             // alert('test');
             layer.open({
@@ -176,6 +180,7 @@
                 }*/
             });
         }
+        /* 编辑功能 */
         function openEditUser(data) {
             layer.open({
                 type:1,

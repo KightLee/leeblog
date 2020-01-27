@@ -1,8 +1,9 @@
 package com.lx.leeblog.controller;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.lx.leeblog.pojo.User;
 import com.lx.leeblog.service.AdminContent;
-import com.lx.leeblog.vo.Page;
 import com.lx.leeblog.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -40,13 +41,15 @@ public class AdminContentController {
      */
     @GetMapping("/users")
     @ResponseBody
-    public ResultVo<User> findAllUser() {
-        List<User> users = adminContent.selectPageList();
+    public ResultVo<User> findAllUser(@RequestParam(value = "page", defaultValue = "1") Integer pageNum,
+                                      @RequestParam(value = "limit", defaultValue = "10") Integer pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        Page<User> users = (Page<User>)adminContent.selectPageList();
         Integer count = adminContent.selectPageCount();
         ResultVo<User> RV = new ResultVo<>();
-        RV.setData(users);
+        RV.setData(users.getResult());
         RV.setMsg("");
-        RV.setCount(count);
+        RV.setCount((int) users.getTotal());
         RV.setCode(0);
         return RV;
     }
