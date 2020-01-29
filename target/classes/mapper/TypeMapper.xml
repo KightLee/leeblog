@@ -82,8 +82,13 @@
       order by ${orderByClause}
     </if>
   </select>
+  <select id="selectAllType" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_type;
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from t_type
     where id = #{id,jdbcType=BIGINT}

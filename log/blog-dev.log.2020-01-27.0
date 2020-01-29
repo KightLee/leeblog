@@ -1,0 +1,1599 @@
+2020-01-27 19:15:41.761  INFO 9220 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 9220 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 19:15:41.792 DEBUG 9220 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 19:15:41.792  INFO 9220 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 19:15:43.948  INFO 9220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 19:15:43.948  INFO 9220 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 19:15:43.964  INFO 9220 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 19:15:44.339  INFO 9220 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 19:15:44.339  INFO 9220 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2328 ms
+2020-01-27 19:15:45.214  INFO 9220 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 19:15:45.292  INFO 9220 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 19:15:45.510  INFO 9220 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 19:15:45.510  INFO 9220 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.141 seconds (JVM running for 7.655)
+2020-01-27 19:16:08.064  INFO 9220 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 19:16:08.064  INFO 9220 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 19:16:08.075  INFO 9220 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-01-27 19:16:09.306  INFO 9220 --- [http-nio-8088-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 19:16:09.661  INFO 9220 --- [http-nio-8088-exec-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 19:16:09.675 DEBUG 9220 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:16:09.705 DEBUG 9220 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:16:09.807 DEBUG 9220 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:16:09.814 DEBUG 9220 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:16:09.814 DEBUG 9220 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:16:09.818 DEBUG 9220 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:20:19.076  INFO 856 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 856 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 19:20:19.092 DEBUG 856 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 19:20:19.092  INFO 856 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 19:20:21.436  INFO 856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 19:20:21.436  INFO 856 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 19:20:21.436  INFO 856 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 19:20:21.561  INFO 856 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 19:20:21.561  INFO 856 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2328 ms
+2020-01-27 19:20:22.154  INFO 856 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 19:20:22.373  INFO 856 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 19:20:22.592  INFO 856 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 19:20:22.592  INFO 856 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 4.634 seconds (JVM running for 6.203)
+2020-01-27 19:20:31.750  INFO 856 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 19:20:31.750  INFO 856 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 19:20:31.758  INFO 856 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-01-27 19:21:14.484  INFO 8804 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 8804 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 19:21:14.500 DEBUG 8804 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 19:21:14.500  INFO 8804 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 19:21:16.859  INFO 8804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 19:21:16.891  INFO 8804 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 19:21:16.891  INFO 8804 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 19:21:17.125  INFO 8804 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 19:21:17.125  INFO 8804 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2500 ms
+2020-01-27 19:21:18.125  INFO 8804 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 19:21:18.281  INFO 8804 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 19:21:18.719  INFO 8804 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 19:21:18.719  INFO 8804 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.468 seconds (JVM running for 6.891)
+2020-01-27 19:21:22.598  INFO 8804 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 19:21:22.598  INFO 8804 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 19:21:22.607  INFO 8804 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-01-27 19:22:57.255  INFO 8804 --- [http-nio-8088-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 19:22:57.452  INFO 8804 --- [http-nio-8088-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 19:22:57.464 DEBUG 8804 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:22:57.517 DEBUG 8804 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:22:57.546 DEBUG 8804 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:22:57.552 DEBUG 8804 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:22:57.552 DEBUG 8804 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:22:57.552 DEBUG 8804 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:24:12.926  INFO 2512 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 2512 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 19:24:12.942 DEBUG 2512 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 19:24:12.942  INFO 2512 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 19:24:15.514  INFO 2512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 19:24:15.526  INFO 2512 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 19:24:15.526  INFO 2512 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 19:24:15.662  INFO 2512 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 19:24:15.662  INFO 2512 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2533 ms
+2020-01-27 19:24:16.306  INFO 2512 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 19:24:16.495  INFO 2512 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 19:24:16.716  INFO 2512 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 19:24:16.723  INFO 2512 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 4.741 seconds (JVM running for 6.029)
+2020-01-27 19:24:16.852  INFO 2512 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 19:24:16.854  INFO 2512 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 19:24:16.864  INFO 2512 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-01-27 19:25:58.190  INFO 9300 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 9300 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 19:25:58.197 DEBUG 9300 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 19:25:58.199  INFO 9300 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 19:26:00.411  INFO 9300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 19:26:00.423  INFO 9300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 19:26:00.424  INFO 9300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 19:26:00.579  INFO 9300 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 19:26:00.579  INFO 9300 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2281 ms
+2020-01-27 19:26:01.743  INFO 9300 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 19:26:01.866  INFO 9300 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 19:26:02.183  INFO 9300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 19:26:02.189  INFO 9300 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.062 seconds (JVM running for 6.455)
+2020-01-27 19:26:09.939  INFO 9300 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 19:26:09.939  INFO 9300 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 19:26:09.948  INFO 9300 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-01-27 19:26:58.466  INFO 9932 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 9932 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 19:26:58.470 DEBUG 9932 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 19:26:58.471  INFO 9932 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 19:27:00.996  INFO 9932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 19:27:01.026  INFO 9932 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 19:27:01.027  INFO 9932 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 19:27:01.218  INFO 9932 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 19:27:01.219  INFO 9932 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2538 ms
+2020-01-27 19:27:02.594  INFO 9932 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 19:27:02.770  INFO 9932 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 19:27:03.252  INFO 9932 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 19:27:03.258  INFO 9932 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.855 seconds (JVM running for 7.436)
+2020-01-27 19:27:03.596  INFO 9932 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 19:27:03.596  INFO 9932 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 19:27:03.613  INFO 9932 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-01-27 19:35:46.800  INFO 3408 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 3408 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 19:35:46.806 DEBUG 3408 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 19:35:46.808  INFO 3408 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 19:35:48.436  INFO 3408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 19:35:48.452  INFO 3408 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 19:35:48.452  INFO 3408 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 19:35:48.561  INFO 3408 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 19:35:48.561  INFO 3408 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1645 ms
+2020-01-27 19:35:49.217  INFO 3408 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 19:35:49.280  INFO 3408 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 19:35:49.467  INFO 3408 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 19:35:49.467  INFO 3408 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 4.021 seconds (JVM running for 5.578)
+2020-01-27 19:36:24.348  INFO 3408 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 19:36:24.348  INFO 3408 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 19:36:24.357  INFO 3408 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-01-27 19:36:25.106  INFO 3408 --- [http-nio-8088-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 19:36:25.328  INFO 3408 --- [http-nio-8088-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 19:36:25.342 DEBUG 3408 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:36:25.372 DEBUG 3408 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:36:25.400 DEBUG 3408 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:36:25.407 DEBUG 3408 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:36:25.407 DEBUG 3408 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:36:25.409 DEBUG 3408 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:36:50.039  INFO 7336 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 7336 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 19:36:50.039 DEBUG 7336 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 19:36:50.039  INFO 7336 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 19:36:51.976  INFO 7336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 19:36:51.992  INFO 7336 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 19:36:51.992  INFO 7336 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 19:36:52.164  INFO 7336 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 19:36:52.164  INFO 7336 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1969 ms
+2020-01-27 19:36:53.148  INFO 7336 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 19:36:53.211  INFO 7336 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 19:36:53.398  INFO 7336 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 19:36:53.398  INFO 7336 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 4.239 seconds (JVM running for 5.541)
+2020-01-27 19:36:57.306  INFO 7336 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 19:36:57.307  INFO 7336 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 19:36:57.315  INFO 7336 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-01-27 19:36:58.046  INFO 7336 --- [http-nio-8088-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 19:36:58.224  INFO 7336 --- [http-nio-8088-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 19:36:58.229 DEBUG 7336 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:36:58.264 DEBUG 7336 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:36:58.292 DEBUG 7336 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:36:58.297 DEBUG 7336 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:36:58.297 DEBUG 7336 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:36:58.299 DEBUG 7336 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:00.473 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:00.473 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:00.477 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:00.478 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:00.479 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:00.482 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:02.143 DEBUG 7336 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:02.143 DEBUG 7336 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:02.146 DEBUG 7336 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:02.147 DEBUG 7336 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:02.148 DEBUG 7336 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:02.149 DEBUG 7336 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:03.161 DEBUG 7336 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:03.163 DEBUG 7336 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:03.165 DEBUG 7336 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:03.166 DEBUG 7336 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:03.166 DEBUG 7336 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:03.168 DEBUG 7336 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:05.209 DEBUG 7336 --- [http-nio-8088-exec-7] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:05.210 DEBUG 7336 --- [http-nio-8088-exec-7] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:05.213 DEBUG 7336 --- [http-nio-8088-exec-7] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:05.214 DEBUG 7336 --- [http-nio-8088-exec-7] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:05.214 DEBUG 7336 --- [http-nio-8088-exec-7] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:05.216 DEBUG 7336 --- [http-nio-8088-exec-7] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:06.302 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:06.303 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:06.305 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:06.306 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:06.307 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:06.308 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:07.052 DEBUG 7336 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:07.053 DEBUG 7336 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:07.055 DEBUG 7336 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:07.056 DEBUG 7336 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:07.056 DEBUG 7336 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:07.057 DEBUG 7336 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:07.798 DEBUG 7336 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:07.799 DEBUG 7336 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:07.802 DEBUG 7336 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:07.803 DEBUG 7336 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:07.804 DEBUG 7336 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:07.806 DEBUG 7336 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:09.075 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:09.075 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:09.077 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:09.078 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:09.078 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:09.079 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:13.515 DEBUG 7336 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:13.516 DEBUG 7336 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:13.518 DEBUG 7336 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:13.518 DEBUG 7336 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:13.519 DEBUG 7336 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:13.521 DEBUG 7336 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:15.716 DEBUG 7336 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:15.717 DEBUG 7336 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:15.719 DEBUG 7336 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:15.720 DEBUG 7336 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:15.720 DEBUG 7336 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:15.721 DEBUG 7336 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:17.416 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:17.418 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:17.419 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:17.420 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:17.420 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:17.423 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:19.957 DEBUG 7336 --- [http-nio-8088-exec-7] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:19.958 DEBUG 7336 --- [http-nio-8088-exec-7] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:19.960 DEBUG 7336 --- [http-nio-8088-exec-7] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:19.960 DEBUG 7336 --- [http-nio-8088-exec-7] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:19.961 DEBUG 7336 --- [http-nio-8088-exec-7] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:19.962 DEBUG 7336 --- [http-nio-8088-exec-7] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:23.145 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:23.146 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:23.147 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:23.153 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:23.154 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:23.155 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:23.825 DEBUG 7336 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:23.826 DEBUG 7336 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:23.827 DEBUG 7336 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:23.828 DEBUG 7336 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:23.828 DEBUG 7336 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:23.829 DEBUG 7336 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:24.471 DEBUG 7336 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:24.472 DEBUG 7336 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:24.474 DEBUG 7336 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:24.475 DEBUG 7336 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:24.476 DEBUG 7336 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:24.477 DEBUG 7336 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:25.847 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:25.848 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:25.850 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:25.851 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:25.852 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:25.853 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:26.517 DEBUG 7336 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:26.517 DEBUG 7336 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:26.517 DEBUG 7336 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:26.517 DEBUG 7336 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:26.517 DEBUG 7336 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:26.517 DEBUG 7336 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:26.915 DEBUG 7336 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:26.915 DEBUG 7336 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:26.915 DEBUG 7336 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:26.915 DEBUG 7336 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:26.915 DEBUG 7336 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:26.915 DEBUG 7336 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:27.103 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:27.103 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:27.104 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:27.105 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:27.105 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:27.106 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:28.341 DEBUG 7336 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:28.341 DEBUG 7336 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:28.343 DEBUG 7336 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:28.343 DEBUG 7336 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:28.343 DEBUG 7336 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:28.344 DEBUG 7336 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:30.302 DEBUG 7336 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:30.302 DEBUG 7336 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:30.303 DEBUG 7336 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:30.304 DEBUG 7336 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:30.304 DEBUG 7336 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:30.305 DEBUG 7336 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:55.595 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:55.595 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:55.596 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:55.597 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:55.598 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:55.599 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:37:58.141 DEBUG 7336 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:37:58.142 DEBUG 7336 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:37:58.143 DEBUG 7336 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:37:58.143 DEBUG 7336 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:37:58.143 DEBUG 7336 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:37:58.144 DEBUG 7336 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:38:02.271 DEBUG 7336 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:38:02.271 DEBUG 7336 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:38:02.272 DEBUG 7336 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:38:02.273 DEBUG 7336 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:38:02.273 DEBUG 7336 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:38:02.274 DEBUG 7336 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:38:03.350 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:38:03.351 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:38:03.352 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:38:03.353 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:38:03.353 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:38:03.354 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:38:06.206 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:38:06.206 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:38:06.208 DEBUG 7336 --- [http-nio-8088-exec-4] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:38:06.208 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:38:06.209 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:38:06.209 DEBUG 7336 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:38:07.917 DEBUG 7336 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:38:07.917 DEBUG 7336 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:38:07.919 DEBUG 7336 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:38:07.919 DEBUG 7336 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:38:07.919 DEBUG 7336 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:38:07.920 DEBUG 7336 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:38:09.529 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:38:09.529 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:38:09.531 DEBUG 7336 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:38:09.532 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:38:09.533 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:38:09.534 DEBUG 7336 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:38:45.622 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:38:45.623 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:38:45.624 DEBUG 7336 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:38:45.625 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:38:45.626 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:38:45.628 DEBUG 7336 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 19:45:26.431  INFO 9976 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 9976 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 19:45:26.437 DEBUG 9976 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 19:45:26.442  INFO 9976 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 19:45:28.773  INFO 9976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 19:45:28.785  INFO 9976 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 19:45:28.786  INFO 9976 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 19:45:28.940  INFO 9976 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 19:45:28.941  INFO 9976 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2372 ms
+2020-01-27 19:45:29.863  INFO 9976 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 19:45:30.063  INFO 9976 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 19:45:30.294  INFO 9976 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 19:45:30.299  INFO 9976 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.143 seconds (JVM running for 6.645)
+2020-01-27 19:45:30.400  INFO 9976 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 19:45:30.400  INFO 9976 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 19:45:30.408  INFO 9976 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-01-27 19:45:30.472  INFO 9976 --- [http-nio-8088-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 19:45:30.624  INFO 9976 --- [http-nio-8088-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 19:45:30.635 DEBUG 9976 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 19:45:30.662 DEBUG 9976 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 19:45:30.690 DEBUG 9976 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 19:45:30.702 DEBUG 9976 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 19:45:30.703 DEBUG 9976 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 19:45:30.707 DEBUG 9976 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 20:32:53.310  INFO 10648 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 10648 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 20:32:53.363 DEBUG 10648 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 20:32:53.364  INFO 10648 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 20:32:56.937  INFO 10648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 20:32:56.958  INFO 10648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 20:32:56.959  INFO 10648 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 20:32:57.213  INFO 10648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 20:32:57.213  INFO 10648 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3723 ms
+2020-01-27 20:32:57.672  WARN 10648 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminContentController': Unsatisfied dependency expressed through field 'adminContent'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminContentImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [E:\code\leeblog\target\classes\com\lx\leeblog\dao\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.ClassCastException: com.github.pagehelper.PageHelper cannot be cast to org.apache.ibatis.plugin.Interceptor
+2020-01-27 20:32:57.676  INFO 10648 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-01-27 20:32:57.692  INFO 10648 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-01-27 20:32:57.708 ERROR 10648 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminContentController': Unsatisfied dependency expressed through field 'adminContent'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminContentImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [E:\code\leeblog\target\classes\com\lx\leeblog\dao\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.ClassCastException: com.github.pagehelper.PageHelper cannot be cast to org.apache.ibatis.plugin.Interceptor
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.lx.leeblog.LeeblogApplication.main(LeeblogApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminContentImpl': Unsatisfied dependency expressed through field 'userMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [E:\code\leeblog\target\classes\com\lx\leeblog\dao\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.ClassCastException: com.github.pagehelper.PageHelper cannot be cast to org.apache.ibatis.plugin.Interceptor
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:116)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1422)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [E:\code\leeblog\target\classes\com\lx\leeblog\dao\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.ClassCastException: com.github.pagehelper.PageHelper cannot be cast to org.apache.ibatis.plugin.Interceptor
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1526)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1406)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:594)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 32 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.ClassCastException: com.github.pagehelper.PageHelper cannot be cast to org.apache.ibatis.plugin.Interceptor
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1511)
+	... 43 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.ClassCastException: com.github.pagehelper.PageHelper cannot be cast to org.apache.ibatis.plugin.Interceptor
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 56 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.ClassCastException: com.github.pagehelper.PageHelper cannot be cast to org.apache.ibatis.plugin.Interceptor
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:572)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:475)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:615)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:180)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$17d4b5ac.CGLIB$sqlSessionFactory$2(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$17d4b5ac$$FastClassBySpringCGLIB$$bc2a4b99.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$17d4b5ac.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 57 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: java.lang.ClassCastException: com.github.pagehelper.PageHelper cannot be cast to org.apache.ibatis.plugin.Interceptor
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:121)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:98)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:569)
+	... 70 common frames omitted
+Caused by: java.lang.ClassCastException: com.github.pagehelper.PageHelper cannot be cast to org.apache.ibatis.plugin.Interceptor
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.pluginElement(XMLConfigBuilder.java:188)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:110)
+	... 72 common frames omitted
+
+2020-01-27 20:33:46.204  INFO 2588 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 2588 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 20:33:46.216 DEBUG 2588 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 20:33:46.221  INFO 2588 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 20:33:48.773  INFO 2588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 20:33:48.784  INFO 2588 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 20:33:48.785  INFO 2588 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 20:33:48.919  INFO 2588 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 20:33:48.920  INFO 2588 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2258 ms
+2020-01-27 20:33:49.712  INFO 2588 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 20:33:49.918  INFO 2588 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 20:33:50.348  INFO 2588 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 20:33:50.354  INFO 2588 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.402 seconds (JVM running for 7.027)
+2020-01-27 20:33:50.463  INFO 2588 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 20:33:50.465  INFO 2588 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 20:33:50.479  INFO 2588 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-01-27 20:33:51.911  INFO 2588 --- [http-nio-8088-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 20:33:52.212  INFO 2588 --- [http-nio-8088-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 20:33:52.227 DEBUG 2588 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 20:33:52.274 DEBUG 2588 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 20:33:52.312 DEBUG 2588 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 20:33:52.324 DEBUG 2588 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 20:33:52.325 DEBUG 2588 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 20:33:52.330 DEBUG 2588 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 20:33:58.641 DEBUG 2588 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 20:33:58.642 DEBUG 2588 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 20:33:58.646 DEBUG 2588 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 20:33:58.646 DEBUG 2588 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 20:33:58.647 DEBUG 2588 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 20:33:58.649 DEBUG 2588 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 20:34:01.419 DEBUG 2588 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 20:34:01.419 DEBUG 2588 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 20:34:01.423 DEBUG 2588 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 20:34:01.424 DEBUG 2588 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 20:34:01.425 DEBUG 2588 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 20:34:01.426 DEBUG 2588 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 20:34:02.882 DEBUG 2588 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 20:34:02.883 DEBUG 2588 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 20:34:02.885 DEBUG 2588 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 20:34:02.886 DEBUG 2588 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 20:34:02.886 DEBUG 2588 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 20:34:02.888 DEBUG 2588 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 20:34:03.780 DEBUG 2588 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 20:34:03.781 DEBUG 2588 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 20:34:03.784 DEBUG 2588 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 20:34:03.785 DEBUG 2588 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 20:34:03.785 DEBUG 2588 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 20:34:03.786 DEBUG 2588 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 20:34:29.852 DEBUG 2588 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 20:34:29.852 DEBUG 2588 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 20:34:29.855 DEBUG 2588 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 20:34:29.856 DEBUG 2588 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 20:34:29.857 DEBUG 2588 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 20:34:29.858 DEBUG 2588 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 20:34:44.208 DEBUG 2588 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user 
+2020-01-27 20:34:44.209 DEBUG 2588 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 
+2020-01-27 20:34:44.211 DEBUG 2588 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 20:34:44.215 DEBUG 2588 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 20:34:44.215 DEBUG 2588 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 20:34:44.217 DEBUG 2588 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 21:22:54.251  INFO 10852 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 10852 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 21:22:54.297 DEBUG 10852 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 21:22:54.300  INFO 10852 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 21:22:57.549  INFO 10852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 21:22:57.573  INFO 10852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 21:22:57.574  INFO 10852 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 21:22:58.185  INFO 10852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 21:22:58.187  INFO 10852 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3703 ms
+2020-01-27 21:22:59.620  INFO 10852 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 21:22:59.769  INFO 10852 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 21:23:00.194  INFO 10852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 21:23:00.206  INFO 10852 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 8.545 seconds (JVM running for 12.709)
+2020-01-27 21:23:00.333  INFO 10852 --- [http-nio-8088-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 21:23:00.333  INFO 10852 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 21:23:00.343  INFO 10852 --- [http-nio-8088-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-01-27 21:23:02.190  INFO 10852 --- [http-nio-8088-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 21:23:02.422  INFO 10852 --- [http-nio-8088-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 21:23:02.436 DEBUG 10852 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_user 
+2020-01-27 21:23:02.475 DEBUG 10852 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectAll_COUNT     : ==> Parameters: 
+2020-01-27 21:23:02.530 DEBUG 10852 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectAll_COUNT     : <==      Total: 1
+2020-01-27 21:23:02.545 DEBUG 10852 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user LIMIT ? 
+2020-01-27 21:23:02.546 DEBUG 10852 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-01-27 21:23:02.554 DEBUG 10852 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 21:23:02.560 DEBUG 10852 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 21:23:02.560 DEBUG 10852 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 21:23:02.562 DEBUG 10852 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 21:23:59.587 DEBUG 10852 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_user 
+2020-01-27 21:23:59.588 DEBUG 10852 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectAll_COUNT     : ==> Parameters: 
+2020-01-27 21:23:59.590 DEBUG 10852 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectAll_COUNT     : <==      Total: 1
+2020-01-27 21:23:59.592 DEBUG 10852 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user LIMIT ? 
+2020-01-27 21:23:59.593 DEBUG 10852 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-01-27 21:23:59.598 DEBUG 10852 --- [http-nio-8088-exec-6] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 21:23:59.600 DEBUG 10852 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 21:23:59.601 DEBUG 10852 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 21:23:59.606 DEBUG 10852 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 21:24:06.576 DEBUG 10852 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_user 
+2020-01-27 21:24:06.581 DEBUG 10852 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectAll_COUNT     : ==> Parameters: 
+2020-01-27 21:24:06.583 DEBUG 10852 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectAll_COUNT     : <==      Total: 1
+2020-01-27 21:24:06.584 DEBUG 10852 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user LIMIT ? 
+2020-01-27 21:24:06.585 DEBUG 10852 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 2(Integer)
+2020-01-27 21:24:06.587 DEBUG 10852 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 2
+2020-01-27 21:24:06.589 DEBUG 10852 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 21:24:06.590 DEBUG 10852 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 21:24:06.591 DEBUG 10852 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 21:24:27.057 DEBUG 10852 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_user 
+2020-01-27 21:24:27.058 DEBUG 10852 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectAll_COUNT     : ==> Parameters: 
+2020-01-27 21:24:27.059 DEBUG 10852 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectAll_COUNT     : <==      Total: 1
+2020-01-27 21:24:27.060 DEBUG 10852 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user LIMIT ?, ? 
+2020-01-27 21:24:27.061 DEBUG 10852 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 2(Integer), 2(Integer)
+2020-01-27 21:24:27.064 DEBUG 10852 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 1
+2020-01-27 21:24:27.065 DEBUG 10852 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 21:24:27.066 DEBUG 10852 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 21:24:27.067 DEBUG 10852 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 21:24:34.468 DEBUG 10852 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_user 
+2020-01-27 21:24:34.469 DEBUG 10852 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectAll_COUNT     : ==> Parameters: 
+2020-01-27 21:24:34.470 DEBUG 10852 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectAll_COUNT     : <==      Total: 1
+2020-01-27 21:24:34.471 DEBUG 10852 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user LIMIT ? 
+2020-01-27 21:24:34.472 DEBUG 10852 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 2(Integer)
+2020-01-27 21:24:34.477 DEBUG 10852 --- [http-nio-8088-exec-1] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 2
+2020-01-27 21:24:34.479 DEBUG 10852 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 21:24:34.479 DEBUG 10852 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 21:24:34.481 DEBUG 10852 --- [http-nio-8088-exec-1] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 21:24:47.612  INFO 10852 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-01-27 21:24:47.613  INFO 10852 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-01-27 21:24:47.619  INFO 10852 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-01-27 22:28:19.082  INFO 9480 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 9480 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:28:19.087 DEBUG 9480 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:28:19.088  INFO 9480 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:28:21.539  INFO 9480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:28:21.559  INFO 9480 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:28:21.560  INFO 9480 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:28:21.926  INFO 9480 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:28:21.927  INFO 9480 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2731 ms
+2020-01-27 22:28:23.348  INFO 9480 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:28:23.615  INFO 9480 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:28:23.951  INFO 9480 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:28:23.956  INFO 9480 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 6.374 seconds (JVM running for 8.153)
+2020-01-27 22:28:34.614  INFO 9480 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:28:34.614  INFO 9480 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:28:34.625  INFO 9480 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-01-27 22:29:18.052  INFO 9952 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 9952 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:29:18.058 DEBUG 9952 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:29:18.059  INFO 9952 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:29:20.512  INFO 9952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:29:20.523  INFO 9952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:29:20.524  INFO 9952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:29:20.666  INFO 9952 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:29:20.666  INFO 9952 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2215 ms
+2020-01-27 22:29:21.812  INFO 9952 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:29:21.924  INFO 9952 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:29:22.300  INFO 9952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:29:22.307  INFO 9952 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.535 seconds (JVM running for 7.764)
+2020-01-27 22:29:25.614  INFO 9952 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:29:25.614  INFO 9952 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:29:25.628  INFO 9952 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-01-27 22:29:25.673 ERROR 9952 --- [http-nio-8088-exec-1] c.l.l.h.ControllerExceptionHandler       : RequestUrl , http://localhost:8088/
+
+java.lang.ArithmeticException: / by zero
+	at com.lx.leeblog.controller.IndexController.index(IndexController.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-01-27 22:29:28.989 ERROR 9952 --- [http-nio-8088-exec-3] c.l.l.h.ControllerExceptionHandler       : RequestUrl , http://localhost:8088/
+
+java.lang.ArithmeticException: / by zero
+	at com.lx.leeblog.controller.IndexController.index(IndexController.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-01-27 22:29:54.324 ERROR 9952 --- [http-nio-8088-exec-4] c.l.l.h.ControllerExceptionHandler       : RequestUrl , http://localhost:8088/
+
+java.lang.ArithmeticException: / by zero
+	at com.lx.leeblog.controller.IndexController.index(IndexController.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-01-27 22:29:55.606  INFO 9952 --- [http-nio-8088-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-01-27 22:29:55.846  INFO 9952 --- [http-nio-8088-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-01-27 22:29:55.858 DEBUG 9952 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_user 
+2020-01-27 22:29:55.915 DEBUG 9952 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectAll_COUNT     : ==> Parameters: 
+2020-01-27 22:29:55.944 DEBUG 9952 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectAll_COUNT     : <==      Total: 1
+2020-01-27 22:29:55.956 DEBUG 9952 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user LIMIT ? 
+2020-01-27 22:29:55.959 DEBUG 9952 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-01-27 22:29:55.962 DEBUG 9952 --- [http-nio-8088-exec-5] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 22:29:55.968 DEBUG 9952 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 22:29:55.969 DEBUG 9952 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 22:29:55.970 DEBUG 9952 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 22:29:59.197 DEBUG 9952 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_user 
+2020-01-27 22:29:59.197 DEBUG 9952 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectAll_COUNT     : ==> Parameters: 
+2020-01-27 22:29:59.199 DEBUG 9952 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectAll_COUNT     : <==      Total: 1
+2020-01-27 22:29:59.200 DEBUG 9952 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user LIMIT ? 
+2020-01-27 22:29:59.201 DEBUG 9952 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 10(Integer)
+2020-01-27 22:29:59.203 DEBUG 9952 --- [http-nio-8088-exec-8] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 3
+2020-01-27 22:29:59.204 DEBUG 9952 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 22:29:59.205 DEBUG 9952 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 22:29:59.206 DEBUG 9952 --- [http-nio-8088-exec-8] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 22:30:01.079 DEBUG 9952 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_user 
+2020-01-27 22:30:01.081 DEBUG 9952 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectAll_COUNT     : ==> Parameters: 
+2020-01-27 22:30:01.082 DEBUG 9952 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectAll_COUNT     : <==      Total: 1
+2020-01-27 22:30:01.085 DEBUG 9952 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user LIMIT ? 
+2020-01-27 22:30:01.088 DEBUG 9952 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 2(Integer)
+2020-01-27 22:30:01.090 DEBUG 9952 --- [http-nio-8088-exec-9] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 2
+2020-01-27 22:30:01.092 DEBUG 9952 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 22:30:01.092 DEBUG 9952 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 22:30:01.093 DEBUG 9952 --- [http-nio-8088-exec-9] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 22:30:02.012 DEBUG 9952 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_user 
+2020-01-27 22:30:02.013 DEBUG 9952 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectAll_COUNT     : ==> Parameters: 
+2020-01-27 22:30:02.014 DEBUG 9952 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectAll_COUNT     : <==      Total: 1
+2020-01-27 22:30:02.016 DEBUG 9952 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user LIMIT ?, ? 
+2020-01-27 22:30:02.017 DEBUG 9952 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 2(Integer), 2(Integer)
+2020-01-27 22:30:02.018 DEBUG 9952 --- [http-nio-8088-exec-10] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 1
+2020-01-27 22:30:02.019 DEBUG 9952 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 22:30:02.020 DEBUG 9952 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 22:30:02.021 DEBUG 9952 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 22:30:03.001 DEBUG 9952 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_user 
+2020-01-27 22:30:03.002 DEBUG 9952 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectAll_COUNT     : ==> Parameters: 
+2020-01-27 22:30:03.003 DEBUG 9952 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectAll_COUNT     : <==      Total: 1
+2020-01-27 22:30:03.004 DEBUG 9952 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user LIMIT ? 
+2020-01-27 22:30:03.004 DEBUG 9952 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 2(Integer)
+2020-01-27 22:30:03.007 DEBUG 9952 --- [http-nio-8088-exec-2] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 2
+2020-01-27 22:30:03.009 DEBUG 9952 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 22:30:03.010 DEBUG 9952 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 22:30:03.012 DEBUG 9952 --- [http-nio-8088-exec-2] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 22:30:04.336 DEBUG 9952 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectAll_COUNT     : ==>  Preparing: SELECT count(0) FROM t_user 
+2020-01-27 22:30:04.337 DEBUG 9952 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectAll_COUNT     : ==> Parameters: 
+2020-01-27 22:30:04.339 DEBUG 9952 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectAll_COUNT     : <==      Total: 1
+2020-01-27 22:30:04.342 DEBUG 9952 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user LIMIT ? 
+2020-01-27 22:30:04.344 DEBUG 9952 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : ==> Parameters: 2(Integer)
+2020-01-27 22:30:04.345 DEBUG 9952 --- [http-nio-8088-exec-3] com.lx.leeblog.dao.UserMapper.selectAll  : <==      Total: 2
+2020-01-27 22:30:04.346 DEBUG 9952 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==>  Preparing: select count(*) from t_user; 
+2020-01-27 22:30:04.347 DEBUG 9952 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : ==> Parameters: 
+2020-01-27 22:30:04.347 DEBUG 9952 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectPageCount     : <==      Total: 1
+2020-01-27 22:37:39.574  INFO 9268 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 9268 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:37:39.579 DEBUG 9268 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:37:39.580  INFO 9268 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:37:41.989  INFO 9268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:37:42.016  INFO 9268 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:37:42.021  INFO 9268 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:37:42.324  INFO 9268 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:37:42.324  INFO 9268 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2621 ms
+2020-01-27 22:37:43.673  INFO 9268 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:37:43.850  INFO 9268 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:37:44.501  INFO 9268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:37:44.508  INFO 9268 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 6.315 seconds (JVM running for 7.952)
+2020-01-27 22:37:58.029  INFO 9268 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:37:58.029  INFO 9268 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:37:58.039  INFO 9268 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-01-27 22:37:58.070 ERROR 9268 --- [http-nio-8088-exec-1] c.l.l.h.ControllerExceptionHandler       : RequestUrl , http://localhost:8088/
+
+java.lang.ArithmeticException: / by zero
+	at com.lx.leeblog.controller.IndexController.index(IndexController.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-01-27 22:42:09.452  INFO 11904 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 11904 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:42:09.456 DEBUG 11904 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:42:09.457  INFO 11904 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:42:11.822  INFO 11904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:42:11.840  INFO 11904 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:42:11.840  INFO 11904 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:42:12.143  INFO 11904 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:42:12.144  INFO 11904 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2550 ms
+2020-01-27 22:42:13.600  INFO 11904 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:42:13.685  INFO 11904 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:42:13.951  INFO 11904 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:42:13.955  INFO 11904 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.552 seconds (JVM running for 7.216)
+2020-01-27 22:42:26.809  INFO 11904 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:42:26.810  INFO 11904 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:42:26.825  INFO 11904 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-01-27 22:43:22.686  INFO 10860 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 10860 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:43:22.695 DEBUG 10860 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:43:22.696  INFO 10860 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:43:25.066  INFO 10860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:43:25.091  INFO 10860 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:43:25.091  INFO 10860 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:43:25.421  INFO 10860 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:43:25.422  INFO 10860 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2564 ms
+2020-01-27 22:43:26.806  INFO 10860 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:43:27.143  INFO 10860 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:43:27.731  INFO 10860 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:43:27.736  INFO 10860 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 6.136 seconds (JVM running for 7.598)
+2020-01-27 22:43:27.926  INFO 10860 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:43:27.930  INFO 10860 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:43:27.943  INFO 10860 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-01-27 22:43:56.710  INFO 6788 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 6788 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:43:56.789 DEBUG 6788 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:43:56.790  INFO 6788 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:43:59.328  INFO 6788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:43:59.343  INFO 6788 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:43:59.344  INFO 6788 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:43:59.520  INFO 6788 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:43:59.521  INFO 6788 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2617 ms
+2020-01-27 22:44:00.870  INFO 6788 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:44:01.274  INFO 6788 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:44:01.722  INFO 6788 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:44:01.727  INFO 6788 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 6.089 seconds (JVM running for 7.872)
+2020-01-27 22:44:22.057  INFO 6788 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:44:22.057  INFO 6788 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:44:22.067  INFO 6788 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-01-27 22:47:31.923  INFO 192 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 192 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:47:31.927 DEBUG 192 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:47:31.928  INFO 192 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:47:34.213  INFO 192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:47:34.231  INFO 192 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:47:34.231  INFO 192 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:47:34.454  INFO 192 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:47:34.454  INFO 192 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2329 ms
+2020-01-27 22:47:35.462  INFO 192 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:47:35.629  INFO 192 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:47:36.121  INFO 192 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:47:36.128  INFO 192 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.406 seconds (JVM running for 7.304)
+2020-01-27 22:47:53.984  INFO 192 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:47:53.984  INFO 192 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:47:53.992  INFO 192 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-01-27 22:52:53.864  INFO 6236 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 6236 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:52:53.870 DEBUG 6236 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:52:53.871  INFO 6236 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:52:56.924  INFO 6236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:52:56.941  INFO 6236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:52:56.942  INFO 6236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:52:57.119  INFO 6236 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:52:57.119  INFO 6236 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3131 ms
+2020-01-27 22:52:58.171  INFO 6236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:52:58.455  INFO 6236 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:52:58.869  INFO 6236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:52:58.875  INFO 6236 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 6.287 seconds (JVM running for 8.1)
+2020-01-27 22:53:06.675  INFO 6236 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:53:06.676  INFO 6236 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:53:06.687  INFO 6236 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-01-27 22:54:18.192  INFO 13024 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 13024 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:54:18.201 DEBUG 13024 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:54:18.202  INFO 13024 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:54:21.326  INFO 13024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:54:21.344  INFO 13024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:54:21.345  INFO 13024 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:54:21.503  INFO 13024 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:54:21.504  INFO 13024 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3050 ms
+2020-01-27 22:54:22.827  INFO 13024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:54:22.979  INFO 13024 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:54:23.419  INFO 13024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:54:23.423  INFO 13024 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 6.553 seconds (JVM running for 7.991)
+2020-01-27 22:54:32.998  INFO 13024 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:54:32.998  INFO 13024 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:54:33.006  INFO 13024 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-01-27 22:55:42.321  INFO 12256 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 12256 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:55:42.326 DEBUG 12256 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:55:42.330  INFO 12256 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:55:44.718  INFO 12256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:55:44.736  INFO 12256 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:55:44.738  INFO 12256 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:55:45.000  INFO 12256 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:55:45.001  INFO 12256 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2426 ms
+2020-01-27 22:55:46.011  INFO 12256 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:55:46.146  INFO 12256 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:55:46.760  INFO 12256 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:55:46.766  INFO 12256 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.878 seconds (JVM running for 7.51)
+2020-01-27 22:55:50.560  INFO 12256 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:55:50.560  INFO 12256 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:55:50.571  INFO 12256 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-01-27 22:56:35.288  INFO 3740 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 3740 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:56:35.292 DEBUG 3740 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:56:35.293  INFO 3740 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:56:38.236  INFO 3740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:56:38.266  INFO 3740 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:56:38.267  INFO 3740 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:56:38.604  INFO 3740 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:56:38.604  INFO 3740 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3146 ms
+2020-01-27 22:56:40.187  INFO 3740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:56:40.360  INFO 3740 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:56:41.017  INFO 3740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:56:41.024  INFO 3740 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 6.984 seconds (JVM running for 8.558)
+2020-01-27 22:56:41.371  INFO 3740 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:56:41.372  INFO 3740 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:56:41.383  INFO 3740 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-01-27 22:56:41.935 ERROR 3740 --- [http-nio-8088-exec-1] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8088-exec-1] Exception processing template "error/404": Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:661)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-01-27 22:56:41.941 ERROR 3740 --- [http-nio-8088-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:661)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-01-27 22:56:41.945 ERROR 3740 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:661)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 25 common frames omitted
+
+2020-01-27 22:56:43.219 ERROR 3740 --- [http-nio-8088-exec-5] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8088-exec-5] Exception processing template "error/404": Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-01-27 22:56:43.220 ERROR 3740 --- [http-nio-8088-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-01-27 22:56:43.221 ERROR 3740 --- [http-nio-8088-exec-5] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 25 common frames omitted
+
+2020-01-27 22:56:44.538 ERROR 3740 --- [http-nio-8088-exec-6] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8088-exec-6] Exception processing template "error/404": Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-01-27 22:56:44.539 ERROR 3740 --- [http-nio-8088-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] threw exception
+
+org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-01-27 22:56:44.541 ERROR 3740 --- [http-nio-8088-exec-6] o.a.c.c.C.[Tomcat].[localhost]           : Exception Processing ErrorPage[errorCode=0, location=/error]
+
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.thymeleaf.exceptions.TemplateProcessingException: Could not parse as expression: "'background:url('+@{/img/banner.png}+')no-repeat center;' background-size:cover;
+    font-size: 150px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 100vh;" (template: "error/404" - line 10, col 26)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:131)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:62)
+	at org.thymeleaf.standard.expression.StandardExpressionParser.parseExpression(StandardExpressionParser.java:44)
+	at org.thymeleaf.engine.EngineEventUtils.parseAttributeExpression(EngineEventUtils.java:220)
+	at org.thymeleaf.engine.EngineEventUtils.computeAttributeExpression(EngineEventUtils.java:207)
+	at org.thymeleaf.standard.processor.AbstractStandardExpressionAttributeTagProcessor.doProcess(AbstractStandardExpressionAttributeTagProcessor.java:125)
+	at org.thymeleaf.processor.element.AbstractAttributeTagProcessor.doProcess(AbstractAttributeTagProcessor.java:74)
+	at org.thymeleaf.processor.element.AbstractElementTagProcessor.process(AbstractElementTagProcessor.java:95)
+	at org.thymeleaf.util.ProcessorConfigurationUtils$ElementTagProcessorWrapper.process(ProcessorConfigurationUtils.java:633)
+	at org.thymeleaf.engine.ProcessorTemplateHandler.handleOpenElement(ProcessorTemplateHandler.java:1314)
+	at org.thymeleaf.engine.OpenElementTag.beHandled(OpenElementTag.java:205)
+	at org.thymeleaf.engine.TemplateModel.process(TemplateModel.java:136)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:592)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	... 25 common frames omitted
+
+2020-01-27 22:57:55.967  INFO 3764 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 3764 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:57:56.049 DEBUG 3764 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:57:56.051  INFO 3764 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:57:58.708  INFO 3764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:57:58.721  INFO 3764 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:57:58.722  INFO 3764 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:57:58.864  INFO 3764 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:57:58.865  INFO 3764 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2692 ms
+2020-01-27 22:57:59.780  INFO 3764 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:57:59.897  INFO 3764 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:58:00.189  INFO 3764 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:58:00.193  INFO 3764 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.345 seconds (JVM running for 7.024)
+2020-01-27 22:58:09.681  INFO 3764 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:58:09.682  INFO 3764 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:58:09.706  INFO 3764 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2020-01-27 22:58:57.092  INFO 14268 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 14268 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:58:57.101 DEBUG 14268 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:58:57.102  INFO 14268 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:59:00.622  INFO 14268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:59:00.669  INFO 14268 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:59:00.670  INFO 14268 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:59:01.007  INFO 14268 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:59:01.008  INFO 14268 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3595 ms
+2020-01-27 22:59:02.338  INFO 14268 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:59:02.627  INFO 14268 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:59:03.224  INFO 14268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:59:03.230  INFO 14268 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 7.385 seconds (JVM running for 8.933)
+2020-01-27 22:59:03.371  INFO 14268 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:59:03.371  INFO 14268 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:59:03.387  INFO 14268 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-01-27 22:59:24.958  INFO 4720 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 4720 (E:\code\leeblog\target\classes started by lx in E:\code\leeblog)
+2020-01-27 22:59:24.963 DEBUG 4720 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-01-27 22:59:24.963  INFO 4720 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-01-27 22:59:27.795  INFO 4720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-01-27 22:59:27.828  INFO 4720 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-27 22:59:27.829  INFO 4720 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-27 22:59:28.215  INFO 4720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-27 22:59:28.216  INFO 4720 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2938 ms
+2020-01-27 22:59:29.411  INFO 4720 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-27 22:59:29.718  INFO 4720 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-01-27 22:59:30.107  INFO 4720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-01-27 22:59:30.112  INFO 4720 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 6.205 seconds (JVM running for 8.02)
+2020-01-27 22:59:30.953  INFO 4720 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-01-27 22:59:30.953  INFO 4720 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-01-27 22:59:30.964  INFO 4720 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms

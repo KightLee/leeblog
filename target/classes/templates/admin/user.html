@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>用户</title>
@@ -64,7 +64,7 @@
         var layer = layui.layer;
         var form = layui.form;
         var table = layui.table;
-        table.render({
+        var tableIns = table.render({
             elem: '#userTable'
             , url: 'http://localhost:8088/admin/users'
             , toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
@@ -156,12 +156,21 @@
             // alert('ok');
             // 序列化表单数据
             var param = $('#datafrm').serialize();
-            alert(param);
+            $.post(
+                url,
+                param,
+                function(data) {
+                    layer.close(mainIndex);
+                    tableIns.reload();
+                }
+            )
         });
+        var url;
+        var mainIndex;
         /* 新增功能*/
         function openAddUser() {
             // alert('test');
-            layer.open({
+            mainIndex = layer.open({
                 type:1,
                 title:'添加用户',
                 content:$("#saveAndUpdateDiv"),
@@ -169,6 +178,7 @@
                 success: function(index) {
                     // 清空表单数据 !!! 记得转jquery对象 js对象
                     $("#datafrm")[0].reset();
+                    url = "http://localhost:8088/admin/useradd";
                 }
                 /*btn:[],
                 yes:function(index, layero){
@@ -182,13 +192,14 @@
         }
         /* 编辑功能 */
         function openEditUser(data) {
-            layer.open({
+            mainIndex = layer.open({
                 type:1,
                 title:'编辑用户',
                 content:$("#saveAndUpdateDiv"),
                 area:['800px'],
                 success: function(index) {
                     form.val("datafrm", data);
+                    url = "http://localhost:8088/admin/useredit";
                 }
                 /*btn:[],
                 yes:function(index, layero){

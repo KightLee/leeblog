@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
@@ -39,7 +39,7 @@
                         <li>
 							<a href="https://github.com/login/oauth/authorize?client_id=94c859cbf53a5eed0642&redirect_uri=http://localhost:8088/callback&scope=user&state=1">Github登录</a>
 						</li>
-                        <li><a href="#" th:href="@{/user/login}">登录</a></li>
+                        <li><a href="#" th:href="@{/user/register}">登录</a></li>
 						<li><a href="#" th:href="@{/user/register}">注册</a></li>
                     </ul>
                 </li>

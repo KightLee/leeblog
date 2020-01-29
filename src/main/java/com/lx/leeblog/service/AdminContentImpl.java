@@ -1,6 +1,12 @@
 package com.lx.leeblog.service;
 
+import com.lx.leeblog.dao.BlogMapper;
+import com.lx.leeblog.dao.TagMapper;
+import com.lx.leeblog.dao.TypeMapper;
 import com.lx.leeblog.dao.UserMapper;
+import com.lx.leeblog.pojo.Blog;
+import com.lx.leeblog.pojo.Tag;
+import com.lx.leeblog.pojo.Type;
 import com.lx.leeblog.pojo.User;
 import com.lx.leeblog.vo.Page;
 import org.junit.Test;
@@ -18,6 +24,32 @@ public class AdminContentImpl implements AdminContent {
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private BlogMapper blogMapper;
+
+    @Autowired
+    private TypeMapper typeMapper;
+
+    @Autowired
+    private TagMapper tagMapper;
+
+    @Override
+    public List<Tag> selectPageTagList() {
+        return tagMapper.selectAllTags();
+    }
+
+    @Override
+    public List<Type> selectPageTypeList() {
+        List<Type> types = typeMapper.selectAllType();
+        return types;
+    }
+
+    @Override
+    public List<Blog> selectPageBlogList() {
+        List<Blog> blogs = blogMapper.selectAllBlogList();
+        return blogs;
+    }
 
     @Override
     public List<User> selectPageList() {

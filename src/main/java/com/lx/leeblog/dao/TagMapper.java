@@ -18,6 +18,8 @@ public interface TagMapper {
 
     List<Tag> selectByExample(TagExample example);
 
+    List<Tag> selectAllTags();
+
     Tag selectByPrimaryKey(Long id);
 
     int updateByExampleSelective(@Param("record") Tag record, @Param("example") TagExample example);

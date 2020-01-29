@@ -7,4 +7,6 @@ import com.lx.leeblog.pojo.User;
  */
 public interface UserCheck {
     public User checkAdminUser(User user);
+
+    public User checkNormalUser(User user);
 }

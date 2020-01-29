@@ -2,12 +2,10 @@ package com.lx.leeblog.dao;
 
 import com.lx.leeblog.pojo.User;
 import com.lx.leeblog.pojo.UserExample;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
 public interface UserMapper {
     int countByExample(UserExample example);
 

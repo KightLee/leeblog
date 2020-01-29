@@ -18,6 +18,8 @@ public interface TypeMapper {
 
     List<Type> selectByExample(TypeExample example);
 
+    List<Type> selectAllType();
+
     Type selectByPrimaryKey(Long id);
 
     int updateByExampleSelective(@Param("record") Type record, @Param("example") TypeExample example);

@@ -1,432 +1,440 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.lx.leeblog.dao.BlogMapper" >
-  <resultMap id="BaseResultMap" type="com.lx.leeblog.pojo.Blog" >
-    <constructor >
-      <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="appreciation" jdbcType="BIT" javaType="java.lang.Boolean" />
-      <arg column="commentabled" jdbcType="BIT" javaType="java.lang.Boolean" />
-      <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
-      <arg column="description" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="first_picture" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="flag" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="published" jdbcType="BIT" javaType="java.lang.Boolean" />
-      <arg column="recommend" jdbcType="BIT" javaType="java.lang.Boolean" />
-      <arg column="share_statement" jdbcType="BIT" javaType="java.lang.Boolean" />
-      <arg column="title" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
-      <arg column="views" jdbcType="INTEGER" javaType="java.lang.Integer" />
-      <arg column="type_id" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="user_id" jdbcType="BIGINT" javaType="java.lang.Long" />
-    </constructor>
-  </resultMap>
-  <resultMap id="ResultMapWithBLOBs" type="com.lx.leeblog.pojo.Blog" >
-    <constructor >
-      <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="appreciation" jdbcType="BIT" javaType="java.lang.Boolean" />
-      <arg column="commentabled" jdbcType="BIT" javaType="java.lang.Boolean" />
-      <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
-      <arg column="description" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="first_picture" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="flag" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="published" jdbcType="BIT" javaType="java.lang.Boolean" />
-      <arg column="recommend" jdbcType="BIT" javaType="java.lang.Boolean" />
-      <arg column="share_statement" jdbcType="BIT" javaType="java.lang.Boolean" />
-      <arg column="title" jdbcType="VARCHAR" javaType="java.lang.String" />
-      <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date" />
-      <arg column="views" jdbcType="INTEGER" javaType="java.lang.Integer" />
-      <arg column="type_id" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="user_id" jdbcType="BIGINT" javaType="java.lang.Long" />
-      <arg column="content" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
-    </constructor>
-  </resultMap>
-  <sql id="Example_Where_Clause" >
-    <where >
-      <foreach collection="oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
+<mapper namespace="com.lx.leeblog.dao.BlogMapper">
+    <resultMap id="BaseResultMap" type="com.lx.leeblog.pojo.Blog">
+        <constructor>
+            <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long"/>
+            <arg column="appreciation" jdbcType="BIT" javaType="java.lang.Boolean"/>
+            <arg column="commentabled" jdbcType="BIT" javaType="java.lang.Boolean"/>
+            <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+            <arg column="description" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="first_picture" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="flag" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="published" jdbcType="BIT" javaType="java.lang.Boolean"/>
+            <arg column="recommend" jdbcType="BIT" javaType="java.lang.Boolean"/>
+            <arg column="share_statement" jdbcType="BIT" javaType="java.lang.Boolean"/>
+            <arg column="title" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+            <arg column="views" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="type_id" jdbcType="BIGINT" javaType="java.lang.Long"/>
+            <arg column="user_id" jdbcType="BIGINT" javaType="java.lang.Long"/>
+        </constructor>
+    </resultMap>
+    <resultMap id="ResultMapWithBLOBs" type="com.lx.leeblog.pojo.Blog">
+        <constructor>
+            <idArg column="id" jdbcType="BIGINT" javaType="java.lang.Long"/>
+            <arg column="appreciation" jdbcType="BIT" javaType="java.lang.Boolean"/>
+            <arg column="commentabled" jdbcType="BIT" javaType="java.lang.Boolean"/>
+            <arg column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+            <arg column="description" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="first_picture" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="flag" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="published" jdbcType="BIT" javaType="java.lang.Boolean"/>
+            <arg column="recommend" jdbcType="BIT" javaType="java.lang.Boolean"/>
+            <arg column="share_statement" jdbcType="BIT" javaType="java.lang.Boolean"/>
+            <arg column="title" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="update_time" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+            <arg column="views" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="type_id" jdbcType="BIGINT" javaType="java.lang.Long"/>
+            <arg column="user_id" jdbcType="BIGINT" javaType="java.lang.Long"/>
+            <arg column="content" jdbcType="LONGVARCHAR" javaType="java.lang.String"/>
+        </constructor>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
             </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause" >
-    <where >
-      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue" >
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue" >
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue" >
-                  and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
             </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Base_Column_List" >
-    id, appreciation, commentabled, create_time, description, first_picture, flag, published, 
+        </where>
+    </sql>
+    <sql id="Base_Column_List">
+    id, appreciation, commentabled, create_time, description, first_picture, flag, published,
     recommend, share_statement, title, update_time, views, type_id, user_id
   </sql>
-  <sql id="Blob_Column_List" >
+    <sql id="Blob_Column_List">
     content
   </sql>
-  <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.lx.leeblog.pojo.BlogExample" >
-    select
-    <if test="distinct" >
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
-    from t_blog
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null" >
-      order by ${orderByClause}
-    </if>
-  </select>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.lx.leeblog.pojo.BlogExample" >
-    select
-    <if test="distinct" >
-      distinct
-    </if>
-    <include refid="Base_Column_List" />
-    from t_blog
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null" >
-      order by ${orderByClause}
-    </if>
-  </select>
-  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
-    select 
-    <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
-    from t_blog
-    where id = #{id,jdbcType=BIGINT}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs"
+            parameterType="com.lx.leeblog.pojo.BlogExample">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from t_blog
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.lx.leeblog.pojo.BlogExample">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from t_blog
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectAllBlogList" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_blog;
+    </select>
+    <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from t_blog
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from t_blog
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.lx.leeblog.pojo.BlogExample" >
-    delete from t_blog
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-  </delete>
-  <insert id="insert" parameterType="com.lx.leeblog.pojo.Blog" >
-    insert into t_blog (id, appreciation, commentabled, 
-      create_time, description, first_picture, 
-      flag, published, recommend, 
-      share_statement, title, update_time, 
-      views, type_id, user_id, 
+    <delete id="deleteByExample" parameterType="com.lx.leeblog.pojo.BlogExample">
+        delete from t_blog
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="insert" parameterType="com.lx.leeblog.pojo.Blog">
+    insert into t_blog (id, appreciation, commentabled,
+      create_time, description, first_picture,
+      flag, published, recommend,
+      share_statement, title, update_time,
+      views, type_id, user_id,
       content)
-    values (#{id,jdbcType=BIGINT}, #{appreciation,jdbcType=BIT}, #{commentabled,jdbcType=BIT}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{description,jdbcType=VARCHAR}, #{firstPicture,jdbcType=VARCHAR}, 
-      #{flag,jdbcType=VARCHAR}, #{published,jdbcType=BIT}, #{recommend,jdbcType=BIT}, 
-      #{shareStatement,jdbcType=BIT}, #{title,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
-      #{views,jdbcType=INTEGER}, #{typeId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, 
+    values (#{id,jdbcType=BIGINT}, #{appreciation,jdbcType=BIT}, #{commentabled,jdbcType=BIT},
+      #{createTime,jdbcType=TIMESTAMP}, #{description,jdbcType=VARCHAR}, #{firstPicture,jdbcType=VARCHAR},
+      #{flag,jdbcType=VARCHAR}, #{published,jdbcType=BIT}, #{recommend,jdbcType=BIT},
+      #{shareStatement,jdbcType=BIT}, #{title,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP},
+      #{views,jdbcType=INTEGER}, #{typeId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT},
       #{content,jdbcType=LONGVARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.lx.leeblog.pojo.Blog" >
-    insert into t_blog
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        id,
-      </if>
-      <if test="appreciation != null" >
-        appreciation,
-      </if>
-      <if test="commentabled != null" >
-        commentabled,
-      </if>
-      <if test="createTime != null" >
-        create_time,
-      </if>
-      <if test="description != null" >
-        description,
-      </if>
-      <if test="firstPicture != null" >
-        first_picture,
-      </if>
-      <if test="flag != null" >
-        flag,
-      </if>
-      <if test="published != null" >
-        published,
-      </if>
-      <if test="recommend != null" >
-        recommend,
-      </if>
-      <if test="shareStatement != null" >
-        share_statement,
-      </if>
-      <if test="title != null" >
-        title,
-      </if>
-      <if test="updateTime != null" >
-        update_time,
-      </if>
-      <if test="views != null" >
-        views,
-      </if>
-      <if test="typeId != null" >
-        type_id,
-      </if>
-      <if test="userId != null" >
-        user_id,
-      </if>
-      <if test="content != null" >
-        content,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="appreciation != null" >
-        #{appreciation,jdbcType=BIT},
-      </if>
-      <if test="commentabled != null" >
-        #{commentabled,jdbcType=BIT},
-      </if>
-      <if test="createTime != null" >
-        #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="description != null" >
-        #{description,jdbcType=VARCHAR},
-      </if>
-      <if test="firstPicture != null" >
-        #{firstPicture,jdbcType=VARCHAR},
-      </if>
-      <if test="flag != null" >
-        #{flag,jdbcType=VARCHAR},
-      </if>
-      <if test="published != null" >
-        #{published,jdbcType=BIT},
-      </if>
-      <if test="recommend != null" >
-        #{recommend,jdbcType=BIT},
-      </if>
-      <if test="shareStatement != null" >
-        #{shareStatement,jdbcType=BIT},
-      </if>
-      <if test="title != null" >
-        #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="updateTime != null" >
-        #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="views != null" >
-        #{views,jdbcType=INTEGER},
-      </if>
-      <if test="typeId != null" >
-        #{typeId,jdbcType=BIGINT},
-      </if>
-      <if test="userId != null" >
-        #{userId,jdbcType=BIGINT},
-      </if>
-      <if test="content != null" >
-        #{content,jdbcType=LONGVARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <select id="countByExample" parameterType="com.lx.leeblog.pojo.BlogExample" resultType="java.lang.Integer" >
-    select count(*) from t_blog
-    <if test="_parameter != null" >
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map" >
-    update t_blog
-    <set >
-      <if test="record.id != null" >
-        id = #{record.id,jdbcType=BIGINT},
-      </if>
-      <if test="record.appreciation != null" >
+    <insert id="insertSelective" parameterType="com.lx.leeblog.pojo.Blog">
+        insert into t_blog
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="appreciation != null">
+                appreciation,
+            </if>
+            <if test="commentabled != null">
+                commentabled,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="description != null">
+                description,
+            </if>
+            <if test="firstPicture != null">
+                first_picture,
+            </if>
+            <if test="flag != null">
+                flag,
+            </if>
+            <if test="published != null">
+                published,
+            </if>
+            <if test="recommend != null">
+                recommend,
+            </if>
+            <if test="shareStatement != null">
+                share_statement,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="updateTime != null">
+                update_time,
+            </if>
+            <if test="views != null">
+                views,
+            </if>
+            <if test="typeId != null">
+                type_id,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="content != null">
+                content,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="appreciation != null">
+                #{appreciation,jdbcType=BIT},
+            </if>
+            <if test="commentabled != null">
+                #{commentabled,jdbcType=BIT},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="description != null">
+                #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="firstPicture != null">
+                #{firstPicture,jdbcType=VARCHAR},
+            </if>
+            <if test="flag != null">
+                #{flag,jdbcType=VARCHAR},
+            </if>
+            <if test="published != null">
+                #{published,jdbcType=BIT},
+            </if>
+            <if test="recommend != null">
+                #{recommend,jdbcType=BIT},
+            </if>
+            <if test="shareStatement != null">
+                #{shareStatement,jdbcType=BIT},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="views != null">
+                #{views,jdbcType=INTEGER},
+            </if>
+            <if test="typeId != null">
+                #{typeId,jdbcType=BIGINT},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="content != null">
+                #{content,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.lx.leeblog.pojo.BlogExample" resultType="java.lang.Integer">
+        select count(*) from t_blog
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update t_blog
+        <set>
+            <if test="record.id != null">
+                id = #{record.id,jdbcType=BIGINT},
+            </if>
+            <if test="record.appreciation != null">
+                appreciation = #{record.appreciation,jdbcType=BIT},
+            </if>
+            <if test="record.commentabled != null">
+                commentabled = #{record.commentabled,jdbcType=BIT},
+            </if>
+            <if test="record.createTime != null">
+                create_time = #{record.createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.description != null">
+                description = #{record.description,jdbcType=VARCHAR},
+            </if>
+            <if test="record.firstPicture != null">
+                first_picture = #{record.firstPicture,jdbcType=VARCHAR},
+            </if>
+            <if test="record.flag != null">
+                flag = #{record.flag,jdbcType=VARCHAR},
+            </if>
+            <if test="record.published != null">
+                published = #{record.published,jdbcType=BIT},
+            </if>
+            <if test="record.recommend != null">
+                recommend = #{record.recommend,jdbcType=BIT},
+            </if>
+            <if test="record.shareStatement != null">
+                share_statement = #{record.shareStatement,jdbcType=BIT},
+            </if>
+            <if test="record.title != null">
+                title = #{record.title,jdbcType=VARCHAR},
+            </if>
+            <if test="record.updateTime != null">
+                update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="record.views != null">
+                views = #{record.views,jdbcType=INTEGER},
+            </if>
+            <if test="record.typeId != null">
+                type_id = #{record.typeId,jdbcType=BIGINT},
+            </if>
+            <if test="record.userId != null">
+                user_id = #{record.userId,jdbcType=BIGINT},
+            </if>
+            <if test="record.content != null">
+                content = #{record.content,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExampleWithBLOBs" parameterType="map">
+        update t_blog
+        set id = #{record.id,jdbcType=BIGINT},
         appreciation = #{record.appreciation,jdbcType=BIT},
-      </if>
-      <if test="record.commentabled != null" >
         commentabled = #{record.commentabled,jdbcType=BIT},
-      </if>
-      <if test="record.createTime != null" >
         create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.description != null" >
         description = #{record.description,jdbcType=VARCHAR},
-      </if>
-      <if test="record.firstPicture != null" >
         first_picture = #{record.firstPicture,jdbcType=VARCHAR},
-      </if>
-      <if test="record.flag != null" >
         flag = #{record.flag,jdbcType=VARCHAR},
-      </if>
-      <if test="record.published != null" >
         published = #{record.published,jdbcType=BIT},
-      </if>
-      <if test="record.recommend != null" >
         recommend = #{record.recommend,jdbcType=BIT},
-      </if>
-      <if test="record.shareStatement != null" >
         share_statement = #{record.shareStatement,jdbcType=BIT},
-      </if>
-      <if test="record.title != null" >
         title = #{record.title,jdbcType=VARCHAR},
-      </if>
-      <if test="record.updateTime != null" >
         update_time = #{record.updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="record.views != null" >
         views = #{record.views,jdbcType=INTEGER},
-      </if>
-      <if test="record.typeId != null" >
         type_id = #{record.typeId,jdbcType=BIGINT},
-      </if>
-      <if test="record.userId != null" >
         user_id = #{record.userId,jdbcType=BIGINT},
-      </if>
-      <if test="record.content != null" >
-        content = #{record.content,jdbcType=LONGVARCHAR},
-      </if>
-    </set>
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExampleWithBLOBs" parameterType="map" >
-    update t_blog
-    set id = #{record.id,jdbcType=BIGINT},
-      appreciation = #{record.appreciation,jdbcType=BIT},
-      commentabled = #{record.commentabled,jdbcType=BIT},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      description = #{record.description,jdbcType=VARCHAR},
-      first_picture = #{record.firstPicture,jdbcType=VARCHAR},
-      flag = #{record.flag,jdbcType=VARCHAR},
-      published = #{record.published,jdbcType=BIT},
-      recommend = #{record.recommend,jdbcType=BIT},
-      share_statement = #{record.shareStatement,jdbcType=BIT},
-      title = #{record.title,jdbcType=VARCHAR},
-      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
-      views = #{record.views,jdbcType=INTEGER},
-      type_id = #{record.typeId,jdbcType=BIGINT},
-      user_id = #{record.userId,jdbcType=BIGINT},
-      content = #{record.content,jdbcType=LONGVARCHAR}
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map" >
-    update t_blog
-    set id = #{record.id,jdbcType=BIGINT},
-      appreciation = #{record.appreciation,jdbcType=BIT},
-      commentabled = #{record.commentabled,jdbcType=BIT},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      description = #{record.description,jdbcType=VARCHAR},
-      first_picture = #{record.firstPicture,jdbcType=VARCHAR},
-      flag = #{record.flag,jdbcType=VARCHAR},
-      published = #{record.published,jdbcType=BIT},
-      recommend = #{record.recommend,jdbcType=BIT},
-      share_statement = #{record.shareStatement,jdbcType=BIT},
-      title = #{record.title,jdbcType=VARCHAR},
-      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
-      views = #{record.views,jdbcType=INTEGER},
-      type_id = #{record.typeId,jdbcType=BIGINT},
-      user_id = #{record.userId,jdbcType=BIGINT}
-    <if test="_parameter != null" >
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.lx.leeblog.pojo.Blog" >
-    update t_blog
-    <set >
-      <if test="appreciation != null" >
-        appreciation = #{appreciation,jdbcType=BIT},
-      </if>
-      <if test="commentabled != null" >
-        commentabled = #{commentabled,jdbcType=BIT},
-      </if>
-      <if test="createTime != null" >
-        create_time = #{createTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="description != null" >
-        description = #{description,jdbcType=VARCHAR},
-      </if>
-      <if test="firstPicture != null" >
-        first_picture = #{firstPicture,jdbcType=VARCHAR},
-      </if>
-      <if test="flag != null" >
-        flag = #{flag,jdbcType=VARCHAR},
-      </if>
-      <if test="published != null" >
-        published = #{published,jdbcType=BIT},
-      </if>
-      <if test="recommend != null" >
-        recommend = #{recommend,jdbcType=BIT},
-      </if>
-      <if test="shareStatement != null" >
-        share_statement = #{shareStatement,jdbcType=BIT},
-      </if>
-      <if test="title != null" >
-        title = #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="updateTime != null" >
-        update_time = #{updateTime,jdbcType=TIMESTAMP},
-      </if>
-      <if test="views != null" >
-        views = #{views,jdbcType=INTEGER},
-      </if>
-      <if test="typeId != null" >
-        type_id = #{typeId,jdbcType=BIGINT},
-      </if>
-      <if test="userId != null" >
-        user_id = #{userId,jdbcType=BIGINT},
-      </if>
-      <if test="content != null" >
-        content = #{content,jdbcType=LONGVARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.lx.leeblog.pojo.Blog" >
+        content = #{record.content,jdbcType=LONGVARCHAR}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update t_blog
+        set id = #{record.id,jdbcType=BIGINT},
+        appreciation = #{record.appreciation,jdbcType=BIT},
+        commentabled = #{record.commentabled,jdbcType=BIT},
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+        description = #{record.description,jdbcType=VARCHAR},
+        first_picture = #{record.firstPicture,jdbcType=VARCHAR},
+        flag = #{record.flag,jdbcType=VARCHAR},
+        published = #{record.published,jdbcType=BIT},
+        recommend = #{record.recommend,jdbcType=BIT},
+        share_statement = #{record.shareStatement,jdbcType=BIT},
+        title = #{record.title,jdbcType=VARCHAR},
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+        views = #{record.views,jdbcType=INTEGER},
+        type_id = #{record.typeId,jdbcType=BIGINT},
+        user_id = #{record.userId,jdbcType=BIGINT}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.lx.leeblog.pojo.Blog">
+        update t_blog
+        <set>
+            <if test="appreciation != null">
+                appreciation = #{appreciation,jdbcType=BIT},
+            </if>
+            <if test="commentabled != null">
+                commentabled = #{commentabled,jdbcType=BIT},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="description != null">
+                description = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="firstPicture != null">
+                first_picture = #{firstPicture,jdbcType=VARCHAR},
+            </if>
+            <if test="flag != null">
+                flag = #{flag,jdbcType=VARCHAR},
+            </if>
+            <if test="published != null">
+                published = #{published,jdbcType=BIT},
+            </if>
+            <if test="recommend != null">
+                recommend = #{recommend,jdbcType=BIT},
+            </if>
+            <if test="shareStatement != null">
+                share_statement = #{shareStatement,jdbcType=BIT},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="views != null">
+                views = #{views,jdbcType=INTEGER},
+            </if>
+            <if test="typeId != null">
+                type_id = #{typeId,jdbcType=BIGINT},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="content != null">
+                content = #{content,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.lx.leeblog.pojo.Blog">
     update t_blog
     set appreciation = #{appreciation,jdbcType=BIT},
       commentabled = #{commentabled,jdbcType=BIT},
@@ -445,7 +453,7 @@
       content = #{content,jdbcType=LONGVARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.lx.leeblog.pojo.Blog" >
+    <update id="updateByPrimaryKey" parameterType="com.lx.leeblog.pojo.Blog">
     update t_blog
     set appreciation = #{appreciation,jdbcType=BIT},
       commentabled = #{commentabled,jdbcType=BIT},

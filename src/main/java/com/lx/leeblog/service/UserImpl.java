@@ -20,4 +20,9 @@ public class UserImpl implements UserCheck{
     public User checkAdminUser(User user) {
         return userMapper.selectByPrimaryKey(user.getId());
     }
+
+    @Override
+    public User checkNormalUser(User user) {
+        return userMapper.selectByUsername(user.getUsername());
+    }
 }
