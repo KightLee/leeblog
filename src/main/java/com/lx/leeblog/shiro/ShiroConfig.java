@@ -1,5 +1,6 @@
 package com.lx.leeblog.shiro;
 
+import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -28,7 +29,9 @@ public class ShiroConfig {
         Map<String, String> filtermap = new LinkedHashMap<String, String>();
         filtermap.put("/user/loginIndex", "anon");
         filtermap.put("/admin/login", "anon");
+        filtermap.put("/addContent", "perms[content:add]");
         filtermap.put("/*", "authc");
+        filtermap.put("/logout", "logout");
         shiroFilterFactoryBean.setLoginUrl("/");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filtermap);
         return shiroFilterFactoryBean;
