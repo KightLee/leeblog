@@ -27,7 +27,6 @@
         </jdbcConnection>
 
 
-
         <!-- Model模型生成器,用来生成含有主键key的类，记录类 以及查询Example类
             targetPackage     指定生成的model生成所在的包名
             targetProject     指定在该项目下所在的路径
@@ -60,15 +59,16 @@
         <!--<javaClientGenerator type="XMLMAPPER" targetPackage="com.mmall.dao" targetProject=".\src\main\java">-->
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.lx.leeblog.dao" targetProject="./src/main/java">
             <!-- enableSubPackages:是否让schema作为包的后缀 -->
-            <property name="enableSubPackages" value="false" />
+            <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-
-        <table tableName="t_user" domainObjectName="User"></table>
+        <table tableName="role" domainObjectName="Role"></table>
+        <table tableName="permission" domainObjectName="Permission"></table>
+        <!--<table tableName="t_user" domainObjectName="User"></table>
         <table tableName="t_type" domainObjectName="Type"></table>
         <table tableName="t_tag" domainObjectName="Tag"></table>
         <table tableName="t_blog" domainObjectName="Blog"></table>
-        <table tableName="t_comment" domainObjectName="Comment"></table>
+        <table tableName="t_comment" domainObjectName="Comment"></table>-->
 
         <!-- geelynote mybatis插件的搭建 -->
     </context>

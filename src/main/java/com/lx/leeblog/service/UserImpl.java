@@ -25,4 +25,9 @@ public class UserImpl implements UserCheck{
     public User checkNormalUser(User user) {
         return userMapper.selectByUsername(user.getUsername());
     }
+
+    @Override
+    public User checkPermission(String username) {
+        return userMapper.selectPermissionByUsername(username);
+    }
 }

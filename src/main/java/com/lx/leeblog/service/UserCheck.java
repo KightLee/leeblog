@@ -9,4 +9,6 @@ public interface UserCheck {
     public User checkAdminUser(User user);
 
     public User checkNormalUser(User user);
+
+    public User checkPermission(String username);
 }

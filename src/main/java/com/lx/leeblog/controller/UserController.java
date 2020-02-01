@@ -70,4 +70,10 @@ public class UserController {
         }
         return "/user/loginIndex";
     }
+
+    @GetMapping("/test")
+    public String test() {
+        System.out.println("测试授权接口");
+        return "admin/index";
+    }
 }

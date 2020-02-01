@@ -4,6 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias type="com.lx.leeblog.pojo.User" alias="user"/>
+        <package name="com.lx.leeblog.pojo" />
     </typeAliases>
 </configuration>

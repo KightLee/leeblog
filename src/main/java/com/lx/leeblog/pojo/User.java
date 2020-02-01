@@ -1,6 +1,7 @@
 package com.lx.leeblog.pojo;
 
 import java.util.Date;
+import java.util.List;
 
 public class User {
     private Long id;
@@ -20,6 +21,16 @@ public class User {
     private Date updateTime;
 
     private String username;
+
+    List<Permission> permissions;
+
+    public List<Permission> getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(List<Permission> permissions) {
+        this.permissions = permissions;
+    }
 
     public User(Long id, String avatar, Date createTime, String email, String nickname, String password, Integer type, Date updateTime, String username) {
         this.id = id;

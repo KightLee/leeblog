@@ -112,22 +112,23 @@
                 </dependencies>
             </plugin>
         </plugins>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-                <filtering>true</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                </includes>
-                <filtering>true</filtering>
-            </resource>
-        </resources>
+        <!--这个配置用于逆向工程的时候用，不然会和application的datasource冲突-->
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>src/main/java</directory>-->
+<!--                <includes>-->
+<!--                    <include>**/*.xml</include>-->
+<!--                </includes>-->
+<!--                <filtering>true</filtering>-->
+<!--            </resource>-->
+<!--            <resource>-->
+<!--                <directory>src/main/resources</directory>-->
+<!--                <includes>-->
+<!--                    <include>**/*.properties</include>-->
+<!--                    <include>**/*.xml</include>-->
+<!--                </includes>-->
+<!--                <filtering>true</filtering>-->
+<!--            </resource>-->
+<!--        </resources>-->
     </build>
 </project>
