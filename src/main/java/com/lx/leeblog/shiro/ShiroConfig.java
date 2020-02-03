@@ -31,7 +31,7 @@ public class ShiroConfig {
         filtermap.put("/admin/login", "anon");
         filtermap.put("/*", "authc");
         filtermap.put("/user/test", "perms[user]");
-//        filtermap.put("/logout", "logout");
+        filtermap.put("/logout", "logout");
         shiroFilterFactoryBean.setLoginUrl("/");
         shiroFilterFactoryBean.setFilterChainDefinitionMap(filtermap);
         return shiroFilterFactoryBean;

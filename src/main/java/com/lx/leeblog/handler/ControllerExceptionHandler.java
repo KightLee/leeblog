@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * create by @author lixing on 2020/1/27 22:17
- * 记录异常信息
+ * 记录异常信息, 注射异常处理，效果还不如不加
  */
 @ControllerAdvice
 public class ControllerExceptionHandler {

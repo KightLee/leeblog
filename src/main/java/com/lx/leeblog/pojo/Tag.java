@@ -5,9 +5,12 @@ public class Tag {
 
     private String name;
 
-    public Tag(Long id, String name) {
+    private Long tagid;
+
+    public Tag(Long id, String name, Long tagid) {
         this.id = id;
         this.name = name;
+        this.tagid = tagid;
     }
 
     public Tag() {
@@ -28,5 +31,13 @@ public class Tag {
 
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
+    }
+
+    public Long getTagid() {
+        return tagid;
+    }
+
+    public void setTagid(Long tagid) {
+        this.tagid = tagid;
     }
 }

@@ -17,4 +17,9 @@ public class IndexController {
     public String index() {
         return "index";
     }
+
+    @GetMapping("/logout")
+    public String logout() {
+        return "login";
+    }
 }
