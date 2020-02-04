@@ -43,6 +43,14 @@ body {
 .content-right {
 	margin-top: 25px;
 }
-.tag-content {
-	display: block;
+.publish-tag-tab {
+	display: none;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+.publish-tag-tab .label-primary {
+	white-space: normal;
+	margin: 5px 5px;
+	display: inline-block;
 }

@@ -2,14 +2,8 @@ package com.lx.leeblog.controller;
 
 import com.lx.leeblog.dao.TagTypeMapper;
 import com.lx.leeblog.dao.UserMapper;
-import com.lx.leeblog.pojo.Tag;
-import com.lx.leeblog.pojo.TagType;
-import com.lx.leeblog.pojo.Type;
-import com.lx.leeblog.pojo.User;
-import com.lx.leeblog.service.ClientUser;
-import com.lx.leeblog.service.TagService;
-import com.lx.leeblog.service.TagTypeService;
-import com.lx.leeblog.service.TypeService;
+import com.lx.leeblog.pojo.*;
+import com.lx.leeblog.service.*;
 import net.bytebuddy.asm.Advice;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -46,6 +40,9 @@ public class UserController {
 
     @Autowired
     private TagTypeService tagTypeService;
+
+    @Autowired
+    private BlogService blogService;
 
     @GetMapping("loginIndex")
     public String login() {
@@ -106,6 +103,15 @@ public class UserController {
         model.addAttribute("type", types);
         model.addAttribute("tagType", tagTypes);
         return "edit";
+    }
+
+    @PostMapping("/publish")
+    public String publish(Blog blog) {
+        int save = blogService.save(blog);
+        if (save != 0) {
+            return "index";
+        }
+        return null;
     }
     @GetMapping("/test")
     public String test() {

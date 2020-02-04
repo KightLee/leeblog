@@ -5,7 +5,7 @@ import java.util.Date;
 public class Blog {
     private Long id;
 
-    private Boolean appreciation;
+    private String appreciation;
 
     private Boolean commentabled;
 
@@ -19,15 +19,15 @@ public class Blog {
 
     private Boolean published;
 
-    private Boolean recommend;
+    private Long recommend;
 
-    private Boolean shareStatement;
+    private Long shareStatement;
 
     private String title;
 
     private Date updateTime;
 
-    private Integer views;
+    private Long views;
 
     private Long typeId;
 
@@ -35,7 +35,7 @@ public class Blog {
 
     private String content;
 
-    public Blog(Long id, Boolean appreciation, Boolean commentabled, Date createTime, String description, String firstPicture, String flag, Boolean published, Boolean recommend, Boolean shareStatement, String title, Date updateTime, Integer views, Long typeId, Long userId, String content) {
+    public Blog(Long id, String appreciation, Boolean commentabled, Date createTime, String description, String firstPicture, String flag, Boolean published, Long recommend, Long shareStatement, String title, Date updateTime, Long views, Long typeId, Long userId, String content) {
         this.id = id;
         this.appreciation = appreciation;
         this.commentabled = commentabled;
@@ -66,12 +66,12 @@ public class Blog {
         this.id = id;
     }
 
-    public Boolean getAppreciation() {
+    public String getAppreciation() {
         return appreciation;
     }
 
-    public void setAppreciation(Boolean appreciation) {
-        this.appreciation = appreciation;
+    public void setAppreciation(String appreciation) {
+        this.appreciation = appreciation == null ? null : appreciation.trim();
     }
 
     public Boolean getCommentabled() {
@@ -122,19 +122,19 @@ public class Blog {
         this.published = published;
     }
 
-    public Boolean getRecommend() {
+    public Long getRecommend() {
         return recommend;
     }
 
-    public void setRecommend(Boolean recommend) {
+    public void setRecommend(Long recommend) {
         this.recommend = recommend;
     }
 
-    public Boolean getShareStatement() {
+    public Long getShareStatement() {
         return shareStatement;
     }
 
-    public void setShareStatement(Boolean shareStatement) {
+    public void setShareStatement(Long shareStatement) {
         this.shareStatement = shareStatement;
     }
 
@@ -154,11 +154,11 @@ public class Blog {
         this.updateTime = updateTime;
     }
 
-    public Integer getViews() {
+    public Long getViews() {
         return views;
     }
 
-    public void setViews(Integer views) {
+    public void setViews(Long views) {
         this.views = views;
     }
 

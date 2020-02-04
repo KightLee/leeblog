@@ -47,8 +47,7 @@ public class AdminContentImpl implements AdminContent {
 
     @Override
     public List<Blog> selectPageBlogList() {
-        List<Blog> blogs = blogMapper.selectAllBlogList();
-        return blogs;
+        return null;
     }
 
     @Override

@@ -175,52 +175,62 @@ public class BlogExample {
             return (Criteria) this;
         }
 
-        public Criteria andAppreciationEqualTo(Boolean value) {
+        public Criteria andAppreciationEqualTo(String value) {
             addCriterion("appreciation =", value, "appreciation");
             return (Criteria) this;
         }
 
-        public Criteria andAppreciationNotEqualTo(Boolean value) {
+        public Criteria andAppreciationNotEqualTo(String value) {
             addCriterion("appreciation <>", value, "appreciation");
             return (Criteria) this;
         }
 
-        public Criteria andAppreciationGreaterThan(Boolean value) {
+        public Criteria andAppreciationGreaterThan(String value) {
             addCriterion("appreciation >", value, "appreciation");
             return (Criteria) this;
         }
 
-        public Criteria andAppreciationGreaterThanOrEqualTo(Boolean value) {
+        public Criteria andAppreciationGreaterThanOrEqualTo(String value) {
             addCriterion("appreciation >=", value, "appreciation");
             return (Criteria) this;
         }
 
-        public Criteria andAppreciationLessThan(Boolean value) {
+        public Criteria andAppreciationLessThan(String value) {
             addCriterion("appreciation <", value, "appreciation");
             return (Criteria) this;
         }
 
-        public Criteria andAppreciationLessThanOrEqualTo(Boolean value) {
+        public Criteria andAppreciationLessThanOrEqualTo(String value) {
             addCriterion("appreciation <=", value, "appreciation");
             return (Criteria) this;
         }
 
-        public Criteria andAppreciationIn(List<Boolean> values) {
+        public Criteria andAppreciationLike(String value) {
+            addCriterion("appreciation like", value, "appreciation");
+            return (Criteria) this;
+        }
+
+        public Criteria andAppreciationNotLike(String value) {
+            addCriterion("appreciation not like", value, "appreciation");
+            return (Criteria) this;
+        }
+
+        public Criteria andAppreciationIn(List<String> values) {
             addCriterion("appreciation in", values, "appreciation");
             return (Criteria) this;
         }
 
-        public Criteria andAppreciationNotIn(List<Boolean> values) {
+        public Criteria andAppreciationNotIn(List<String> values) {
             addCriterion("appreciation not in", values, "appreciation");
             return (Criteria) this;
         }
 
-        public Criteria andAppreciationBetween(Boolean value1, Boolean value2) {
+        public Criteria andAppreciationBetween(String value1, String value2) {
             addCriterion("appreciation between", value1, value2, "appreciation");
             return (Criteria) this;
         }
 
-        public Criteria andAppreciationNotBetween(Boolean value1, Boolean value2) {
+        public Criteria andAppreciationNotBetween(String value1, String value2) {
             addCriterion("appreciation not between", value1, value2, "appreciation");
             return (Criteria) this;
         }
@@ -625,52 +635,52 @@ public class BlogExample {
             return (Criteria) this;
         }
 
-        public Criteria andRecommendEqualTo(Boolean value) {
+        public Criteria andRecommendEqualTo(Long value) {
             addCriterion("recommend =", value, "recommend");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendNotEqualTo(Boolean value) {
+        public Criteria andRecommendNotEqualTo(Long value) {
             addCriterion("recommend <>", value, "recommend");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendGreaterThan(Boolean value) {
+        public Criteria andRecommendGreaterThan(Long value) {
             addCriterion("recommend >", value, "recommend");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendGreaterThanOrEqualTo(Boolean value) {
+        public Criteria andRecommendGreaterThanOrEqualTo(Long value) {
             addCriterion("recommend >=", value, "recommend");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendLessThan(Boolean value) {
+        public Criteria andRecommendLessThan(Long value) {
             addCriterion("recommend <", value, "recommend");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendLessThanOrEqualTo(Boolean value) {
+        public Criteria andRecommendLessThanOrEqualTo(Long value) {
             addCriterion("recommend <=", value, "recommend");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendIn(List<Boolean> values) {
+        public Criteria andRecommendIn(List<Long> values) {
             addCriterion("recommend in", values, "recommend");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendNotIn(List<Boolean> values) {
+        public Criteria andRecommendNotIn(List<Long> values) {
             addCriterion("recommend not in", values, "recommend");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendBetween(Boolean value1, Boolean value2) {
+        public Criteria andRecommendBetween(Long value1, Long value2) {
             addCriterion("recommend between", value1, value2, "recommend");
             return (Criteria) this;
         }
 
-        public Criteria andRecommendNotBetween(Boolean value1, Boolean value2) {
+        public Criteria andRecommendNotBetween(Long value1, Long value2) {
             addCriterion("recommend not between", value1, value2, "recommend");
             return (Criteria) this;
         }
@@ -685,52 +695,52 @@ public class BlogExample {
             return (Criteria) this;
         }
 
-        public Criteria andShareStatementEqualTo(Boolean value) {
+        public Criteria andShareStatementEqualTo(Long value) {
             addCriterion("share_statement =", value, "shareStatement");
             return (Criteria) this;
         }
 
-        public Criteria andShareStatementNotEqualTo(Boolean value) {
+        public Criteria andShareStatementNotEqualTo(Long value) {
             addCriterion("share_statement <>", value, "shareStatement");
             return (Criteria) this;
         }
 
-        public Criteria andShareStatementGreaterThan(Boolean value) {
+        public Criteria andShareStatementGreaterThan(Long value) {
             addCriterion("share_statement >", value, "shareStatement");
             return (Criteria) this;
         }
 
-        public Criteria andShareStatementGreaterThanOrEqualTo(Boolean value) {
+        public Criteria andShareStatementGreaterThanOrEqualTo(Long value) {
             addCriterion("share_statement >=", value, "shareStatement");
             return (Criteria) this;
         }
 
-        public Criteria andShareStatementLessThan(Boolean value) {
+        public Criteria andShareStatementLessThan(Long value) {
             addCriterion("share_statement <", value, "shareStatement");
             return (Criteria) this;
         }
 
-        public Criteria andShareStatementLessThanOrEqualTo(Boolean value) {
+        public Criteria andShareStatementLessThanOrEqualTo(Long value) {
             addCriterion("share_statement <=", value, "shareStatement");
             return (Criteria) this;
         }
 
-        public Criteria andShareStatementIn(List<Boolean> values) {
+        public Criteria andShareStatementIn(List<Long> values) {
             addCriterion("share_statement in", values, "shareStatement");
             return (Criteria) this;
         }
 
-        public Criteria andShareStatementNotIn(List<Boolean> values) {
+        public Criteria andShareStatementNotIn(List<Long> values) {
             addCriterion("share_statement not in", values, "shareStatement");
             return (Criteria) this;
         }
 
-        public Criteria andShareStatementBetween(Boolean value1, Boolean value2) {
+        public Criteria andShareStatementBetween(Long value1, Long value2) {
             addCriterion("share_statement between", value1, value2, "shareStatement");
             return (Criteria) this;
         }
 
-        public Criteria andShareStatementNotBetween(Boolean value1, Boolean value2) {
+        public Criteria andShareStatementNotBetween(Long value1, Long value2) {
             addCriterion("share_statement not between", value1, value2, "shareStatement");
             return (Criteria) this;
         }
@@ -875,52 +885,52 @@ public class BlogExample {
             return (Criteria) this;
         }
 
-        public Criteria andViewsEqualTo(Integer value) {
+        public Criteria andViewsEqualTo(Long value) {
             addCriterion("views =", value, "views");
             return (Criteria) this;
         }
 
-        public Criteria andViewsNotEqualTo(Integer value) {
+        public Criteria andViewsNotEqualTo(Long value) {
             addCriterion("views <>", value, "views");
             return (Criteria) this;
         }
 
-        public Criteria andViewsGreaterThan(Integer value) {
+        public Criteria andViewsGreaterThan(Long value) {
             addCriterion("views >", value, "views");
             return (Criteria) this;
         }
 
-        public Criteria andViewsGreaterThanOrEqualTo(Integer value) {
+        public Criteria andViewsGreaterThanOrEqualTo(Long value) {
             addCriterion("views >=", value, "views");
             return (Criteria) this;
         }
 
-        public Criteria andViewsLessThan(Integer value) {
+        public Criteria andViewsLessThan(Long value) {
             addCriterion("views <", value, "views");
             return (Criteria) this;
         }
 
-        public Criteria andViewsLessThanOrEqualTo(Integer value) {
+        public Criteria andViewsLessThanOrEqualTo(Long value) {
             addCriterion("views <=", value, "views");
             return (Criteria) this;
         }
 
-        public Criteria andViewsIn(List<Integer> values) {
+        public Criteria andViewsIn(List<Long> values) {
             addCriterion("views in", values, "views");
             return (Criteria) this;
         }
 
-        public Criteria andViewsNotIn(List<Integer> values) {
+        public Criteria andViewsNotIn(List<Long> values) {
             addCriterion("views not in", values, "views");
             return (Criteria) this;
         }
 
-        public Criteria andViewsBetween(Integer value1, Integer value2) {
+        public Criteria andViewsBetween(Long value1, Long value2) {
             addCriterion("views between", value1, value2, "views");
             return (Criteria) this;
         }
 
-        public Criteria andViewsNotBetween(Integer value1, Integer value2) {
+        public Criteria andViewsNotBetween(Long value1, Long value2) {
             addCriterion("views not between", value1, value2, "views");
             return (Criteria) this;
         }

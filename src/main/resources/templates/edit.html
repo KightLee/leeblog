@@ -19,10 +19,15 @@
         <hr class="col-md-12 col-sm-12">
         <h2><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;内容编写</h2>
         <hr class="col-md-12 col-sm-12">
-        <form action="/publish" method="post">
+        <form action="/user/publish" th:action="@{/user/publish}" method="post">
+            <input type="hidden" name="userId" th:value="${session.user.id}">
             <div class="form-group">
                 <label for="title">标题[简明易懂]:</label>
                 <input type="text" class="form-control" name="title" placeholder="输入标题">
+            </div>
+            <div class="form-group">
+                <label for="first">图片[放图片URl链接]:</label>
+                <input type="text" class="form-control" name="firstPicture" placeholder="输入标题">
             </div>
             <!-- markdown编辑 -->
             <div class="form-group" id="md-content" style="z-index: 100;">
@@ -31,76 +36,32 @@
             <hr class="col-md-12 col-sm-12">
             <div class="form-group">
                 <label for="type">选择分类:</label>
-                <select class="form-control">
-                    <option th:each="type : ${types}" th:text="${type.name}" th:data-value="${types.id}"></option>
+                <!--<h1 th:text="${user.username}"></h1> 测试数据回显-->
+                <select class="form-control" name="typeId">
+                    <option th:each="type : ${type}" th:text="${type.name}" th:value="${type.id}"></option>
                 </select>
                 <br>
                 <label for="tag">添加标签:</label>
-                <input type="text" class="form-control" name="tag" placeholder="输入标签">
+                <input type="text" class="form-control" id="tag" name="flag" placeholder="输入标签" onclick="showTag()">
             </div>
             <hr class="col-md-12 col-sm-12">
-            <div class="publish-tag-tab">
+            <div class="publish-tag-tab" id="select-tag" style="display: none">
                 <ul class="nav nav-tabs">
-                    <li role="presentation" class="active"><a href="#bc" data-toggle="tab">编程语言</a></li>
-                    <li role="presentation"><a href="#kj" data-toggle="tab">框架</a></li>
-                    <li role="presentation"><a href="#sjk" data-toggle="tab">数据库</a></li>
-                    <li role="presentation"><a href="#xy" data-toggle="tab">校园</a></li>
-                    <li role="presentation"><a href="#sh" data-toggle="tab">生活</a></li>
-                    <li role="presentation"><a href="#qt" data-toggle="tab">其他</a></li>
+                    <li role="presentation" class="active" th:class="${ttStat.first==true? 'active':''}"
+                        th:each="tagtype,ttStat : ${tagType}">
+                        <a href="#bc" th:href="${'#'+tagtype.id}" data-toggle="tab" th:text="${tagtype.tagtypedesc}">编程语言</a>
+                    </li>
                 </ul>
-                <div class="tag-content" style="position: relative;display: block;height: 100px;">
-                    <div role="tabpanel" class="tab-pane fade in active" id="bc" style="position: absolute;top:15px;">
+                <div class="tag-content">
+                    <div role="tabpanel" id="bc"
+                         th:id="${tt.id}" th:class="${ttStat.first?'tab-pane fade in active':'tab-pane fade'}"
+                         th:each="tt,ttStat : ${tagType}">
 								<span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-								</span>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="sjk" style="position: absolute;top: 5px;">
-								<span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-								</span>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="kj" style="position: absolute;top: 5px;">
-								<span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-								</span>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="xy" style="position: absolute;top: 5px;">
-								<span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-								</span>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="sh" style="position: absolute;top: 5px;">
-								<span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-								</span>
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="qt" style="position: absolute;top: 5px;">
-								<span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
-									<span class="label label-primary">Primary</span>
+									<span class="label label-primary" th:each="tag : ${tt.tags}">
+                                        <span class="glyphicon glyphicon-tags" th:text="${' '+tag.name}"
+                                        th:data-tag="${tag.name}"
+                                        onclick="selectTag(this)"></span>
+                                    </span>
 								</span>
                     </div>
                 </div>
@@ -154,6 +115,20 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
 <script src="../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
 <script>
+    function selectTag(e) {
+        let value = e.getAttribute("data-tag");
+        let previous = $("#tag").val();
+        if (previous.indexOf(value)==-1) {
+            if(previous) {
+                $("#tag").val(previous + ',' + value);
+            }else {
+                $("#tag").val(value);
+            }
+        }
+    }
+    function showTag() {
+        $('#select-tag').show();
+    }
     var contentEditor;
     $(function () {
         contentEditor = editormd("md-content", {

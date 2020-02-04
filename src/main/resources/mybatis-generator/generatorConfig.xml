@@ -45,7 +45,7 @@
 
         <!--mapper映射文件生成所在的目录 为每一个数据库的表生成对应的SqlMap文件 -->
         <!--<sqlMapGenerator targetPackage="mappers" targetProject=".\src\main\resources">-->
-        <sqlMapGenerator targetPackage="mappers" targetProject="./src/main/resources">
+        <sqlMapGenerator targetPackage="mapper" targetProject="./src/main/resources">
             <property name="enableSubPackages" value="false"/>
         </sqlMapGenerator>
 
@@ -62,14 +62,14 @@
             <property name="enableSubPackages" value="false"/>
         </javaClientGenerator>
 
-        <table tableName="t_tag" domainObjectName="Tag"></table>
+        <!--<table tableName="t_tag" domainObjectName="Tag"></table>
         <table tableName="t_tagType" domainObjectName="TagType"></table>
-        <!--<table tableName="t_user" domainObjectName="User"></table>
+        <table tableName="t_user" domainObjectName="User"></table>
         <table tableName="t_type" domainObjectName="Type"></table>
         <table tableName="t_tag" domainObjectName="Tag"></table>
-        <table tableName="t_blog" domainObjectName="Blog"></table>
-        <table tableName="t_comment" domainObjectName="Comment"></table>-->
 
+        <table tableName="t_comment" domainObjectName="Comment"></table>-->
+        <table tableName="t_blog" domainObjectName="Blog"></table>
         <!-- geelynote mybatis插件的搭建 -->
     </context>
 </generatorConfiguration>
