@@ -4,6 +4,7 @@ import com.lx.leeblog.dao.TagTypeMapper;
 import com.lx.leeblog.dao.UserMapper;
 import com.lx.leeblog.pojo.*;
 import com.lx.leeblog.service.*;
+import com.lx.leeblog.util.ErrorCode;
 import net.bytebuddy.asm.Advice;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
@@ -32,19 +33,7 @@ public class UserController {
     @Autowired
     private ClientUser clientUser;
 
-    @Autowired
-    private TypeService typeService;
-
-    @Autowired
-    private TagService tagService;
-
-    @Autowired
-    private TagTypeService tagTypeService;
-
-    @Autowired
-    private BlogService blogService;
-
-    @GetMapping("loginIndex")
+    @GetMapping("/loginIndex")
     public String login() {
         return "login";
     }
@@ -53,7 +42,23 @@ public class UserController {
     public String register() {
         return "register";
     }
+    @Autowired
+    private TypeService typeService;
 
+    @Autowired
+    private TagTypeService tagTypeService;
+
+    @GetMapping("/edit")
+    public String edit(HttpSession session, Model model) {
+        User user = (User) session.getAttribute("user");
+        User u1 = clientUser.selectUserByUsername(user.getUsername());
+        List<Type> types = typeService.selectAllType();
+        List<TagType> tagTypes = tagTypeService.selectTypeAndTag();
+        model.addAttribute("user", u1);
+        model.addAttribute("type", types);
+        model.addAttribute("tagType", tagTypes);
+        return "/edit";
+    }
     /**
      * 网站的注册用户
      *
@@ -93,26 +98,10 @@ public class UserController {
         return "/user/loginIndex";
     }
 
-    @GetMapping("/edit")
-    public String edit(HttpSession session, Model model) {
-        User user = (User) session.getAttribute("user");
-        User u1 = clientUser.selectUserByUsername(user.getUsername());
-        List<Type> types = typeService.selectAllType();
-        List<TagType> tagTypes = tagTypeService.selectTypeAndTag();
-        model.addAttribute("user", u1);
-        model.addAttribute("type", types);
-        model.addAttribute("tagType", tagTypes);
-        return "edit";
-    }
-
-    @PostMapping("/publish")
-    public String publish(Blog blog) {
-        int save = blogService.save(blog);
-        if (save != 0) {
-            return "index";
-        }
-        return null;
-    }
+    /**
+     * 测试权限， 成功就返回index页面
+     * @return
+     */
     @GetMapping("/test")
     public String test() {
         System.out.println("测试授权接口");

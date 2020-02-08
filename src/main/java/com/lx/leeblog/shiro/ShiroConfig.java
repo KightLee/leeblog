@@ -28,8 +28,9 @@ public class ShiroConfig {
          */
         Map<String, String> filtermap = new LinkedHashMap<String, String>();
         filtermap.put("/user/loginIndex", "anon");
-        filtermap.put("/admin/login", "anon");
-        filtermap.put("/*", "authc");
+        filtermap.put("/user/register", "anon");
+        filtermap.put("/user/login", "anon");
+        filtermap.put("/**", "authc");
         filtermap.put("/user/test", "perms[user]");
         filtermap.put("/logout", "logout");
         shiroFilterFactoryBean.setLoginUrl("/");

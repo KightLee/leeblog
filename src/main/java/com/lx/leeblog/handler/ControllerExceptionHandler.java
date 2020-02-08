@@ -1,7 +1,10 @@
 package com.lx.leeblog.handler;
 
+import com.lx.leeblog.util.ErrorCode;
+import com.lx.leeblog.vo.ErrorResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.ui.Model;
 import org.springframework.web.HttpRequestHandler;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -17,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 public class ControllerExceptionHandler {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @ExceptionHandler(Exception.class)
     public ModelAndView exceptionHander(HttpServletRequest request,
                                         Exception e) {
@@ -24,7 +28,7 @@ public class ControllerExceptionHandler {
         ModelAndView mv = new ModelAndView();
         mv.addObject("url", request.getRequestURL());
         mv.addObject("exception", e);
-        mv.setViewName("error/error");
         return mv;
     }
+
 }

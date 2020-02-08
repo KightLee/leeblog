@@ -30,7 +30,7 @@
                 <button type="submit" class="btn btn-default">搜索博客</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" th:href="@{/user/edit}">写博客</a></li>
+                <li><a href="#" th:href="@{/edit}">写博客</a></li>
                 <!-- 跳转登录页, 同时做session判断 -->
                 <li th:if="${session.user}==null" class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"

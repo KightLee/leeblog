@@ -6,6 +6,7 @@ spring:
     password: root
   thymeleaf:
     mode: HTML
+    cache: false
 server:
   port: 8088
 logging:
@@ -22,4 +23,10 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   pageSizeZero: true
+ftp:
+  host: 115.29.241.166
+  port: 21
+  user: lixing
+  password: 123456
+  prefix: http://115.29.241.166/
 

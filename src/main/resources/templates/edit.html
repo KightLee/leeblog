@@ -10,7 +10,6 @@
 <body>
 <nav th:replace="_fragment :: menu" class="navbar navbar-default"
      style="box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);">
-
 </nav>
 <!-- 编辑区域 -->
 <div class="container content">
@@ -19,7 +18,7 @@
         <hr class="col-md-12 col-sm-12">
         <h2><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;内容编写</h2>
         <hr class="col-md-12 col-sm-12">
-        <form action="/user/publish" th:action="@{/user/publish}" method="post">
+        <form action="/publish" th:action="@{/publish}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="userId" th:value="${session.user.id}">
             <div class="form-group">
                 <label for="title">标题[简明易懂]:</label>
@@ -59,12 +58,16 @@
 								<span>
 									<span class="label label-primary" th:each="tag : ${tt.tags}">
                                         <span class="glyphicon glyphicon-tags" th:text="${' '+tag.name}"
-                                        th:data-tag="${tag.name}"
-                                        onclick="selectTag(this)"></span>
+                                              th:data-tag="${tag.name}"
+                                              onclick="selectTag(this)"></span>
                                     </span>
 								</span>
                     </div>
                 </div>
+            </div>
+            <div class="form-group">
+                <label for="two">二维码 (可加不可加) :</label>
+                <input type="file" value="选择二维码" name="appreciation">
             </div>
             <div class="row">
                 <div class="col-md-9"></div>
@@ -118,23 +121,26 @@
     function selectTag(e) {
         let value = e.getAttribute("data-tag");
         let previous = $("#tag").val();
-        if (previous.indexOf(value)==-1) {
-            if(previous) {
+        if (previous.indexOf(value) == -1) {
+            if (previous) {
                 $("#tag").val(previous + ',' + value);
-            }else {
+            } else {
                 $("#tag").val(value);
             }
         }
     }
+
     function showTag() {
         $('#select-tag').show();
     }
+
     var contentEditor;
     $(function () {
         contentEditor = editormd("md-content", {
             width: "100%",
             height: 640,
             syncScrolling: "single",
+            emoji: true,
             // path: "../static/lib/editormd/lib/" 这里巨坑!!!!
             path: "/lib/editormd/lib/"
         });

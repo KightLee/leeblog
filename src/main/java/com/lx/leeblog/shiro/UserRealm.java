@@ -59,8 +59,6 @@ public class UserRealm extends AuthorizingRealm {
      * @return
      * @throws AuthenticationException
      */
-
-
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         System.out.println("认证逻辑测试");
