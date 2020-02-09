@@ -29,7 +29,7 @@ public class AdminContentController {
      *  跳转的页面
      * @return
      */
-    @GetMapping("/blogs-table")
+    @GetMapping("/blogadmin")
     public String blogs() {
         return "admin/blog";
     }

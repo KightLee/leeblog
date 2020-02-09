@@ -40,3 +40,8 @@ body {
 .tiny-title{
 	font-size: 8px;
 }
+.media-object {
+	width: 38px;
+	height: 38px;
+	border-radius: 6px;
+}

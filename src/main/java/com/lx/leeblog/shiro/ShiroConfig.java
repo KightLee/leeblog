@@ -30,6 +30,7 @@ public class ShiroConfig {
         filtermap.put("/user/loginIndex", "anon");
         filtermap.put("/user/register", "anon");
         filtermap.put("/user/login", "anon");
+        filtermap.put("/index", "anon");
         filtermap.put("/**", "authc");
         filtermap.put("/user/test", "perms[user]");
         filtermap.put("/logout", "logout");

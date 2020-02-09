@@ -3,6 +3,8 @@ package com.lx.leeblog.dao;
 import com.lx.leeblog.pojo.Blog;
 import com.lx.leeblog.pojo.BlogExample;
 import java.util.List;
+
+import com.lx.leeblog.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
 public interface BlogMapper {
@@ -19,6 +21,10 @@ public interface BlogMapper {
     List<Blog> selectByExampleWithBLOBs(BlogExample example);
 
     List<Blog> selectByExample(BlogExample example);
+
+    List<Blog> selectAllBlog();
+
+    List<User> selectAllBlogWithUser();
 
     Blog selectByPrimaryKey(Long id);
 

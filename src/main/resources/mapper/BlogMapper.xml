@@ -40,6 +40,17 @@
       <arg column="content" jdbcType="LONGVARCHAR" javaType="java.lang.String" />
     </constructor>
   </resultMap>
+  <resultMap id="ResultMapWithBlogUser" type="User">
+    <id property="id" column="id"/>
+    <result property="avatar" column="avatar" />
+    <collection property="blogs" ofType="Blog">
+      <result property="createTime" column="create_time" />
+      <result property="recommend" column="recommend" />
+      <result property="title" column="title" />
+      <result property="views" column="views" />
+      <result property="userId" column="user_id" />
+    </collection>
+  </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >
@@ -99,11 +110,14 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, appreciation, commentabled, create_time, description, first_picture, flag, published, 
+    id, appreciation, commentabled, create_time, description, first_picture, flag, published,
     recommend, share_statement, title, update_time, views, type_id, user_id
   </sql>
   <sql id="Blob_Column_List" >
     content
+  </sql>
+  <sql id="Blog_User_List">
+    u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id
   </sql>
   <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.lx.leeblog.pojo.BlogExample" >
     select
@@ -135,8 +149,20 @@
       order by ${orderByClause}
     </if>
   </select>
+  <select id="selectAllBlog" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_blog
+  </select>
+  <select id="selectAllBlogWithUser" resultMap="ResultMapWithBlogUser">
+    SELECT <include refid="Blog_User_List" />
+    from t_user u RIGHT JOIN t_blog b
+    on u.id = b.user_id;
+  </select>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
-    select 
+    select
     <include refid="Base_Column_List" />
     ,
     <include refid="Blob_Column_List" />
@@ -154,17 +180,17 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lx.leeblog.pojo.Blog" >
-    insert into t_blog (id, appreciation, commentabled, 
-      create_time, description, first_picture, 
-      flag, published, recommend, 
-      share_statement, title, update_time, 
-      views, type_id, user_id, 
+    insert into t_blog (id, appreciation, commentabled,
+      create_time, description, first_picture,
+      flag, published, recommend,
+      share_statement, title, update_time,
+      views, type_id, user_id,
       content)
-    values (#{id,jdbcType=BIGINT}, #{appreciation,jdbcType=VARCHAR}, #{commentabled,jdbcType=BIT}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{description,jdbcType=VARCHAR}, #{firstPicture,jdbcType=VARCHAR}, 
-      #{flag,jdbcType=VARCHAR}, #{published,jdbcType=BIT}, #{recommend,jdbcType=BIGINT}, 
-      #{shareStatement,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
-      #{views,jdbcType=BIGINT}, #{typeId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT}, 
+    values (#{id,jdbcType=BIGINT}, #{appreciation,jdbcType=VARCHAR}, #{commentabled,jdbcType=BIT},
+      #{createTime,jdbcType=TIMESTAMP}, #{description,jdbcType=VARCHAR}, #{firstPicture,jdbcType=VARCHAR},
+      #{flag,jdbcType=VARCHAR}, #{published,jdbcType=BIT}, #{recommend,jdbcType=BIGINT},
+      #{shareStatement,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP},
+      #{views,jdbcType=BIGINT}, #{typeId,jdbcType=BIGINT}, #{userId,jdbcType=BIGINT},
       #{content,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.lx.leeblog.pojo.Blog" >

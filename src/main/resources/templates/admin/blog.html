@@ -8,7 +8,7 @@
 <body>
 <table class="layui-hide" id="userTable" lay-filter="userTable"></table>
 <div id="toolbarDemo" style="display: none">
-    <button class="layui-btn layui-btn-sm" lay-event="add">新增</button>
+    <!--    <button class="layui-btn layui-btn-sm" lay-event="add">新增</button>-->
     <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="batchDelete">删除</button>
 </div>
 <div id="barDemo" style="display: none">
@@ -18,39 +18,42 @@
 <div id="saveAndUpdateDiv" style="display: none; padding: 20px">
     <form action="" class="layui-form" method="post" lay-filter="datafrm" id="datafrm">
         <div class="layui-inline">
-            <label class="layui-form-label">用户名</label>
+            <label class="layui-form-label">博客标题</label>
             <div class="layui-input-inline">
-                <input type="text" name="username" autocomplete="off" class="layui-input" lay-verify="username">
+                <input type="text" name="title" autocomplete="off" class="layui-input" lay-verify="username">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">密码</label>
+            <label class="layui-form-label">二维码</label>
             <div class="layui-input-inline">
-                <input type="text" name="password" autocomplete="off" class="layui-input">
+                <input type="text" name="appreciation" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">首图</label>
+            <label class="layui-form-label">博客首图</label>
             <div class="layui-input-inline">
-                <input type="text" name="avatar" autocomplete="off" class="layui-input">
+                <input type="text" name="firstPicture" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">邮箱</label>
+            <label class="layui-form-label">博客标签</label>
             <div class="layui-input-inline">
-                <input type="text" name="email" autocomplete="off" class="layui-input">
+                <input type="text" name="flag" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">分类</label>
+            <label class="layui-form-label">是否发布</label>
             <div class="layui-input-inline">
-                <input type="radio" name="type" value="0" title="普通用户">
-                <input type="radio" name="type" value="1" title="注册用户">
+                <input type="radio" name="published" value="0" title="是">
+                <input type="radio" name="published" value="1" title="否">
             </div>
         </div>
+        <input type="hidden" name="userId" /><!--隐藏域， 判断博客的作者-->
         <div class="layui-form-item" style="text-align: center">
             <div class="layui-input-block">
-                <button class="layui-btn layui-icon layui-icon-release" type="button" id="do-update" lay-submit lay-filter="dosubmit">修改</button>
+                <button class="layui-btn layui-icon layui-icon-release" type="button" id="do-update" lay-submit
+                        lay-filter="dosubmit">修改
+                </button>
                 <button class="layui-btn layui-icon layui-icon-refresh" type="reset" id="do-reset">重置</button>
             </div>
         </div>
@@ -58,15 +61,18 @@
 </div>
 
 <script src="../../static/admin/layui.all.js" th:src="@{/admin/layui.all.js}"></script>
+</body>
+</html>
+
 <script>
     layui.use(['jquery', 'layer', 'laypage', 'form', 'table'], function () {
         var $ = layui.jquery;
         var layer = layui.layer;
         var form = layui.form;
         var table = layui.table;
-        table.render({
+        var tableIns = table.render({
             elem: '#userTable'
-            , url: 'http://localhost:8088/admin/users'
+            , url: 'http://localhost:8088/admin/blogs'
             , toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
             , title: '用户数据表'
             , page: true
@@ -74,37 +80,34 @@
             , cols: [
                 [
                     {type: 'checkbox', fixed: 'left'}
-                    , {field: 'id', title: 'ID', width: 80, fixed: 'left', unresize: true, sort: true}
-                    , {field: 'username', title: '用户名', width: 120, align: 'center'}
-                    , {field: 'password', title: '密码', width: 120, align: 'center'}
-                    , {field: 'nickname', title: '昵称', width: 120, align: 'center'}
-                    , {
-                    field: 'email', title: '邮箱', width: 150, templet: function (res) {
-                        return '<em>' + res.email + '</em>';
-                    }
-                }
-                    , {field: 'avatar', title: '首图', width: 150}
-                    , {field: 'type', title: '分类', width: 100}
+                    , {field: 'id', title: '博客ID', width: 100, fixed: 'left', unresize: true, sort: true}
+                    , {field: 'userId', title: '用户ID', width: 80, align: 'center'}
+                    , {field: 'title', title: '博客标题', width: 100, align: 'center'}
+                    , {field: 'appreciation', title: '二维码', width: 120}
+                    , {field: 'firstPicture', title: '首图', width: 120}
+                    , {field: 'flag', title: '博客标签', width: 150}
+                    , {field: 'published', title: '是否发布', width: 100, align: 'center'}
                     , {field: 'createTime', title: '创建时间', width: 120, sort: true}
-                    , {field: 'updateTime', title: '更新时间', width: 120, sort: true}
+                    , {field: 'recommend', title: '点赞数目', width: 120, sort: true}
+                    , {field: 'views', title: '浏览数', width: 120, sort: true}
                     , {fixed: 'right', title: '操作', width: 150, align: 'center', toolbar: '#barDemo'}
                 ]
             ]
         });
         table.on("toolbar(userTable)", function (obj) {
             switch (obj.event) {
-                case
+                /*case
                 'add':
                     // layer.msg('add');
                     openAddUser();
-                    break;
+                    break;*/
                 case
                 'batchDelete':
                     layer.msg('delete');
                     break;
             }
         });
-        /* 监听checkbox*/
+        /* 监听checkbox, 这里获取选中的值*/
         table.on("checkbox(userTable)", function (obj) {
             console.log(obj.checked);
             console.log(obj.data);
@@ -132,43 +135,41 @@
         });
         // 验证
         form.verify({
-            username: function(value, item){ //value：表单的值、item：表单的DOM对象
-                if(!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)){
+            username: function (value, item) { //value：表单的值、item：表单的DOM对象
+                if (!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)) {
                     return '不能有特殊字符';
                 }
-                if(/(^\_)|(\__)|(\_+$)/.test(value)){
+                if (/(^\_)|(\__)|(\_+$)/.test(value)) {
                     return '首尾不能出现下划线\'_\'';
                 }
-                if(/^\d+\d+\d$/.test(value)){
+                if (/^\d+\d+\d$/.test(value)) {
                     return '不能全为数字';
                 }
             }
 
             //我们既支持上述函数式的方式，也支持下述数组的形式
             //数组的两个值分别代表：[正则匹配、匹配不符时的提示文字]
-            ,pass: [
+            , pass: [
                 /^[\S]{6,12}$/
-                ,'密码必须6到12位，且不能出现空格'
+                , '密码必须6到12位，且不能出现空格'
             ]
         });
-        /* 提交表单*/
-        form.on('submit(dosubmit)',function(obj){
-            // alert('ok');
-            // 序列化表单数据
-            var param = $('#datafrm').serialize();
-            alert(param);
-        });
+
+        var url;
+        var mainIndex;
+
         /* 新增功能*/
         function openAddUser() {
             // alert('test');
-            layer.open({
-                type:1,
-                title:'添加用户',
-                content:$("#saveAndUpdateDiv"),
-                area:['800px'],
-                success: function(index) {
+            mainIndex = layer.open({
+                type: 1,
+                title: '添加用户',
+                content: $("#saveAndUpdateDiv"),
+                area: ['800px'],
+                success: function (index) {
                     // 清空表单数据 !!! 记得转jquery对象 js对象
                     $("#datafrm")[0].reset();
+                    url = "http://localhost:8088/admin/useradd";
                 }
                 /*btn:[],
                 yes:function(index, layero){
@@ -180,16 +181,31 @@
                 }*/
             });
         }
+
         /* 编辑功能 */
         function openEditUser(data) {
-            layer.open({
-                type:1,
-                title:'编辑用户',
-                content:$("#saveAndUpdateDiv"),
-                area:['800px'],
-                success: function(index) {
-                    form.val("datafrm", data);
+            mainIndex = layer.open({
+                type: 1,
+                title: '编辑用户',
+                content: $("#saveAndUpdateDiv"),
+                area: ['800px'],
+                success: function (index) {
+                    /*form.val("datafrm", data); ！！！ 大坑 : 如果有部分值要动态修改的话，其他值也得跟着一个个修改*/
+                    /*console.log(data.published);*/
+                    form.val('datafrm',
+                        {
+                            "title" : data.title,
+                            "appreciation" : data.appreciation,
+                            "firstPicture" : data.firstPicture,
+                            "flag" : data.flag,
+                            "userId" : data.userId,
+                            "published": $("input[name='published'][value='0']").attr("checked", data.published == true ? 'checked':''),
+                            "published": $("input[name='published'][value='1']").attr("checked", data.published == false ? 'checked':'')
+                        }
+                    );
+                    url = "http://localhost:8088/admin/blogedit";
                 }
+
                 /*btn:[],
                 yes:function(index, layero){
                     layer.msg('save');
@@ -198,9 +214,23 @@
                     layer.msg('close');
                     return true;
                 }*/
+
             });
         }
+
+        /* 提交表单*/
+        form.on('submit(dosubmit)', function (obj) {
+            // alert(url);
+            // 序列化表单数据
+            var params = $('#datafrm').serialize();
+            $.post(
+                url,
+                params,
+                function (data) {
+                    layer.close(mainIndex);
+                    tableIns.reload();
+                }
+            )
+        });
     });
 </script>
-</body>
-</html>

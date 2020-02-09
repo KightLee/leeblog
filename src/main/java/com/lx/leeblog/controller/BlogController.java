@@ -50,4 +50,9 @@ public class BlogController {
         model.addAttribute("error", errorResponse);
         return "blog";
     }
+
+    @GetMapping("/detail")
+    public String detail() {
+        return "detail";
+    }
 }

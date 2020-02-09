@@ -1,0 +1,36 @@
+html,
+body {
+    /*background: url("https://picsum.photos/id/1045/1920/900");
+    background-size: cover;*/
+}
+.foot-class {
+    height: 150px;
+    color: #F2F2F2;
+    position: relative;
+    bottom: 0;
+    color: #000000;
+    text-align: center;
+}
+
+.foot-class p {
+    color: #000000;
+}
+
+.foot-first:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 130px;
+    background-color: #000000;
+    top: 18px;
+    right: 0;
+}
+.foot-last:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 130px;
+    background-color: #000000;
+    top: 18px;
+    right: 0;
+}
