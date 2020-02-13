@@ -1,16 +1,196 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head th:replace="_fragment :: head(~{::title})">
+<head>
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/blog.css" th:href="@{/css/blog.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/typo.css" th:href="@{/css/typo.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/animate.css" th:href="@{/css/animate.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}"/>
     <title>详情页</title>
 </head>
 <body>
-    <nav th:replace="_fragment :: menu"></nav>
+<nav th:replace="_fragment :: menu"></nav>
+<!--内容-->
+<div class="container js-toc-content content animated fadeInUp">
+    <div class="col-md-8">
+        <h4><span class="ques-title">标题</span></h4>
+        <span class="desc">
+					<small class="panel-title">作者:&nbsp;&nbsp;<font>poke</font> |
+						发布时间: <font>2020-1-18</font> |
+						阅读数: <font>0</font>
+					</small>
+				</span>
+        <hr class="col-md-12">
+        <!-- 内容区域 -->
+        <div id="content" class="typo typo-selection">
+            <p>本文所有引用内容均来自公众号《罗辑思维》万维钢老师的一篇文章《关于刻意练习的清单》，有兴趣的同学可以关注查看，知识含金量很高。
 
-    <footer th:replace="_fragment :: footer"></footer>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+                关注罗胖好久了，很羡慕很钦佩，他的认知和洞察力，他的敏锐和犀利，最重要的是他能够跟身边那么多聪明的人打交道，有一个那么利于成长和学习进步的环境，真是幸福，这种幸福是精神物质双向的幸福，没有一点点遗憾。
+
+                罗振宇的话说就是：学习提升自己的同时还挣着了钱，这是内容创业者的最高境界了吧。不过没关系，罗振宇在我们这个年纪的时候也没出名没创业呢，重要的是坚定自己的方向，不断打磨自己的价值观，精炼自己的选择，然后笃信践行。
+
+                剩下的就交给时间就好了，只要你没有辜负时间，时间就是你最忠实的朋友。只要你踏实陪伴和努力，时间都看在眼里记在心里，终会以某种形式回报给你。若你连自己都欺骗，到时候，时间惩罚起愚蠢可是毫不留情更会变本加厉。
+
+                所以，无论自己遇到了什么境遇，问自己一个问题“最重要的是什么？”。然后，面对，思考，解决，记录。坦然的面对自己，坦然的接受跟自己有关的一切。
+
+                “刻意练习”这个话题，是我在学习领域很感兴趣的一个话题，今天好好聊一下如何刻意？怎样练习？才能真正的把握好刻意练习的精髓，为我们所用。</p>
+            <h2 id="section1">关于</h2>
+            <pre>
+                <code class="language-css">
+						public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificationExecutor<Blog> {
+						    @Query("select t from Blog t where t.recommend = true")
+						    List<Blog>  findTop(Pageable pageable);
+
+						    @Query("select b from Blog b where b.title like ?1 or b.content like ?1")
+						    Page<Blog> findByQuery(String query, Pageable pageable);
+						}
+                </code>
+            </pre>
+            <p>不论在什么行业或领域，提高技能与能力的最有效方法全都遵循一系列普遍原则，就是刻意练习。成为任何领域高手的关键因素不是文化，不是艺术，不是哲学，不是制度，不是自虐，而是刻意练习。
+
+                所以每一个正常人都有成为高手的能力，培不培养这个能力，就得看你是否有想要成为某行业高手的足够强烈的愿望和想法。别干坐着学习方法，太多时候，我们太重视方法而忽略了基本操作的重要性。</p>
+            <h2 id="section2">2</h2>
+            <p>关于刻意练习，被误读最久的一个概念是“一万小时定律”。事实上，想把自己变成高手，光知道“一万小时”毫无意义，因为真正的关键根本不在训练时间，而是训练的方法。
+
+                并不是所有的努力都是有回报的，看不到回报的努力只是“看起来很努力”。别把前一句话当做自己不努力的借口，真正的逻辑是这样的：有效正确的努力的结果，必然会伴随着一些正面的反馈和收获。若没有收到一些正面的反馈，就要反思自己努力的方法是否正确、有效。
+
+                这个过程很重要，所谓“磨刀不误砍柴工”说的就是这个道理，把所有的希望都寄托在自己付出的时间是否足够长；重复的次数是否足够多；是不是一刻不停的在“砍柴”......最终的结果可能只能事倍功半。
+
+                反思的自己方法问题很重要，去分析，去思考，不要总问别人事情该怎么做，你自己的情况自己最清楚，最知道该自己弱项在哪，如何针对其进行刻意训练。不知道该怎么做的大部分人只是不想动手开始做，懒得思考，或者你想做成的愿望并不强烈。
+            </p>
+            <h2 id="section3">3</h2>
+            <p>功夫就在功夫上，“功夫在诗外”就是一句谎言。技能是人脑中的一种硬件结构，是“长”在人脑中的。要高度针对性地重复练习基本功，想要学什么功夫，就应该练什么功夫。
+
+                之前看笑来老师的文章时，当中提到，人是可以通过学习变聪明的。这不是什么鼓励或者励志的话，有科学研究证明，通过学习是可以改变大脑皮层“沟回”厚度，即通过学习你可以改变大脑的本身的构造，这么说，“技能”还真是人脑中的一种硬件结构。</p>
+            <h2>4</h2>
+            <p>心理学家把人的知识和技能分为层层嵌套的三个圆形区域：最内一层是“舒适区”，是我们已经熟练掌握的各种技能；最外一层是“恐慌区”，是我们暂时无法学会的技能；二者中间则是“学习区”。</p>
+
+        </div>
+        <button type="button" class="btn btn-danger" data-toggle="popover" id="good" data-img="../img/wechat.jpg">
+            赞赏
+        </button>
+        <hr class="col-md-12">
+        <!-- 评论区域 -->
+
+    </div>
+
+    <!-- 侧边 -->
+    <div class="col-md-3 col-md-offset-1 content-right">
+        <div class="panel panel-default">
+            <div class="panel-heading">猜你喜欢</div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item"><small>Cras justo odio</small></li>
+                    <li class="list-group-item"><small>Dapibus ac facilisis in</small></li>
+                    <li class="list-group-item"><small>Morbi leo risus</small></li>
+                    <li class="list-group-item"><small>Porta ac consectetur ac</small></li>
+                    <li class="list-group-item"><small>Vestibulum at eros</small></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="m-fixed">
+    <div class="btn-group-vertical" role="group">
+        <button type="button" class="btn btn-success" data-toggle="popover" id="cart">目录</button>
+        <button type="button" class="btn btn-success" id="toComment">评论</button>
+        <button type="button" class="btn btn-success" data-toggle="popover" id="phone">
+            <span class="glyphicon glyphicon-phone"></span>
+        </button>
+        <button id="toTop" type="button" class="btn btn-default">
+            <span class="glyphicon glyphicon-menu-up"></span>
+        </button>
+    </div>
+</div>
+
+<footer th:replace="_fragment :: footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+<script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+<script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
+<!--<script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>-->
+<script>
+    /* 监听鼠标进行初始化， 不然报错且数据混乱*/
+    $("#cart").popover({
+        trigger:'manual',
+        html:true,
+        content: '<ol class="js-toc"></ol>',
+        animation: false,
+        placement: 'left'
+    }).on('mouseenter', function(){
+        var self = this;
+        $(this).popover("show");
+        /* 初始化目录*/
+        tocbot.init({
+            // Where to render the table of contents.
+            tocSelector: '.js-toc',
+            // Where to grab the headings to build the table of contents.
+            contentSelector: '.js-toc-content',
+            // Which headings to grab inside of the contentSelector element.
+            headingSelector: 'h1, h2, h3',
+            // For headings inside relative or absolute positioned containers within content.
+            hasInnerContainers: true,
+        });
+        $(this).siblings(".popover").on("mouseleave", function () {
+            $(self).popover('hide');
+        });
+    }).on('mouseleave', function(){
+        var self = this;
+        setTimeout(function () {
+            if (!$(".popover:hover").length) {
+                $(self).popover("hide")
+            }
+        }, 100);
+    });
+
+    /* 手机访问*/
+    $("#phone").popover({
+        trigger:'manual',
+        html:true,
+        content: '<div id="qrcode" style="width: 160px; height: 160px;"></div>',
+        animation: false,
+        placement: 'left'
+    }).on('mouseenter', function(){
+        var self = this;
+        $(this).popover("show");
+        /* 二维码生成*/
+        $('#qrcode').qrcode({
+            render: 'canvas',
+            text: "http://www.baidu.com", // 后期换了服务器地址
+            width: 160,
+            height: 160,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : 0
+        });
+        $(this).siblings(".popover").on("mouseleave", function () {
+            $(self).popover('hide');
+        });
+    }).on('mouseleave', function(){
+        var self = this;
+        setTimeout(function () {
+            if (!$(".popover:hover").length) {
+                $(self).popover("hide")
+            }
+        }, 100);
+    });
+
+    $('#toTop').click(function(){
+        $(window).scrollTo(0, 800);
+    });
+
+    /* 获取后台的图片地址拼接到img中*/
+    const imgurl = $("#good").data('img');
+    $("#good").popover({
+        trigger:'hover',
+        html:true,
+        content:'<img src="'+imgurl+'"'+'style="width: 100px;height: 100px;border-radius: 10%;"/>'
+    });
+</script>
 </body>
 </html>

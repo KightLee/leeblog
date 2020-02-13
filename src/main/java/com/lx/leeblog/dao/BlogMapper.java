@@ -26,6 +26,8 @@ public interface BlogMapper {
 
     List<User> selectAllBlogWithUser();
 
+    List<User> selectAllBlogWithUserAndTagName(String tag);
+
     Blog selectByPrimaryKey(Long id);
 
     int updateByExampleSelective(@Param("record") Blog record, @Param("example") BlogExample example);

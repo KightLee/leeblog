@@ -1,7 +1,7 @@
 html,
 body {
-	/*background: url("https://picsum.photos/id/1045/1920/900");
-	background-size: cover;*/
+	background: url("https://picsum.photos/id/1077/1920/900");
+	background-size: cover;
 }
 .foot-class {
 	height: 150px;
@@ -44,4 +44,22 @@ body {
 	width: 38px;
 	height: 38px;
 	border-radius: 6px;
+}
+.blog-tag {
+	text-decoration-line: none;
+	cursor: pointer;
+	display: inline-block;
+	height: 20px;
+	line-height: 16px;
+	padding: 2px 5px;
+	background-color: #99cfff;
+	font-size: 12px;
+	color: #fff !important;
+	border-radius: 4px;
+	margin: 4px;
+}
+.blog-tag:hover {
+	background-color: #339dff;
+	color: #fff !important;
+	text-decoration-line: none;
 }

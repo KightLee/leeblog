@@ -18,6 +18,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpSession;
 import java.util.Date;
@@ -38,7 +39,7 @@ public class UserController {
         return "login";
     }
 
-    @GetMapping("/register")
+    @GetMapping("/registerAdd")
     public String register() {
         return "register";
     }
@@ -67,8 +68,6 @@ public class UserController {
      */
     @PostMapping("/register")
     public String register(User user) {
-        user.setCreateTime(new Date());
-        user.setType(1);
         clientUser.addUser(user);
         return "login_user";
     }
@@ -105,6 +104,15 @@ public class UserController {
     @GetMapping("/test")
     public String test() {
         System.out.println("测试授权接口");
-        return "admin/index";
+        return "redirect:/publish";
+    }
+
+    @GetMapping("/logout")
+    public String logout(RedirectAttributes redirectAttributes) {
+        Subject subject = SecurityUtils.getSubject();
+        if (subject.isAuthenticated()) {
+            subject.logout();
+        }
+        return "redirect:/index";
     }
 }

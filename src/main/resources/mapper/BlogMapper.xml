@@ -161,6 +161,11 @@
     from t_user u RIGHT JOIN t_blog b
     on u.id = b.user_id;
   </select>
+  <select id="selectAllBlogWithUserAndTagName" parameterType="string" resultMap="ResultMapWithBlogUser">
+    SELECT <include refid="Blog_User_List" />
+    from t_user u RIGHT JOIN t_blog b
+    on u.id = b.user_id where b.flag LIKE #{tag}
+  </select>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
     select
     <include refid="Base_Column_List" />

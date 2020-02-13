@@ -11,4 +11,5 @@ import java.util.List;
 public interface BlogService {
     public int save(Blog blog);
     public List<User> selectAllBlog();
+    public List<User> selectBlogByTagId(String tag);
 }

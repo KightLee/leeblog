@@ -1,7 +1,6 @@
 html,
 body {
-	background-color: #EFEFEF;
-	background-size: cover;
+	background: url("../img/gaming-pattern.png");
 }
 
 .foot-class {
@@ -60,4 +59,12 @@ body {
 }
 .content-right {
 	margin-top: 25px;
+}
+/* 小导航的定位 */
+.m-fixed {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	padding: 1em;
 }

@@ -33,4 +33,13 @@ public class BlogServiceImpl implements BlogService {
         List<User> blogs = blogMapper.selectAllBlogWithUser();
         return blogs;
     }
+
+    @Override
+    public List<User> selectBlogByTagId(String tag) {
+        List<User> users = blogMapper.selectAllBlogWithUserAndTagName('%'+tag+'%');
+        if (users.size() == 0) {
+            users = blogMapper.selectAllBlogWithUser();
+        }
+        return users;
+    }
 }

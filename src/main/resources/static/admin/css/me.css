@@ -1,7 +1,6 @@
 .layui-layout-body{
-	width: 100%;
-	height: 50px;
-	background-color: #e8e8e8;
+	/*width: 100%;
+	height: 50px;*/
 }
 .header{
 	position: fixed;
@@ -10,7 +9,7 @@
 	width: 100%;
 	height: 60px;
 	background-color: #393d49;
-	z-index: 6;
+	z-index: 100;
 }
 .layui-logo{
 	height: 50px;
@@ -31,8 +30,8 @@
 }
 /* 变白后字体颜色搞黑 */
 .layui-layout-admin .header .layui-nav .layui-nav-item a {
-	
-} 
+
+}
 /* header阴影 */
 .layui-layout-admin .header {
 	border-bottom: none;
@@ -44,7 +43,7 @@
 	width: 100%;
 	height: 100%;
 	left: 0;
-	top: 0;
+	top: 0px;
 	right: 0;
 	bottom: 0
 }
@@ -53,7 +52,6 @@
 }
 .layui-layout-admin .layui-body {
 	position: fixed;
-	top: 60px;
-	bottom: 0;
-	z-index: 1;
+	top: 50px;
+	z-index: -1;
 }

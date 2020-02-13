@@ -16,4 +16,6 @@ public interface AdminContent {
     List<Blog> selectPageBlogList();
     List<User> selectPageList();
     Integer selectPageCount();
+    int updateBlogByUserId(Blog blog);
+    int deleteBlogById(Integer[] ids);
 }

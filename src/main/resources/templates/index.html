@@ -41,7 +41,7 @@
                             <a href="https://github.com/login/oauth/authorize?client_id=94c859cbf53a5eed0642&redirect_uri=http://localhost:8088/callback&scope=user&state=1">Github登录</a>
                         </li>
                         <li><a href="#" th:href="@{/user/loginIndex}">登录</a></li>
-                        <li><a href="#" th:href="@{/user/register}">注册</a></li>
+                        <li><a href="#" th:href="@{/user/registerAdd}">注册</a></li>
                     </ul>
                 </li>
                 <li th:if="${session.user}!=null" class="dropdown">
@@ -74,7 +74,7 @@
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3><span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;BLOG</h3>
+                    <h3><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;BLOG</h3>
                     <ul class="nav nav-tabs">
                         <li role="presentation" class="active"><a href="#">主页</a></li>
                     </ul>
@@ -109,27 +109,24 @@
                             </span>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
         <!-- 右列 -->
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
             <div class="panel panel-default">
-                <div class="panel-heading">标签</div>
                 <div class="panel-body">
-                    Panel content
+                    <h4>标签</h4>
+                    <hr>
+                    <a th:href="@{'/indextag?tag='+${tag.name}}" class="blog-tag" th:each="tag : ${tags}" th:text="${tag.name}">user</a>
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading">分类</div>
                 <div class="panel-body">
+                    <h4>分类</h4>
+                    <hr>
                     <ul class="list-group">
-                        <li class="list-group-item">技术</li>
-                        <li class="list-group-item">学习</li>
-                        <li class="list-group-item">生活</li>
-                        <li class="list-group-item">生活</li>
-                        <li class="list-group-item">校园</li>
+                        <li class="list-group-item" th:each="type : ${types}" th:text="${type.name}" th:href="${type.id}">技术</li>
                     </ul>
                 </div>
             </div>

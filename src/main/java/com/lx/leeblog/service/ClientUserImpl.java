@@ -5,6 +5,7 @@ import com.lx.leeblog.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -18,8 +19,16 @@ public class ClientUserImpl implements ClientUser {
 
     @Override
     public Integer addUser(User user) {
-        int state = userMapper.insert(user);
-        return state;
+        user.setCreateTime(new Date());
+        String email = user.getEmail();
+        if (email != null) {
+            user.setType(1);
+        } else {
+            user.setType(0);
+        }
+        int id = userMapper.insert(user);
+
+        return id == 0?1:0;
     }
 
     @Override

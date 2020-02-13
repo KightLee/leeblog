@@ -44,11 +44,11 @@
         <div class="layui-inline">
             <label class="layui-form-label">是否发布</label>
             <div class="layui-input-inline">
-                <input type="radio" name="published" value="0" title="是">
-                <input type="radio" name="published" value="1" title="否">
+                <input type="radio" name="published" value="1" title="是">
+                <input type="radio" name="published" value="0" title="否">
             </div>
         </div>
-        <input type="hidden" name="userId" /><!--隐藏域， 判断博客的作者-->
+        <input type="hidden" name="id"/><!--隐藏域， 判断博客的作者-->
         <div class="layui-form-item" style="text-align: center">
             <div class="layui-input-block">
                 <button class="layui-btn layui-icon layui-icon-release" type="button" id="do-update" lay-submit
@@ -103,16 +103,50 @@
                     break;*/
                 case
                 'batchDelete':
-                    layer.msg('delete');
+                    deleteSelect();
                     break;
             }
         });
+        var deleteArr = [];
         /* 监听checkbox, 这里获取选中的值*/
         table.on("checkbox(userTable)", function (obj) {
-            console.log(obj.checked);
+            /*console.log(obj.checked);
             console.log(obj.data);
-            console.log(obj.type);
+            console.log(obj.type);*/
+            if (obj.type == "one") {
+                if (obj.checked) {
+                    deleteArr.push(obj.data.id);
+                    /*var b = JSON.stringify(deleteArr)
+                    console.log($.type(b));*/
+                } else {
+                    deleteArr.splice($.inArray(obj.data.id, deleteArr), 1);
+                    console.log(deleteArr);
+                }
+            } else {
+                layer.msg('不允许一次性清空数据库!');
+            }
         });
+
+        function deleteSelect() {
+            var arrdel = JSON.stringify(deleteArr);
+            $.ajax({
+                type: "post",
+                url: "http://localhost:8088/admin/blogdelete",
+                dataType: "JSON",
+                contentType: "application/json",
+                data : JSON.stringify(deleteArr),
+                success: function (data) {
+                    alert(data);
+                    if (data == 1) {
+                        layer.msg('删除成功');
+                        tableIns.reload();
+                    } else {
+                        layer.msg('删除失败');
+                    }
+                }
+            });
+        }
+
         /* 监听工具栏*/
         table.on('tool(userTable)', function (obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
             var data = obj.data; //获得当前行数据
@@ -133,54 +167,9 @@
                 openEditUser(data);
             }
         });
-        // 验证
-        form.verify({
-            username: function (value, item) { //value：表单的值、item：表单的DOM对象
-                if (!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)) {
-                    return '不能有特殊字符';
-                }
-                if (/(^\_)|(\__)|(\_+$)/.test(value)) {
-                    return '首尾不能出现下划线\'_\'';
-                }
-                if (/^\d+\d+\d$/.test(value)) {
-                    return '不能全为数字';
-                }
-            }
-
-            //我们既支持上述函数式的方式，也支持下述数组的形式
-            //数组的两个值分别代表：[正则匹配、匹配不符时的提示文字]
-            , pass: [
-                /^[\S]{6,12}$/
-                , '密码必须6到12位，且不能出现空格'
-            ]
-        });
 
         var url;
         var mainIndex;
-
-        /* 新增功能*/
-        function openAddUser() {
-            // alert('test');
-            mainIndex = layer.open({
-                type: 1,
-                title: '添加用户',
-                content: $("#saveAndUpdateDiv"),
-                area: ['800px'],
-                success: function (index) {
-                    // 清空表单数据 !!! 记得转jquery对象 js对象
-                    $("#datafrm")[0].reset();
-                    url = "http://localhost:8088/admin/useradd";
-                }
-                /*btn:[],
-                yes:function(index, layero){
-                    layer.msg('save');
-                },
-                btn2:function(index, layero){
-                    layer.msg('close');
-                    return true;
-                }*/
-            });
-        }
 
         /* 编辑功能 */
         function openEditUser(data) {
@@ -194,13 +183,13 @@
                     /*console.log(data.published);*/
                     form.val('datafrm',
                         {
-                            "title" : data.title,
-                            "appreciation" : data.appreciation,
-                            "firstPicture" : data.firstPicture,
-                            "flag" : data.flag,
-                            "userId" : data.userId,
-                            "published": $("input[name='published'][value='0']").attr("checked", data.published == true ? 'checked':''),
-                            "published": $("input[name='published'][value='1']").attr("checked", data.published == false ? 'checked':'')
+                            "title": data.title,
+                            "appreciation": data.appreciation,
+                            "firstPicture": data.firstPicture,
+                            "flag": data.flag,
+                            "id": data.id,/*   设置input用prop ， attr巨坑！！！*/
+                            "published": $("input[name='published'][value='1']").prop("checked", data.published == true ? true : false),
+                            "published": $("input[name='published'][value='0']").prop("checked", data.published == false ? true : false)
                         }
                     );
                     url = "http://localhost:8088/admin/blogedit";
@@ -227,6 +216,12 @@
                 url,
                 params,
                 function (data) {
+                    // alert(data);
+                    if (data == 1) {
+                        layer.msg('更新成功');
+                    } else {
+                        layer.msg('更新失败');
+                    }
                     layer.close(mainIndex);
                     tableIns.reload();
                 }
