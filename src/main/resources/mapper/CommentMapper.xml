@@ -11,7 +11,24 @@
       <arg column="nickname" jdbcType="VARCHAR" javaType="java.lang.String" />
       <arg column="blog_id" jdbcType="BIGINT" javaType="java.lang.Long" />
       <arg column="parent_comment_id" jdbcType="BIGINT" javaType="java.lang.Long" />
+      <arg column="like_count" jdbcType="BIGINT" javaType="java.lang.Long" />
     </constructor>
+  </resultMap>
+  <!--!!! 二级的列名一定要起别名！！-->
+  <resultMap id="ParentResultMap" type="Comment">
+    <id property="id" column="id" />
+    <result property="avatar" column="avatar"/>
+    <result property="content" column="content"/>
+    <result property="createTime" column="create_time"/>
+    <result property="nickname" column="nickname"/>
+    <result property="likeCount" column="like_count"/>
+    <collection property="commentList" ofType="Comment">
+      <result property="avatar" column="cavatar"/>
+      <result property="content" column="ccontent"/>
+      <result property="createTime" column="ccreate_time"/>
+      <result property="nickname" column="cnickname"/>
+      <result property="likeCount" column="clike_count"/>
+    </collection>
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -72,7 +89,11 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, avatar, content, create_time, email, nickname, blog_id, parent_comment_id
+    id, avatar, content, create_time, email, nickname, blog_id, parent_comment_id, like_count
+  </sql>
+  <sql id="parentwithComment_List" >
+    t1.id, t1.avatar, t1.content, t1.create_time, t1.nickname, t1.like_count,
+    t2.avatar as cavatar, t2.content as ccontent, t2.create_time as ccreate_time, t2.nickname as cnickname, t2.like_count as clike_count
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.lx.leeblog.pojo.CommentExample" >
     select
@@ -88,8 +109,24 @@
       order by ${orderByClause}
     </if>
   </select>
+  <select id="selectAllComment" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from t_comment
+  </select>
+  <select id="selectCommentByUserBlogId" resultMap="ParentResultMap">
+     select
+     /*t1.id, t1.avatar, t1.content, t1.create_time, t1.nickname, t1.like_count,
+     t2.id as pid, t2.avatar, t2.content, t2.create_time, t2.nickname, t2.like_count */
+     <include refid="parentwithComment_List" />
+     from t_comment t1
+     LEFT JOIN t_comment t2 on t1.id = t2.parent_comment_id
+ 	 where t1.id NOT in
+ 	 (select t3.id from t_comment t3 INNER JOIN t_comment t1 on t3.parent_comment_id = t1.id)
+	 and t1.blog_id = #{id,jdbcType=BIGINT}
+  </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from t_comment
     where id = #{id,jdbcType=BIGINT}
@@ -105,12 +142,14 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.lx.leeblog.pojo.Comment" >
-    insert into t_comment (id, avatar, content, 
-      create_time, email, nickname, 
-      blog_id, parent_comment_id)
-    values (#{id,jdbcType=BIGINT}, #{avatar,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{email,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, 
-      #{blogId,jdbcType=BIGINT}, #{parentCommentId,jdbcType=BIGINT})
+    insert into t_comment (id, avatar, content,
+      create_time, email, nickname,
+      blog_id, parent_comment_id, like_count
+      )
+    values (#{id,jdbcType=BIGINT}, #{avatar,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR},
+      #{createTime,jdbcType=TIMESTAMP}, #{email,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR},
+      #{blogId,jdbcType=BIGINT}, #{parentCommentId,jdbcType=BIGINT}, #{likeCount,jdbcType=BIGINT}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.lx.leeblog.pojo.Comment" >
     insert into t_comment
@@ -139,6 +178,9 @@
       <if test="parentCommentId != null" >
         parent_comment_id,
       </if>
+      <if test="likeCount != null" >
+        like_count,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -164,6 +206,9 @@
       </if>
       <if test="parentCommentId != null" >
         #{parentCommentId,jdbcType=BIGINT},
+      </if>
+      <if test="likeCount != null" >
+        #{likeCount,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>
@@ -200,6 +245,9 @@
       <if test="record.parentCommentId != null" >
         parent_comment_id = #{record.parentCommentId,jdbcType=BIGINT},
       </if>
+      <if test="record.likeCount != null" >
+        like_count = #{record.likeCount,jdbcType=BIGINT},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -214,7 +262,8 @@
       email = #{record.email,jdbcType=VARCHAR},
       nickname = #{record.nickname,jdbcType=VARCHAR},
       blog_id = #{record.blogId,jdbcType=BIGINT},
-      parent_comment_id = #{record.parentCommentId,jdbcType=BIGINT}
+      parent_comment_id = #{record.parentCommentId,jdbcType=BIGINT},
+      like_count = #{record.likeCount,jdbcType=BIGINT}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -243,6 +292,9 @@
       <if test="parentCommentId != null" >
         parent_comment_id = #{parentCommentId,jdbcType=BIGINT},
       </if>
+      <if test="likeCount != null" >
+        like_count = #{likeCount,jdbcType=BIGINT},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
@@ -254,7 +306,8 @@
       email = #{email,jdbcType=VARCHAR},
       nickname = #{nickname,jdbcType=VARCHAR},
       blog_id = #{blogId,jdbcType=BIGINT},
-      parent_comment_id = #{parentCommentId,jdbcType=BIGINT}
+      parent_comment_id = #{parentCommentId,jdbcType=BIGINT},
+      like_count = #{likeCount,jdbcType=BIGINT}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

@@ -5,6 +5,7 @@
     <title>首页</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../static/css/me.css" th:href="@{/css/me.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/animate.css" th:href="@{/css/animate.css}"/>
 </head>
 <body>
 <nav th:replace="_fragment :: menu" class="navbar navbar-default"
@@ -68,21 +69,21 @@
     <p th:text="${error}"></p>
 </div>-->
 
-<div class="container">
+<div class="container animated fadeIn">
     <div class="row">
         <!-- 左列 -->
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;BLOG</h3>
+                    <h3>BLOG</h3>
                     <ul class="nav nav-tabs">
-                        <li role="presentation" class="active"><a href="#">主页</a></li>
+                        <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
                     </ul>
                 </div>
                 <!-- 内容-->
                 <div class="panel-body">
                     <!-- 缩略列表-->
-                    <div class="media" th:each="blog : ${blogs}">
+                    <div class="media" th:each="blog : ${blogs}" style="margin: 25px">
                         <div class="media-left media-middle">
                             <a href="#">
                                 <img class="media-object" src="https://picsum.photos/id/1006/38/38"
@@ -91,7 +92,9 @@
                             </a>
                         </div>
                         <div class="media-body">
-                            <h4 class="media-heading head-title" th:text="${blog.title}">博客标题测试。。。。</h4>
+                            <h4 class="media-heading head-title">
+                                <a href="" th:href="@{'/detail?blogid='+${blog.id}}" th:text="${blog.title}">博客标题测试。。。。</a>
+                            </h4>
                             <span class="tiny-title">
                                 <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
                                 创建时间

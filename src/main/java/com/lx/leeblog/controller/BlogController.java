@@ -27,6 +27,15 @@ public class BlogController {
     @Autowired
     private FileService fileService;
 
+    @Autowired
+    private ClientUser clientUser;
+
+    @Autowired
+    private TypeService typeService;
+
+    @Autowired
+    private CommentService commentService;
+
     /**
      * 接受带文件的参数，存储后拿到文件的位置存入数据库
      * @param blogFIle
@@ -51,8 +60,32 @@ public class BlogController {
         return "/user/edit";
     }
 
-    @GetMapping("/detail")
+    /**
+     * 详情页测试
+     * @return
+     */
+    @GetMapping("/detailtest")
     public String detail() {
+        return "detailtest";
+    }
+
+    /**
+     * 详情页
+     * @param blogid
+     * @return
+     */
+    @GetMapping("/detail")
+    public String detail(Long blogid, Model model) {
+        Blog blog = blogService.selectBlogByBlogId(blogid);
+        Long userId = blog.getUserId();
+        Long typeId = blog.getTypeId();
+        User user1 = clientUser.selectUserByUserId(userId);
+        Type type = typeService.selectTypeByTypeId(typeId);
+        List<Comment> comments = commentService.findAllCommentByUserBlogId(blogid);
+        model.addAttribute("blog", blog);
+        model.addAttribute("comm", comments);
+        model.addAttribute("bloguser", user1);
+        model.addAttribute("blogtype", type);
         return "detail";
     }
 }

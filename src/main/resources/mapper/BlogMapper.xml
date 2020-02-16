@@ -44,6 +44,7 @@
     <id property="id" column="id"/>
     <result property="avatar" column="avatar" />
     <collection property="blogs" ofType="Blog">
+      <id property="id" column="bid"/>
       <result property="createTime" column="create_time" />
       <result property="recommend" column="recommend" />
       <result property="title" column="title" />
@@ -117,7 +118,7 @@
     content
   </sql>
   <sql id="Blog_User_List">
-    u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id
+    u.id, u.avatar, b.create_time, b.id as bid, b.recommend, b.title, b.views, b.user_id
   </sql>
   <select id="selectByExampleWithBLOBs" resultMap="ResultMapWithBLOBs" parameterType="com.lx.leeblog.pojo.BlogExample" >
     select

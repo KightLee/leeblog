@@ -1,7 +1,9 @@
 package com.lx.leeblog.service;
 
+import com.lx.leeblog.dao.BlogMapper;
 import com.lx.leeblog.pojo.Blog;
 import com.lx.leeblog.pojo.User;
+import com.lx.leeblog.vo.BlogVo;
 
 import java.util.List;
 
@@ -12,4 +14,5 @@ public interface BlogService {
     public int save(Blog blog);
     public List<User> selectAllBlog();
     public List<User> selectBlogByTagId(String tag);
+    public Blog selectBlogByBlogId(Long id);
 }

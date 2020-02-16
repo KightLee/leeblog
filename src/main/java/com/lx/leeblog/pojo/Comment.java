@@ -1,6 +1,7 @@
 package com.lx.leeblog.pojo;
 
 import java.util.Date;
+import java.util.List;
 
 public class Comment {
     private Long id;
@@ -19,7 +20,19 @@ public class Comment {
 
     private Long parentCommentId;
 
-    public Comment(Long id, String avatar, String content, Date createTime, String email, String nickname, Long blogId, Long parentCommentId) {
+    private Long likeCount;
+
+    private List<Comment> commentList;
+
+    public List<Comment> getCommentList() {
+        return commentList;
+    }
+
+    public void setCommentList(List<Comment> commentList) {
+        this.commentList = commentList;
+    }
+
+    public Comment(Long id, String avatar, String content, Date createTime, String email, String nickname, Long blogId, Long parentCommentId, Long likeCount) {
         this.id = id;
         this.avatar = avatar;
         this.content = content;
@@ -28,6 +41,7 @@ public class Comment {
         this.nickname = nickname;
         this.blogId = blogId;
         this.parentCommentId = parentCommentId;
+        this.likeCount = likeCount;
     }
 
     public Comment() {
@@ -96,5 +110,13 @@ public class Comment {
 
     public void setParentCommentId(Long parentCommentId) {
         this.parentCommentId = parentCommentId;
+    }
+
+    public Long getLikeCount() {
+        return likeCount;
+    }
+
+    public void setLikeCount(Long likeCount) {
+        this.likeCount = likeCount;
     }
 }

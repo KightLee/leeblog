@@ -1,0 +1,1537 @@
+2020-02-13 18:27:46.698  INFO 10496 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 10496 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 18:27:46.704 DEBUG 10496 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 18:27:46.704  INFO 10496 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 18:27:50.159  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$69f274da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:50.175  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:50.244  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:50.259  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b188f264] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:50.259  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:50.275  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:50.297  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:50.313  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:51.099  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:51.115  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:51.115  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:51.115  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:51.115  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:51.115  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:51.632  INFO 10496 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:27:52.001  INFO 10496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 18:27:52.017  INFO 10496 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 18:27:52.017  INFO 10496 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 18:27:52.402  INFO 10496 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 18:27:52.402  INFO 10496 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5566 ms
+2020-02-13 18:27:52.681  INFO 10496 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 18:27:52.835  INFO 10496 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 18:27:53.104  INFO 10496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 18:27:53.104  INFO 10496 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 7.533 seconds (JVM running for 10.327)
+2020-02-13 18:28:41.763  INFO 3320 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 3320 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 18:28:41.779 DEBUG 3320 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 18:28:41.779  INFO 3320 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 18:28:43.390  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$49015086] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:43.406  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:43.547  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:43.562  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$9097ce10] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:43.578  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:43.593  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:43.640  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:43.656  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:44.418  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:44.418  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:44.434  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:44.434  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:44.434  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:44.434  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:45.012  INFO 3320 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:28:45.699  INFO 3320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 18:28:45.715  INFO 3320 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 18:28:45.715  INFO 3320 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 18:28:45.902  INFO 3320 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 18:28:45.902  INFO 3320 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4014 ms
+2020-02-13 18:28:46.309  INFO 3320 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 18:28:46.418  INFO 3320 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 18:28:46.715  INFO 3320 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 18:28:46.715  INFO 3320 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.963 seconds (JVM running for 7.278)
+2020-02-13 18:29:00.043  INFO 3320 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 18:29:00.043  INFO 3320 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 18:29:00.051  INFO 3320 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-02-13 18:29:00.150  INFO 3320 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 18:29:00.336  INFO 3320 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 18:29:00.345 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 18:29:00.375 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 18:29:00.507 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 18:29:00.518 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:29:00.519 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:29:00.576 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:29:00.577 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 18:29:00.578 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 18:29:00.588 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 18:29:03.248 DEBUG 3320 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 18:29:03.249 DEBUG 3320 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 18:29:03.262 DEBUG 3320 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 18:29:03.269 DEBUG 3320 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:29:03.269 DEBUG 3320 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:29:03.280 DEBUG 3320 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:29:03.281 DEBUG 3320 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 18:29:03.282 DEBUG 3320 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 18:29:03.284 DEBUG 3320 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 18:29:04.340 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 18:29:04.340 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 18:29:04.343 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 18:29:04.344 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:29:04.345 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:29:04.346 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:29:04.347 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 18:29:04.347 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 18:29:04.348 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 18:29:04.991 DEBUG 3320 --- [http-nio-8088-exec-9] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 18:29:04.992 DEBUG 3320 --- [http-nio-8088-exec-9] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 18:29:04.997 DEBUG 3320 --- [http-nio-8088-exec-9] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 18:29:04.998 DEBUG 3320 --- [http-nio-8088-exec-9] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:29:04.998 DEBUG 3320 --- [http-nio-8088-exec-9] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:29:05.000 DEBUG 3320 --- [http-nio-8088-exec-9] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:29:05.001 DEBUG 3320 --- [http-nio-8088-exec-9] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 18:29:05.001 DEBUG 3320 --- [http-nio-8088-exec-9] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 18:29:05.002 DEBUG 3320 --- [http-nio-8088-exec-9] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 18:29:06.768 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 18:29:06.769 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 18:29:06.777 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 18:29:06.778 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:29:06.778 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:29:06.779 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:29:06.781 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 18:29:06.781 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 18:29:06.784 DEBUG 3320 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 18:29:10.400 DEBUG 3320 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 18:29:10.401 DEBUG 3320 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 18:29:10.406 DEBUG 3320 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 18:29:10.435 DEBUG 3320 --- [http-nio-8088-exec-4] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 18:29:10.436 DEBUG 3320 --- [http-nio-8088-exec-4] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 18:29:10.442 DEBUG 3320 --- [http-nio-8088-exec-4] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 18:29:10.444 DEBUG 3320 --- [http-nio-8088-exec-4] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:29:10.444 DEBUG 3320 --- [http-nio-8088-exec-4] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:29:10.445 DEBUG 3320 --- [http-nio-8088-exec-4] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:29:10.446 DEBUG 3320 --- [http-nio-8088-exec-4] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 18:29:10.446 DEBUG 3320 --- [http-nio-8088-exec-4] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 18:29:10.449 DEBUG 3320 --- [http-nio-8088-exec-4] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 18:29:11.878 DEBUG 3320 --- [http-nio-8088-exec-6] .l.l.d.B.selectAllBlogWithUserAndTagName : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id where b.flag LIKE ? 
+2020-02-13 18:29:11.878 DEBUG 3320 --- [http-nio-8088-exec-6] .l.l.d.B.selectAllBlogWithUserAndTagName : ==> Parameters: %java%(String)
+2020-02-13 18:29:11.884 DEBUG 3320 --- [http-nio-8088-exec-6] .l.l.d.B.selectAllBlogWithUserAndTagName : <==      Total: 4
+2020-02-13 18:29:11.885 DEBUG 3320 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:29:11.885 DEBUG 3320 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:29:11.888 DEBUG 3320 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:29:11.889 DEBUG 3320 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 18:29:11.890 DEBUG 3320 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 18:29:11.891 DEBUG 3320 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 18:29:13.295 DEBUG 3320 --- [http-nio-8088-exec-7] .l.l.d.B.selectAllBlogWithUserAndTagName : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id where b.flag LIKE ? 
+2020-02-13 18:29:13.296 DEBUG 3320 --- [http-nio-8088-exec-7] .l.l.d.B.selectAllBlogWithUserAndTagName : ==> Parameters: %go%(String)
+2020-02-13 18:29:13.297 DEBUG 3320 --- [http-nio-8088-exec-7] .l.l.d.B.selectAllBlogWithUserAndTagName : <==      Total: 1
+2020-02-13 18:29:13.297 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:29:13.298 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:29:13.299 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:29:13.299 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 18:29:13.300 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 18:29:13.301 DEBUG 3320 --- [http-nio-8088-exec-7] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 18:29:14.290 DEBUG 3320 --- [http-nio-8088-exec-8] .l.l.d.B.selectAllBlogWithUserAndTagName : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id where b.flag LIKE ? 
+2020-02-13 18:29:14.291 DEBUG 3320 --- [http-nio-8088-exec-8] .l.l.d.B.selectAllBlogWithUserAndTagName : ==> Parameters: %python%(String)
+2020-02-13 18:29:14.292 DEBUG 3320 --- [http-nio-8088-exec-8] .l.l.d.B.selectAllBlogWithUserAndTagName : <==      Total: 0
+2020-02-13 18:29:14.292 DEBUG 3320 --- [http-nio-8088-exec-8] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 18:29:14.293 DEBUG 3320 --- [http-nio-8088-exec-8] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 18:29:14.295 DEBUG 3320 --- [http-nio-8088-exec-8] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 18:29:14.296 DEBUG 3320 --- [http-nio-8088-exec-8] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:29:14.296 DEBUG 3320 --- [http-nio-8088-exec-8] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:29:14.297 DEBUG 3320 --- [http-nio-8088-exec-8] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:29:14.298 DEBUG 3320 --- [http-nio-8088-exec-8] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 18:29:14.298 DEBUG 3320 --- [http-nio-8088-exec-8] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 18:29:14.299 DEBUG 3320 --- [http-nio-8088-exec-8] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 18:29:24.956 DEBUG 3320 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 18:29:24.957 DEBUG 3320 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 18:29:24.959 DEBUG 3320 --- [http-nio-8088-exec-10] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 18:29:24.960 DEBUG 3320 --- [http-nio-8088-exec-10] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:29:24.960 DEBUG 3320 --- [http-nio-8088-exec-10] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:29:24.961 DEBUG 3320 --- [http-nio-8088-exec-10] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:29:24.962 DEBUG 3320 --- [http-nio-8088-exec-10] c.l.l.d.TagTypeMapper.selectTypeAndTag   : ==>  Preparing: select tt.id as uuuid,tt.tagTypeDesc,ta.id, ta.name from t_tagtype tt LEFT JOIN t_tag ta on tt.id = ta.Tagid; 
+2020-02-13 18:29:24.962 DEBUG 3320 --- [http-nio-8088-exec-10] c.l.l.d.TagTypeMapper.selectTypeAndTag   : ==> Parameters: 
+2020-02-13 18:29:25.041 DEBUG 3320 --- [http-nio-8088-exec-10] c.l.l.d.TagTypeMapper.selectTypeAndTag   : <==      Total: 14
+2020-02-13 18:49:31.218  INFO 2396 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 2396 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 18:49:31.218 DEBUG 2396 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 18:49:31.218  INFO 2396 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 18:49:33.234  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$af242931] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:33.234  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:33.327  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:33.343  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$f6baa6bb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:33.343  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:33.359  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:33.390  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:33.390  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:34.046  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:34.062  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:34.062  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:34.062  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:34.062  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:34.062  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:34.577  INFO 2396 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 18:49:35.040  INFO 2396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 18:49:35.056  INFO 2396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 18:49:35.056  INFO 2396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 18:49:35.634  INFO 2396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 18:49:35.634  INFO 2396 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4338 ms
+2020-02-13 18:49:36.009  INFO 2396 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 18:49:36.118  INFO 2396 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 18:49:36.431  INFO 2396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 18:49:36.431  INFO 2396 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.979 seconds (JVM running for 7.385)
+2020-02-13 18:59:43.638  INFO 2396 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 18:59:43.638  INFO 2396 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 18:59:43.648  INFO 2396 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-02-13 18:59:43.745  INFO 2396 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 18:59:43.930  INFO 2396 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 18:59:43.946 DEBUG 2396 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 18:59:43.980 DEBUG 2396 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 18:59:44.027 DEBUG 2396 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 18:59:44.056 DEBUG 2396 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:59:44.057 DEBUG 2396 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:59:44.071 DEBUG 2396 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:59:44.073 DEBUG 2396 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 18:59:44.074 DEBUG 2396 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 18:59:44.079 DEBUG 2396 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 18:59:49.825 DEBUG 2396 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 18:59:49.826 DEBUG 2396 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 18:59:49.828 DEBUG 2396 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 18:59:49.852 DEBUG 2396 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 18:59:49.853 DEBUG 2396 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 18:59:49.860 DEBUG 2396 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 18:59:49.862 DEBUG 2396 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 18:59:49.862 DEBUG 2396 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 18:59:49.864 DEBUG 2396 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 18:59:49.864 DEBUG 2396 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 18:59:49.865 DEBUG 2396 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 18:59:49.869 DEBUG 2396 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 18:59:54.351 ERROR 2396 --- [http-nio-8088-exec-7] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8088-exec-7] Exception processing template "detail": An error happened during template parsing (template: "class path resource [templates/detail.html]" - line 6, col 5)
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/detail.html]" - line 6, col 5)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: (Line = 6, Column = 5) Incomplete structure: "<link rel="stylesheet" type="text/css" href="../static/css/blog.css" th:href="@{/css/blog.css" }
+    "/>
+    <link rel="stylesheet" type="text/css" href="../static/css/typo.css" th:href="@{/css/typo.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/animate.css" th:href="@{/css/animate.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}"/>
+    <title>详情页</title>
+</head>
+<body>
+<nav th:replace="_fragment :: menu"></nav>
+<!--内容-->
+<div class="container content animated fadeInUp">
+    <div class="col-md-8">
+        <h4><span class="ques-title">标题</span></h4>
+        <span class="desc">
+					<small class="panel-title">作者:&nbsp;&nbsp;<font>poke</font> |
+						发布时间: <font>2020-1-18</font> |
+						阅读数: <font>0</font>
+					</small>
+				</span>
+        <hr class="col-md-12">
+        <!-- 内容区域 -->
+        <div id="content" class="typo typo-selection">
+            <p>本文所有引用内容均来自公众号《罗辑思维》万维钢老师的一篇文章《关于刻意练习的清单》，有兴趣的同学可以关注查看，知识含金量很高。
+
+                关注罗胖好久了，很羡慕很钦佩，他的认知和洞察力，他的敏锐和犀利，最重要的是他能够跟身边那么多聪明的人打交道，有一个那么利于成长和学习进步的环境，真是幸福，这种幸福是精神物质双向的幸福，没有一点点遗憾。
+
+                罗振宇的话说就是：学习提升自己的同时还挣着了钱，这是内容创业者的最高境界了吧。不过没关系，罗振宇在我们这个年纪的时候也没出名没创业呢，重要的是坚定自己的方向，不断打磨自己的价值观，精炼自己的选择，然后笃信践行。
+
+                剩下的就交给时间就好了，只要你没有辜负时间，时间就是你最忠实的朋友。只要你踏实陪伴和努力，时间都看在眼里记在心里，终会以某种形式回报给你。若你连自己都欺骗，到时候，时间惩罚起愚蠢可是毫不留情更会变本加厉。
+
+                所以，无论自己遇到了什么境遇，问自己一个问题“最重要的是什么？”。然后，面对，思考，解决，记录。坦然的面对自己，坦然的接受跟自己有关的一切。
+
+                “刻意练习”这个话题，是我在学习领域很感兴趣的一个话题，今天好好聊一下如何刻意？怎样练习？才能真正的把握好刻意练习的精髓，为我们所用。</p>
+            <h2 id="section1">关于</h2>
+            <pre>
+                <code class="language-css">
+						public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificationExecutor<Blog> {
+						    @Query("select t from Blog t where t.recommend = true")
+						    List<Blog>  findTop(Pageable pageable);
+
+						    @Query("select b from Blog b where b.title like ?1 or b.content like ?1")
+						    Page<Blog> findByQuery(String query, Pageable pageable);
+						}
+                </code>
+            </pre>
+            <p>不论在什么行业或领域，提高技能与能力的最有效方法全都遵循一系列普遍原则，就是刻意练习。成为任何领域高手的关键因素不是文化，不是艺术，不是哲学，不是制度，不是自虐，而是刻意练习。
+
+                所以每一个正常人都有成为高手的能力，培不培养这个能力，就得看你是否有想要成为某行业高手的足够强烈的愿望和想法。别干坐着学习方法，太多时候，我们太重视方法而忽略了基本操作的重要性。</p>
+            <h2 id="section2">2</h2>
+            <p>关于刻意练习，被误读最久的一个概念是“一万小时定律”。事实上，想把自己变成高手，光知道“一万小时”毫无意义，因为真正的关键根本不在训练时间，而是训练的方法。
+
+                并不是所有的努力都是有回报的，看不到回报的努力只是“看起来很努力”。别把前一句话当做自己不努力的借口，真正的逻辑是这样的：有效正确的努力的结果，必然会伴随着一些正面的反馈和收获。若没有收到一些正面的反馈，就要反思自己努力的方法是否正确、有效。
+
+                这个过程很重要，所谓“磨刀不误砍柴工”说的就是这个道理，把所有的希望都寄托在自己付出的时间是否足够长；重复的次数是否足够多；是不是一刻不停的在“砍柴”......最终的结果可能只能事倍功半。
+
+                反思的自己方法问题很重要，去分析，去思考，不要总问别人事情该怎么做，你自己的情况自己最清楚，最知道该自己弱项在哪，如何针对其进行刻意训练。不知道该怎么做的大部分人只是不想动手开始做，懒得思考，或者你想做成的愿望并不强烈。
+            </p>
+            <h2>3</h2>
+            <p>功夫就在功夫上，“功夫在诗外”就是一句谎言。技能是人脑中的一种硬件结构，是“长”在人脑中的。要高度针对性地重复练习基本功，想要学什么功夫，就应该练什么功夫。
+
+                之前看笑来老师的文章时，当中提到，人是可以通过学习变聪明的。这不是什么鼓励或者励志的话，有科学研究证明，通过学习是可以改变大脑皮层“沟回”厚度，即通过学习你可以改变大脑的本身的构造，这么说，“技能”还真是人脑中的一种硬件结构。</p>
+            <h2>4</h2>
+            <p>心理学家把人的知识和技能分为层层嵌套的三个圆形区域：最内一层是“舒适区”，是我们已经熟练掌握的各种技能；最外一层是“恐慌区”，是我们暂时无法学会的技能；二者中间则是“学习区”。</p>
+
+            <h2>5</h2>
+            <p>
+                在“舒适区”做事，叫生活；在“学习区”做事，才叫练习。有效的练习必须发生在“学习区”，一旦你学会了某个东西，就不该在上面继续花时间，要立即转入下一个难度。凡是达到“我闭着眼睛都能……”这个程度的人都废了，高手不会闭着眼睛做事。
+
+                也总能听到身边的人说：要跳出舒适区进入学习区。若是留心观察大部分人也只是说说过过嘴瘾。真正的学习本身就是一件痛苦的事情，而很多人又放不下舒适区的安逸。于是跟自己说：“我要快乐的学习，要玩的同时把东西学了”。这只是给自己不愿意走出舒适区找的借口而已。要记住，时间真真切切的把一切都看在眼里，它会以它的方式给你相应的反馈，或早或晚。
+
+                很多一辈子只在一个岗位上工作的人，就是掌握一个技能之后就不在学习其他技能了，所有在自己熟悉领域的工作都只能说是重复劳动，而不能说是学习和练习。
+            </p>
+            <h2>6</h2>
+            <p>
+                只有结果可控的领域，刻意练习才有用。股市是不可控的，所以刻意练习预测股市很可能就没用。有严格固定规则的领域，练习的作用最大，比如国际象棋；没有严格规则的领域，练习的作用则非常有限，如编程、航空飞行、广告创意。
+
+                这一条再次强调了，刻意练习不在于重复练习次数，不在于练习时间，而在于有效且正确。什么时候刻意练习的效果最明显，最有用。有效在于结果可控，正确在于在有效的领域又找到正确的练习方法。
+            </p>
+            <h2>7</h2>
+            <p>把要训练的内容分成有针对性的小块，对每一个小块进行重复练习。艺术家要采风，棋手要打谱，律师要学案例，政客要读历史，科学家要看论文。宁可定期坚持发几篇灌水小文章，也比苦读10年期待一鸣惊人强。
+
+                这是刻意练习的训练方法，针对自己的弱项做有针对性的训练，把一个系统的领域或者技能，归类分块练习。</p>
+
+            <h2>8</h2>
+            <p>
+                刻意练习的关键是随时获得有效的反馈。你需要一个旁观者，他不见得水平比你高，不需要经常跟你谈心，不用激发你的战斗热情，但他必须给你提供三步反馈：演示一遍正确动作，表现一遍错误动作，再演示一遍正确动作。</p>
+            <h2>9</h2>
+            <p>有效的反馈，应该满足三个条件：及时，一旦不对马上就有人给你指出来；超脱，对事不对人，反馈者不把你的错误上升到“你这个人行不行”的层面；试错，你犯错误的代价很小。
+            </p>
+
+        </div>
+        <hr class="col-md-12">
+        <!-- 评论区域 -->
+
+    </div>
+
+    <!-- 侧边 -->
+    <div class="col-md-3 col-md-offset-1 content-right">
+        <div class="panel panel-default">
+            <div class="panel-heading">猜你喜欢</div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item"><small>Cras justo odio</small></li>
+                    <li class="list-group-item"><small>Dapibus ac facilisis in</small></li>
+                    <li class="list-group-item"><small>Morbi leo risus</small></li>
+                    <li class="list-group-item"><small>Porta ac consectetur ac</small></li>
+                    <li class="list-group-item"><small>Vestibulum at eros</small></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="_fragment :: footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+"
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 62 common frames omitted
+
+2020-02-13 18:59:54.358 ERROR 2396 --- [http-nio-8088-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/detail.html]" - line 6, col 5)] with root cause
+
+org.attoparser.ParseException: (Line = 6, Column = 5) Incomplete structure: "<link rel="stylesheet" type="text/css" href="../static/css/blog.css" th:href="@{/css/blog.css" }
+    "/>
+    <link rel="stylesheet" type="text/css" href="../static/css/typo.css" th:href="@{/css/typo.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/animate.css" th:href="@{/css/animate.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}"/>
+    <title>详情页</title>
+</head>
+<body>
+<nav th:replace="_fragment :: menu"></nav>
+<!--内容-->
+<div class="container content animated fadeInUp">
+    <div class="col-md-8">
+        <h4><span class="ques-title">标题</span></h4>
+        <span class="desc">
+					<small class="panel-title">作者:&nbsp;&nbsp;<font>poke</font> |
+						发布时间: <font>2020-1-18</font> |
+						阅读数: <font>0</font>
+					</small>
+				</span>
+        <hr class="col-md-12">
+        <!-- 内容区域 -->
+        <div id="content" class="typo typo-selection">
+            <p>本文所有引用内容均来自公众号《罗辑思维》万维钢老师的一篇文章《关于刻意练习的清单》，有兴趣的同学可以关注查看，知识含金量很高。
+
+                关注罗胖好久了，很羡慕很钦佩，他的认知和洞察力，他的敏锐和犀利，最重要的是他能够跟身边那么多聪明的人打交道，有一个那么利于成长和学习进步的环境，真是幸福，这种幸福是精神物质双向的幸福，没有一点点遗憾。
+
+                罗振宇的话说就是：学习提升自己的同时还挣着了钱，这是内容创业者的最高境界了吧。不过没关系，罗振宇在我们这个年纪的时候也没出名没创业呢，重要的是坚定自己的方向，不断打磨自己的价值观，精炼自己的选择，然后笃信践行。
+
+                剩下的就交给时间就好了，只要你没有辜负时间，时间就是你最忠实的朋友。只要你踏实陪伴和努力，时间都看在眼里记在心里，终会以某种形式回报给你。若你连自己都欺骗，到时候，时间惩罚起愚蠢可是毫不留情更会变本加厉。
+
+                所以，无论自己遇到了什么境遇，问自己一个问题“最重要的是什么？”。然后，面对，思考，解决，记录。坦然的面对自己，坦然的接受跟自己有关的一切。
+
+                “刻意练习”这个话题，是我在学习领域很感兴趣的一个话题，今天好好聊一下如何刻意？怎样练习？才能真正的把握好刻意练习的精髓，为我们所用。</p>
+            <h2 id="section1">关于</h2>
+            <pre>
+                <code class="language-css">
+						public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificationExecutor<Blog> {
+						    @Query("select t from Blog t where t.recommend = true")
+						    List<Blog>  findTop(Pageable pageable);
+
+						    @Query("select b from Blog b where b.title like ?1 or b.content like ?1")
+						    Page<Blog> findByQuery(String query, Pageable pageable);
+						}
+                </code>
+            </pre>
+            <p>不论在什么行业或领域，提高技能与能力的最有效方法全都遵循一系列普遍原则，就是刻意练习。成为任何领域高手的关键因素不是文化，不是艺术，不是哲学，不是制度，不是自虐，而是刻意练习。
+
+                所以每一个正常人都有成为高手的能力，培不培养这个能力，就得看你是否有想要成为某行业高手的足够强烈的愿望和想法。别干坐着学习方法，太多时候，我们太重视方法而忽略了基本操作的重要性。</p>
+            <h2 id="section2">2</h2>
+            <p>关于刻意练习，被误读最久的一个概念是“一万小时定律”。事实上，想把自己变成高手，光知道“一万小时”毫无意义，因为真正的关键根本不在训练时间，而是训练的方法。
+
+                并不是所有的努力都是有回报的，看不到回报的努力只是“看起来很努力”。别把前一句话当做自己不努力的借口，真正的逻辑是这样的：有效正确的努力的结果，必然会伴随着一些正面的反馈和收获。若没有收到一些正面的反馈，就要反思自己努力的方法是否正确、有效。
+
+                这个过程很重要，所谓“磨刀不误砍柴工”说的就是这个道理，把所有的希望都寄托在自己付出的时间是否足够长；重复的次数是否足够多；是不是一刻不停的在“砍柴”......最终的结果可能只能事倍功半。
+
+                反思的自己方法问题很重要，去分析，去思考，不要总问别人事情该怎么做，你自己的情况自己最清楚，最知道该自己弱项在哪，如何针对其进行刻意训练。不知道该怎么做的大部分人只是不想动手开始做，懒得思考，或者你想做成的愿望并不强烈。
+            </p>
+            <h2>3</h2>
+            <p>功夫就在功夫上，“功夫在诗外”就是一句谎言。技能是人脑中的一种硬件结构，是“长”在人脑中的。要高度针对性地重复练习基本功，想要学什么功夫，就应该练什么功夫。
+
+                之前看笑来老师的文章时，当中提到，人是可以通过学习变聪明的。这不是什么鼓励或者励志的话，有科学研究证明，通过学习是可以改变大脑皮层“沟回”厚度，即通过学习你可以改变大脑的本身的构造，这么说，“技能”还真是人脑中的一种硬件结构。</p>
+            <h2>4</h2>
+            <p>心理学家把人的知识和技能分为层层嵌套的三个圆形区域：最内一层是“舒适区”，是我们已经熟练掌握的各种技能；最外一层是“恐慌区”，是我们暂时无法学会的技能；二者中间则是“学习区”。</p>
+
+            <h2>5</h2>
+            <p>
+                在“舒适区”做事，叫生活；在“学习区”做事，才叫练习。有效的练习必须发生在“学习区”，一旦你学会了某个东西，就不该在上面继续花时间，要立即转入下一个难度。凡是达到“我闭着眼睛都能……”这个程度的人都废了，高手不会闭着眼睛做事。
+
+                也总能听到身边的人说：要跳出舒适区进入学习区。若是留心观察大部分人也只是说说过过嘴瘾。真正的学习本身就是一件痛苦的事情，而很多人又放不下舒适区的安逸。于是跟自己说：“我要快乐的学习，要玩的同时把东西学了”。这只是给自己不愿意走出舒适区找的借口而已。要记住，时间真真切切的把一切都看在眼里，它会以它的方式给你相应的反馈，或早或晚。
+
+                很多一辈子只在一个岗位上工作的人，就是掌握一个技能之后就不在学习其他技能了，所有在自己熟悉领域的工作都只能说是重复劳动，而不能说是学习和练习。
+            </p>
+            <h2>6</h2>
+            <p>
+                只有结果可控的领域，刻意练习才有用。股市是不可控的，所以刻意练习预测股市很可能就没用。有严格固定规则的领域，练习的作用最大，比如国际象棋；没有严格规则的领域，练习的作用则非常有限，如编程、航空飞行、广告创意。
+
+                这一条再次强调了，刻意练习不在于重复练习次数，不在于练习时间，而在于有效且正确。什么时候刻意练习的效果最明显，最有用。有效在于结果可控，正确在于在有效的领域又找到正确的练习方法。
+            </p>
+            <h2>7</h2>
+            <p>把要训练的内容分成有针对性的小块，对每一个小块进行重复练习。艺术家要采风，棋手要打谱，律师要学案例，政客要读历史，科学家要看论文。宁可定期坚持发几篇灌水小文章，也比苦读10年期待一鸣惊人强。
+
+                这是刻意练习的训练方法，针对自己的弱项做有针对性的训练，把一个系统的领域或者技能，归类分块练习。</p>
+
+            <h2>8</h2>
+            <p>
+                刻意练习的关键是随时获得有效的反馈。你需要一个旁观者，他不见得水平比你高，不需要经常跟你谈心，不用激发你的战斗热情，但他必须给你提供三步反馈：演示一遍正确动作，表现一遍错误动作，再演示一遍正确动作。</p>
+            <h2>9</h2>
+            <p>有效的反馈，应该满足三个条件：及时，一旦不对马上就有人给你指出来；超脱，对事不对人，反馈者不把你的错误上升到“你这个人行不行”的层面；试错，你犯错误的代价很小。
+            </p>
+
+        </div>
+        <hr class="col-md-12">
+        <!-- 评论区域 -->
+
+    </div>
+
+    <!-- 侧边 -->
+    <div class="col-md-3 col-md-offset-1 content-right">
+        <div class="panel panel-default">
+            <div class="panel-heading">猜你喜欢</div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item"><small>Cras justo odio</small></li>
+                    <li class="list-group-item"><small>Dapibus ac facilisis in</small></li>
+                    <li class="list-group-item"><small>Morbi leo risus</small></li>
+                    <li class="list-group-item"><small>Porta ac consectetur ac</small></li>
+                    <li class="list-group-item"><small>Vestibulum at eros</small></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="_fragment :: footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+"
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-02-13 19:00:02.574 ERROR 2396 --- [http-nio-8088-exec-8] org.thymeleaf.TemplateEngine             : [THYMELEAF][http-nio-8088-exec-8] Exception processing template "detail": An error happened during template parsing (template: "class path resource [templates/detail.html]" - line 6, col 5)
+
+org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/detail.html]" - line 6, col 5)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:239)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.attoparser.ParseException: (Line = 6, Column = 5) Incomplete structure: "<link rel="stylesheet" type="text/css" href="../static/css/blog.css" th:href="@{/css/blog.css" }
+    "/>
+    <link rel="stylesheet" type="text/css" href="../static/css/typo.css" th:href="@{/css/typo.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/animate.css" th:href="@{/css/animate.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}"/>
+    <title>详情页</title>
+</head>
+<body>
+<nav th:replace="_fragment :: menu"></nav>
+<!--内容-->
+<div class="container content animated fadeInUp">
+    <div class="col-md-8">
+        <h4><span class="ques-title">标题</span></h4>
+        <span class="desc">
+					<small class="panel-title">作者:&nbsp;&nbsp;<font>poke</font> |
+						发布时间: <font>2020-1-18</font> |
+						阅读数: <font>0</font>
+					</small>
+				</span>
+        <hr class="col-md-12">
+        <!-- 内容区域 -->
+        <div id="content" class="typo typo-selection">
+            <p>本文所有引用内容均来自公众号《罗辑思维》万维钢老师的一篇文章《关于刻意练习的清单》，有兴趣的同学可以关注查看，知识含金量很高。
+
+                关注罗胖好久了，很羡慕很钦佩，他的认知和洞察力，他的敏锐和犀利，最重要的是他能够跟身边那么多聪明的人打交道，有一个那么利于成长和学习进步的环境，真是幸福，这种幸福是精神物质双向的幸福，没有一点点遗憾。
+
+                罗振宇的话说就是：学习提升自己的同时还挣着了钱，这是内容创业者的最高境界了吧。不过没关系，罗振宇在我们这个年纪的时候也没出名没创业呢，重要的是坚定自己的方向，不断打磨自己的价值观，精炼自己的选择，然后笃信践行。
+
+                剩下的就交给时间就好了，只要你没有辜负时间，时间就是你最忠实的朋友。只要你踏实陪伴和努力，时间都看在眼里记在心里，终会以某种形式回报给你。若你连自己都欺骗，到时候，时间惩罚起愚蠢可是毫不留情更会变本加厉。
+
+                所以，无论自己遇到了什么境遇，问自己一个问题“最重要的是什么？”。然后，面对，思考，解决，记录。坦然的面对自己，坦然的接受跟自己有关的一切。
+
+                “刻意练习”这个话题，是我在学习领域很感兴趣的一个话题，今天好好聊一下如何刻意？怎样练习？才能真正的把握好刻意练习的精髓，为我们所用。</p>
+            <h2 id="section1">关于</h2>
+            <pre>
+                <code class="language-css">
+						public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificationExecutor<Blog> {
+						    @Query("select t from Blog t where t.recommend = true")
+						    List<Blog>  findTop(Pageable pageable);
+
+						    @Query("select b from Blog b where b.title like ?1 or b.content like ?1")
+						    Page<Blog> findByQuery(String query, Pageable pageable);
+						}
+                </code>
+            </pre>
+            <p>不论在什么行业或领域，提高技能与能力的最有效方法全都遵循一系列普遍原则，就是刻意练习。成为任何领域高手的关键因素不是文化，不是艺术，不是哲学，不是制度，不是自虐，而是刻意练习。
+
+                所以每一个正常人都有成为高手的能力，培不培养这个能力，就得看你是否有想要成为某行业高手的足够强烈的愿望和想法。别干坐着学习方法，太多时候，我们太重视方法而忽略了基本操作的重要性。</p>
+            <h2 id="section2">2</h2>
+            <p>关于刻意练习，被误读最久的一个概念是“一万小时定律”。事实上，想把自己变成高手，光知道“一万小时”毫无意义，因为真正的关键根本不在训练时间，而是训练的方法。
+
+                并不是所有的努力都是有回报的，看不到回报的努力只是“看起来很努力”。别把前一句话当做自己不努力的借口，真正的逻辑是这样的：有效正确的努力的结果，必然会伴随着一些正面的反馈和收获。若没有收到一些正面的反馈，就要反思自己努力的方法是否正确、有效。
+
+                这个过程很重要，所谓“磨刀不误砍柴工”说的就是这个道理，把所有的希望都寄托在自己付出的时间是否足够长；重复的次数是否足够多；是不是一刻不停的在“砍柴”......最终的结果可能只能事倍功半。
+
+                反思的自己方法问题很重要，去分析，去思考，不要总问别人事情该怎么做，你自己的情况自己最清楚，最知道该自己弱项在哪，如何针对其进行刻意训练。不知道该怎么做的大部分人只是不想动手开始做，懒得思考，或者你想做成的愿望并不强烈。
+            </p>
+            <h2>3</h2>
+            <p>功夫就在功夫上，“功夫在诗外”就是一句谎言。技能是人脑中的一种硬件结构，是“长”在人脑中的。要高度针对性地重复练习基本功，想要学什么功夫，就应该练什么功夫。
+
+                之前看笑来老师的文章时，当中提到，人是可以通过学习变聪明的。这不是什么鼓励或者励志的话，有科学研究证明，通过学习是可以改变大脑皮层“沟回”厚度，即通过学习你可以改变大脑的本身的构造，这么说，“技能”还真是人脑中的一种硬件结构。</p>
+            <h2>4</h2>
+            <p>心理学家把人的知识和技能分为层层嵌套的三个圆形区域：最内一层是“舒适区”，是我们已经熟练掌握的各种技能；最外一层是“恐慌区”，是我们暂时无法学会的技能；二者中间则是“学习区”。</p>
+
+            <h2>5</h2>
+            <p>
+                在“舒适区”做事，叫生活；在“学习区”做事，才叫练习。有效的练习必须发生在“学习区”，一旦你学会了某个东西，就不该在上面继续花时间，要立即转入下一个难度。凡是达到“我闭着眼睛都能……”这个程度的人都废了，高手不会闭着眼睛做事。
+
+                也总能听到身边的人说：要跳出舒适区进入学习区。若是留心观察大部分人也只是说说过过嘴瘾。真正的学习本身就是一件痛苦的事情，而很多人又放不下舒适区的安逸。于是跟自己说：“我要快乐的学习，要玩的同时把东西学了”。这只是给自己不愿意走出舒适区找的借口而已。要记住，时间真真切切的把一切都看在眼里，它会以它的方式给你相应的反馈，或早或晚。
+
+                很多一辈子只在一个岗位上工作的人，就是掌握一个技能之后就不在学习其他技能了，所有在自己熟悉领域的工作都只能说是重复劳动，而不能说是学习和练习。
+            </p>
+            <h2>6</h2>
+            <p>
+                只有结果可控的领域，刻意练习才有用。股市是不可控的，所以刻意练习预测股市很可能就没用。有严格固定规则的领域，练习的作用最大，比如国际象棋；没有严格规则的领域，练习的作用则非常有限，如编程、航空飞行、广告创意。
+
+                这一条再次强调了，刻意练习不在于重复练习次数，不在于练习时间，而在于有效且正确。什么时候刻意练习的效果最明显，最有用。有效在于结果可控，正确在于在有效的领域又找到正确的练习方法。
+            </p>
+            <h2>7</h2>
+            <p>把要训练的内容分成有针对性的小块，对每一个小块进行重复练习。艺术家要采风，棋手要打谱，律师要学案例，政客要读历史，科学家要看论文。宁可定期坚持发几篇灌水小文章，也比苦读10年期待一鸣惊人强。
+
+                这是刻意练习的训练方法，针对自己的弱项做有针对性的训练，把一个系统的领域或者技能，归类分块练习。</p>
+
+            <h2>8</h2>
+            <p>
+                刻意练习的关键是随时获得有效的反馈。你需要一个旁观者，他不见得水平比你高，不需要经常跟你谈心，不用激发你的战斗热情，但他必须给你提供三步反馈：演示一遍正确动作，表现一遍错误动作，再演示一遍正确动作。</p>
+            <h2>9</h2>
+            <p>有效的反馈，应该满足三个条件：及时，一旦不对马上就有人给你指出来；超脱，对事不对人，反馈者不把你的错误上升到“你这个人行不行”的层面；试错，你犯错误的代价很小。
+            </p>
+
+        </div>
+        <hr class="col-md-12">
+        <!-- 评论区域 -->
+
+    </div>
+
+    <!-- 侧边 -->
+    <div class="col-md-3 col-md-offset-1 content-right">
+        <div class="panel panel-default">
+            <div class="panel-heading">猜你喜欢</div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item"><small>Cras justo odio</small></li>
+                    <li class="list-group-item"><small>Dapibus ac facilisis in</small></li>
+                    <li class="list-group-item"><small>Morbi leo risus</small></li>
+                    <li class="list-group-item"><small>Porta ac consectetur ac</small></li>
+                    <li class="list-group-item"><small>Vestibulum at eros</small></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="_fragment :: footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+"
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	... 62 common frames omitted
+
+2020-02-13 19:00:02.576 ERROR 2396 --- [http-nio-8088-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: An error happened during template parsing (template: "class path resource [templates/detail.html]" - line 6, col 5)] with root cause
+
+org.attoparser.ParseException: (Line = 6, Column = 5) Incomplete structure: "<link rel="stylesheet" type="text/css" href="../static/css/blog.css" th:href="@{/css/blog.css" }
+    "/>
+    <link rel="stylesheet" type="text/css" href="../static/css/typo.css" th:href="@{/css/typo.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/animate.css" th:href="@{/css/animate.css}"/>
+    <link rel="stylesheet" type="text/css" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}"/>
+    <title>详情页</title>
+</head>
+<body>
+<nav th:replace="_fragment :: menu"></nav>
+<!--内容-->
+<div class="container content animated fadeInUp">
+    <div class="col-md-8">
+        <h4><span class="ques-title">标题</span></h4>
+        <span class="desc">
+					<small class="panel-title">作者:&nbsp;&nbsp;<font>poke</font> |
+						发布时间: <font>2020-1-18</font> |
+						阅读数: <font>0</font>
+					</small>
+				</span>
+        <hr class="col-md-12">
+        <!-- 内容区域 -->
+        <div id="content" class="typo typo-selection">
+            <p>本文所有引用内容均来自公众号《罗辑思维》万维钢老师的一篇文章《关于刻意练习的清单》，有兴趣的同学可以关注查看，知识含金量很高。
+
+                关注罗胖好久了，很羡慕很钦佩，他的认知和洞察力，他的敏锐和犀利，最重要的是他能够跟身边那么多聪明的人打交道，有一个那么利于成长和学习进步的环境，真是幸福，这种幸福是精神物质双向的幸福，没有一点点遗憾。
+
+                罗振宇的话说就是：学习提升自己的同时还挣着了钱，这是内容创业者的最高境界了吧。不过没关系，罗振宇在我们这个年纪的时候也没出名没创业呢，重要的是坚定自己的方向，不断打磨自己的价值观，精炼自己的选择，然后笃信践行。
+
+                剩下的就交给时间就好了，只要你没有辜负时间，时间就是你最忠实的朋友。只要你踏实陪伴和努力，时间都看在眼里记在心里，终会以某种形式回报给你。若你连自己都欺骗，到时候，时间惩罚起愚蠢可是毫不留情更会变本加厉。
+
+                所以，无论自己遇到了什么境遇，问自己一个问题“最重要的是什么？”。然后，面对，思考，解决，记录。坦然的面对自己，坦然的接受跟自己有关的一切。
+
+                “刻意练习”这个话题，是我在学习领域很感兴趣的一个话题，今天好好聊一下如何刻意？怎样练习？才能真正的把握好刻意练习的精髓，为我们所用。</p>
+            <h2 id="section1">关于</h2>
+            <pre>
+                <code class="language-css">
+						public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificationExecutor<Blog> {
+						    @Query("select t from Blog t where t.recommend = true")
+						    List<Blog>  findTop(Pageable pageable);
+
+						    @Query("select b from Blog b where b.title like ?1 or b.content like ?1")
+						    Page<Blog> findByQuery(String query, Pageable pageable);
+						}
+                </code>
+            </pre>
+            <p>不论在什么行业或领域，提高技能与能力的最有效方法全都遵循一系列普遍原则，就是刻意练习。成为任何领域高手的关键因素不是文化，不是艺术，不是哲学，不是制度，不是自虐，而是刻意练习。
+
+                所以每一个正常人都有成为高手的能力，培不培养这个能力，就得看你是否有想要成为某行业高手的足够强烈的愿望和想法。别干坐着学习方法，太多时候，我们太重视方法而忽略了基本操作的重要性。</p>
+            <h2 id="section2">2</h2>
+            <p>关于刻意练习，被误读最久的一个概念是“一万小时定律”。事实上，想把自己变成高手，光知道“一万小时”毫无意义，因为真正的关键根本不在训练时间，而是训练的方法。
+
+                并不是所有的努力都是有回报的，看不到回报的努力只是“看起来很努力”。别把前一句话当做自己不努力的借口，真正的逻辑是这样的：有效正确的努力的结果，必然会伴随着一些正面的反馈和收获。若没有收到一些正面的反馈，就要反思自己努力的方法是否正确、有效。
+
+                这个过程很重要，所谓“磨刀不误砍柴工”说的就是这个道理，把所有的希望都寄托在自己付出的时间是否足够长；重复的次数是否足够多；是不是一刻不停的在“砍柴”......最终的结果可能只能事倍功半。
+
+                反思的自己方法问题很重要，去分析，去思考，不要总问别人事情该怎么做，你自己的情况自己最清楚，最知道该自己弱项在哪，如何针对其进行刻意训练。不知道该怎么做的大部分人只是不想动手开始做，懒得思考，或者你想做成的愿望并不强烈。
+            </p>
+            <h2>3</h2>
+            <p>功夫就在功夫上，“功夫在诗外”就是一句谎言。技能是人脑中的一种硬件结构，是“长”在人脑中的。要高度针对性地重复练习基本功，想要学什么功夫，就应该练什么功夫。
+
+                之前看笑来老师的文章时，当中提到，人是可以通过学习变聪明的。这不是什么鼓励或者励志的话，有科学研究证明，通过学习是可以改变大脑皮层“沟回”厚度，即通过学习你可以改变大脑的本身的构造，这么说，“技能”还真是人脑中的一种硬件结构。</p>
+            <h2>4</h2>
+            <p>心理学家把人的知识和技能分为层层嵌套的三个圆形区域：最内一层是“舒适区”，是我们已经熟练掌握的各种技能；最外一层是“恐慌区”，是我们暂时无法学会的技能；二者中间则是“学习区”。</p>
+
+            <h2>5</h2>
+            <p>
+                在“舒适区”做事，叫生活；在“学习区”做事，才叫练习。有效的练习必须发生在“学习区”，一旦你学会了某个东西，就不该在上面继续花时间，要立即转入下一个难度。凡是达到“我闭着眼睛都能……”这个程度的人都废了，高手不会闭着眼睛做事。
+
+                也总能听到身边的人说：要跳出舒适区进入学习区。若是留心观察大部分人也只是说说过过嘴瘾。真正的学习本身就是一件痛苦的事情，而很多人又放不下舒适区的安逸。于是跟自己说：“我要快乐的学习，要玩的同时把东西学了”。这只是给自己不愿意走出舒适区找的借口而已。要记住，时间真真切切的把一切都看在眼里，它会以它的方式给你相应的反馈，或早或晚。
+
+                很多一辈子只在一个岗位上工作的人，就是掌握一个技能之后就不在学习其他技能了，所有在自己熟悉领域的工作都只能说是重复劳动，而不能说是学习和练习。
+            </p>
+            <h2>6</h2>
+            <p>
+                只有结果可控的领域，刻意练习才有用。股市是不可控的，所以刻意练习预测股市很可能就没用。有严格固定规则的领域，练习的作用最大，比如国际象棋；没有严格规则的领域，练习的作用则非常有限，如编程、航空飞行、广告创意。
+
+                这一条再次强调了，刻意练习不在于重复练习次数，不在于练习时间，而在于有效且正确。什么时候刻意练习的效果最明显，最有用。有效在于结果可控，正确在于在有效的领域又找到正确的练习方法。
+            </p>
+            <h2>7</h2>
+            <p>把要训练的内容分成有针对性的小块，对每一个小块进行重复练习。艺术家要采风，棋手要打谱，律师要学案例，政客要读历史，科学家要看论文。宁可定期坚持发几篇灌水小文章，也比苦读10年期待一鸣惊人强。
+
+                这是刻意练习的训练方法，针对自己的弱项做有针对性的训练，把一个系统的领域或者技能，归类分块练习。</p>
+
+            <h2>8</h2>
+            <p>
+                刻意练习的关键是随时获得有效的反馈。你需要一个旁观者，他不见得水平比你高，不需要经常跟你谈心，不用激发你的战斗热情，但他必须给你提供三步反馈：演示一遍正确动作，表现一遍错误动作，再演示一遍正确动作。</p>
+            <h2>9</h2>
+            <p>有效的反馈，应该满足三个条件：及时，一旦不对马上就有人给你指出来；超脱，对事不对人，反馈者不把你的错误上升到“你这个人行不行”的层面；试错，你犯错误的代价很小。
+            </p>
+
+        </div>
+        <hr class="col-md-12">
+        <!-- 评论区域 -->
+
+    </div>
+
+    <!-- 侧边 -->
+    <div class="col-md-3 col-md-offset-1 content-right">
+        <div class="panel panel-default">
+            <div class="panel-heading">猜你喜欢</div>
+            <div class="panel-body">
+                <ul class="list-group">
+                    <li class="list-group-item"><small>Cras justo odio</small></li>
+                    <li class="list-group-item"><small>Dapibus ac facilisis in</small></li>
+                    <li class="list-group-item"><small>Morbi leo risus</small></li>
+                    <li class="list-group-item"><small>Porta ac consectetur ac</small></li>
+                    <li class="list-group-item"><small>Vestibulum at eros</small></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer th:replace="_fragment :: footer"></footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+"
+	at org.attoparser.MarkupParser.parseDocument(MarkupParser.java:366)
+	at org.attoparser.MarkupParser.parse(MarkupParser.java:257)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parse(AbstractMarkupTemplateParser.java:230)
+	at org.thymeleaf.templateparser.markup.AbstractMarkupTemplateParser.parseStandalone(AbstractMarkupTemplateParser.java:100)
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:666)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:449)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1591)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+2020-02-13 19:21:02.208  INFO 9032 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 9032 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 19:21:02.217 DEBUG 9032 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 19:21:02.219  INFO 9032 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 19:21:04.438  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$4f19f9c8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:04.450  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:04.548  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:04.559  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$96b07752] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:04.565  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:04.576  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:04.605  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:04.617  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:05.218  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:05.225  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:05.228  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:05.231  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:05.232  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:05.233  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:05.747  INFO 9032 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:21:06.850  INFO 9032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 19:21:06.864  INFO 9032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 19:21:06.865  INFO 9032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 19:21:07.031  INFO 9032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 19:21:07.032  INFO 9032 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4545 ms
+2020-02-13 19:21:07.477  INFO 9032 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 19:21:07.643  INFO 9032 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 19:21:08.172  INFO 9032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 19:21:08.180  INFO 9032 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 7.371 seconds (JVM running for 9.148)
+2020-02-13 19:21:08.303  INFO 9032 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 19:21:08.304  INFO 9032 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 19:21:08.320  INFO 9032 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-02-13 19:21:08.531  INFO 9032 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 19:21:08.792  INFO 9032 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 19:21:08.804 DEBUG 9032 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 19:21:08.881 DEBUG 9032 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 19:21:09.031 DEBUG 9032 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 19:21:09.070 DEBUG 9032 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 19:21:09.071 DEBUG 9032 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 19:21:09.079 DEBUG 9032 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 19:21:09.080 DEBUG 9032 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 19:21:09.081 DEBUG 9032 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 19:21:09.085 DEBUG 9032 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 19:21:15.101 DEBUG 9032 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 19:21:15.102 DEBUG 9032 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 19:21:15.103 DEBUG 9032 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 19:21:15.130 DEBUG 9032 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 19:21:15.131 DEBUG 9032 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 19:21:15.139 DEBUG 9032 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 19:21:15.144 DEBUG 9032 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 19:21:15.145 DEBUG 9032 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 19:21:15.146 DEBUG 9032 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 19:21:15.147 DEBUG 9032 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 19:21:15.148 DEBUG 9032 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 19:21:15.151 DEBUG 9032 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 19:22:59.023  INFO 10208 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 10208 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 19:22:59.028 DEBUG 10208 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 19:22:59.029  INFO 10208 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 19:23:01.064  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$3bd5576] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.075  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.159  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.168  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$4b53d300] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.171  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.179  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.209  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.221  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.742  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.747  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.751  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.753  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.755  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:01.756  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:02.157  INFO 10208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 19:23:02.529  INFO 10208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 19:23:02.542  INFO 10208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 19:23:02.542  INFO 10208 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 19:23:02.666  INFO 10208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 19:23:02.667  INFO 10208 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3446 ms
+2020-02-13 19:23:02.989  INFO 10208 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 19:23:03.110  INFO 10208 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 19:23:03.373  INFO 10208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 19:23:03.377  INFO 10208 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.577 seconds (JVM running for 7.784)
+2020-02-13 19:23:06.613  INFO 10208 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 19:23:06.613  INFO 10208 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 19:23:06.629  INFO 10208 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-02-13 19:23:06.744  INFO 10208 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 19:23:06.939  INFO 10208 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 19:23:06.950 DEBUG 10208 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 19:23:06.983 DEBUG 10208 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 19:23:07.022 DEBUG 10208 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 19:23:07.038 DEBUG 10208 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 19:23:07.038 DEBUG 10208 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 19:23:07.042 DEBUG 10208 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 19:23:07.043 DEBUG 10208 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 19:23:07.044 DEBUG 10208 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 19:23:07.048 DEBUG 10208 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 19:23:13.484 DEBUG 10208 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 19:23:13.486 DEBUG 10208 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 19:23:13.489 DEBUG 10208 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 19:23:13.513 DEBUG 10208 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 19:23:13.513 DEBUG 10208 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 19:23:13.526 DEBUG 10208 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 19:23:13.528 DEBUG 10208 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 19:23:13.529 DEBUG 10208 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 19:23:13.531 DEBUG 10208 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 19:23:13.531 DEBUG 10208 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 19:23:13.532 DEBUG 10208 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 19:23:13.537 DEBUG 10208 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 20:17:40.594 DEBUG 10208 --- [http-nio-8088-exec-3] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 20:17:40.594 DEBUG 10208 --- [http-nio-8088-exec-3] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 20:17:40.603 DEBUG 10208 --- [http-nio-8088-exec-3] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 20:17:40.605 DEBUG 10208 --- [http-nio-8088-exec-3] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 20:17:40.605 DEBUG 10208 --- [http-nio-8088-exec-3] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 20:17:40.606 DEBUG 10208 --- [http-nio-8088-exec-3] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 20:17:40.607 DEBUG 10208 --- [http-nio-8088-exec-3] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 20:17:40.608 DEBUG 10208 --- [http-nio-8088-exec-3] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 20:17:40.609 DEBUG 10208 --- [http-nio-8088-exec-3] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 21:12:21.999  INFO 14144 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 14144 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 21:12:22.004 DEBUG 14144 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 21:12:22.005  INFO 14144 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 21:12:24.628  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$9e8c2ac6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:24.640  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:24.788  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:24.803  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e622a850] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:24.810  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:24.822  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:24.933  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:24.952  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:25.832  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:25.840  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:25.848  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:25.852  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:25.866  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:25.868  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:26.806  INFO 14144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:12:27.787  INFO 14144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 21:12:27.812  INFO 14144 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 21:12:27.813  INFO 14144 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 21:12:28.131  INFO 14144 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 21:12:28.132  INFO 14144 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5883 ms
+2020-02-13 21:12:28.734  INFO 14144 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 21:12:28.926  INFO 14144 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 21:12:29.412  INFO 14144 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 21:12:29.416  INFO 14144 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 8.925 seconds (JVM running for 10.853)
+2020-02-13 21:12:36.241  INFO 14144 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 21:12:36.241  INFO 14144 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 21:12:36.251  INFO 14144 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-02-13 21:12:36.343  INFO 14144 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 21:12:36.519  INFO 14144 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 21:12:36.530 DEBUG 14144 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 21:12:36.559 DEBUG 14144 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 21:12:36.592 DEBUG 14144 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 21:12:36.605 DEBUG 14144 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 21:12:36.605 DEBUG 14144 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 21:12:36.608 DEBUG 14144 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 21:12:36.610 DEBUG 14144 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 21:12:36.610 DEBUG 14144 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 21:12:36.612 DEBUG 14144 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 21:12:42.310 DEBUG 14144 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 21:12:42.312 DEBUG 14144 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 21:12:42.314 DEBUG 14144 --- [http-nio-8088-exec-6] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 21:12:42.337 DEBUG 14144 --- [http-nio-8088-exec-7] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 21:12:42.338 DEBUG 14144 --- [http-nio-8088-exec-7] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 21:12:42.347 DEBUG 14144 --- [http-nio-8088-exec-7] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 21:12:42.350 DEBUG 14144 --- [http-nio-8088-exec-7] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 21:12:42.350 DEBUG 14144 --- [http-nio-8088-exec-7] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 21:12:42.352 DEBUG 14144 --- [http-nio-8088-exec-7] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 21:12:42.353 DEBUG 14144 --- [http-nio-8088-exec-7] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 21:12:42.353 DEBUG 14144 --- [http-nio-8088-exec-7] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 21:12:42.355 DEBUG 14144 --- [http-nio-8088-exec-7] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 21:30:17.870  INFO 13680 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 13680 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 21:30:17.876 DEBUG 13680 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 21:30:17.878  INFO 13680 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 21:30:19.906  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$c70d1037] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:19.919  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.009  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.018  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$ea38dc1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.022  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.033  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.067  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.080  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.669  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.676  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.678  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.681  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.682  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:20.683  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:21.062  INFO 13680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 21:30:21.417  INFO 13680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 21:30:21.427  INFO 13680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 21:30:21.428  INFO 13680 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 21:30:21.550  INFO 13680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 21:30:21.578  INFO 13680 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3408 ms
+2020-02-13 21:30:22.078  INFO 13680 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 21:30:22.345  INFO 13680 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 21:30:22.935  INFO 13680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 21:30:22.946  INFO 13680 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 6.173 seconds (JVM running for 8.689)
+2020-02-13 21:30:34.394  INFO 13680 --- [http-nio-8088-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 21:30:34.394  INFO 13680 --- [http-nio-8088-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 21:30:34.403  INFO 13680 --- [http-nio-8088-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-02-13 21:30:34.494  INFO 13680 --- [http-nio-8088-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 21:30:34.659  INFO 13680 --- [http-nio-8088-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 21:30:34.666 DEBUG 13680 --- [http-nio-8088-exec-9] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 21:30:34.697 DEBUG 13680 --- [http-nio-8088-exec-9] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 21:30:34.744 DEBUG 13680 --- [http-nio-8088-exec-9] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 21:30:34.761 DEBUG 13680 --- [http-nio-8088-exec-9] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 21:30:34.762 DEBUG 13680 --- [http-nio-8088-exec-9] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 21:30:34.772 DEBUG 13680 --- [http-nio-8088-exec-9] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 21:30:34.778 DEBUG 13680 --- [http-nio-8088-exec-9] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 21:30:34.780 DEBUG 13680 --- [http-nio-8088-exec-9] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 21:30:34.786 DEBUG 13680 --- [http-nio-8088-exec-9] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 21:30:38.803 DEBUG 13680 --- [http-nio-8088-exec-7] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 21:30:38.804 DEBUG 13680 --- [http-nio-8088-exec-7] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 21:30:38.805 DEBUG 13680 --- [http-nio-8088-exec-7] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 21:30:38.830 DEBUG 13680 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 21:30:38.831 DEBUG 13680 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 21:30:38.838 DEBUG 13680 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 21:30:38.844 DEBUG 13680 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 21:30:38.845 DEBUG 13680 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 21:30:38.847 DEBUG 13680 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 21:30:38.848 DEBUG 13680 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 21:30:38.848 DEBUG 13680 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 21:30:38.850 DEBUG 13680 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 22:15:05.333  INFO 11524 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 11524 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 22:15:05.340 DEBUG 11524 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 22:15:05.341  INFO 11524 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 22:15:08.443  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$c4175b2b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:08.460  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:08.633  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:08.653  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$badd8b5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:08.659  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:08.673  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:08.765  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:08.794  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:10.247  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:10.256  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:10.260  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:10.263  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:10.265  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:10.266  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:10.894  INFO 11524 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:15:11.445  INFO 11524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 22:15:11.459  INFO 11524 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 22:15:11.460  INFO 11524 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 22:15:12.015  INFO 11524 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 22:15:12.015  INFO 11524 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6571 ms
+2020-02-13 22:15:12.428  INFO 11524 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 22:15:12.526  INFO 11524 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 22:15:12.795  INFO 11524 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 22:15:12.800  INFO 11524 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 9.128 seconds (JVM running for 10.735)
+2020-02-13 22:15:21.377  INFO 11524 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 22:15:21.377  INFO 11524 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 22:15:21.388  INFO 11524 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-02-13 22:15:21.477  INFO 11524 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 22:15:21.622  INFO 11524 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 22:15:21.629 DEBUG 11524 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 22:15:21.657 DEBUG 11524 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 22:15:21.690 DEBUG 11524 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 22:15:21.703 DEBUG 11524 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 22:15:21.703 DEBUG 11524 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 22:15:21.705 DEBUG 11524 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 22:15:21.706 DEBUG 11524 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 22:15:21.707 DEBUG 11524 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 22:15:21.709 DEBUG 11524 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 22:15:26.678 DEBUG 11524 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 22:15:26.678 DEBUG 11524 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 22:15:26.680 DEBUG 11524 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 22:15:26.733 DEBUG 11524 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 22:15:26.733 DEBUG 11524 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 22:15:26.744 DEBUG 11524 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 22:15:26.747 DEBUG 11524 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 22:15:26.747 DEBUG 11524 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 22:15:26.749 DEBUG 11524 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 22:15:26.750 DEBUG 11524 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 22:15:26.750 DEBUG 11524 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 22:15:26.754 DEBUG 11524 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 22:19:53.569  INFO 13208 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 13208 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 22:19:53.574 DEBUG 13208 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 22:19:53.574  INFO 13208 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 22:19:56.418  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$d2303545] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:56.435  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:56.579  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:56.590  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$19c6b2cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:56.595  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:56.609  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:56.648  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:56.668  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:57.346  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:57.354  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:57.359  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:57.366  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:57.368  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:57.382  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:58.262  INFO 13208 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:19:58.921  INFO 13208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 22:19:58.935  INFO 13208 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 22:19:58.936  INFO 13208 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 22:19:59.175  INFO 13208 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 22:19:59.176  INFO 13208 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5530 ms
+2020-02-13 22:19:59.774  INFO 13208 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 22:19:59.900  INFO 13208 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 22:20:00.295  INFO 13208 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 22:20:00.301  INFO 13208 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 8.105 seconds (JVM running for 10.419)
+2020-02-13 22:34:05.739  INFO 3956 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 3956 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 22:34:05.746 DEBUG 3956 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 22:34:05.747  INFO 3956 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 22:34:07.394  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$e82f6a62] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:07.406  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:07.516  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:07.524  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$2fc5e7ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:07.527  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:07.535  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:07.563  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:07.575  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:08.034  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:08.041  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:08.044  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:08.047  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:08.049  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:08.050  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:08.470  INFO 3956 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 22:34:08.855  INFO 3956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 22:34:08.867  INFO 3956 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 22:34:08.867  INFO 3956 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 22:34:08.991  INFO 3956 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 22:34:08.991  INFO 3956 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3137 ms
+2020-02-13 22:34:09.281  INFO 3956 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 22:34:09.367  INFO 3956 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 22:34:09.681  INFO 3956 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 22:34:09.685  INFO 3956 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.329 seconds (JVM running for 6.688)
+2020-02-13 22:34:21.128  INFO 3956 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 22:34:21.129  INFO 3956 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 22:34:21.142  INFO 3956 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-02-13 22:34:21.241  INFO 3956 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 22:34:21.385  INFO 3956 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 22:34:21.395 DEBUG 3956 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 22:34:21.425 DEBUG 3956 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 22:34:21.457 DEBUG 3956 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 22:34:21.473 DEBUG 3956 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 22:34:21.473 DEBUG 3956 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 22:34:21.476 DEBUG 3956 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 22:34:21.477 DEBUG 3956 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 22:34:21.478 DEBUG 3956 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 22:34:21.481 DEBUG 3956 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 22:34:26.195 DEBUG 3956 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 22:34:26.196 DEBUG 3956 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 22:34:26.200 DEBUG 3956 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 22:34:26.222 DEBUG 3956 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 22:34:26.223 DEBUG 3956 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 22:34:26.234 DEBUG 3956 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 22:34:26.238 DEBUG 3956 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 22:34:26.238 DEBUG 3956 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 22:34:26.240 DEBUG 3956 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 22:34:26.241 DEBUG 3956 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 22:34:26.241 DEBUG 3956 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 22:34:26.244 DEBUG 3956 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 23:04:30.831  INFO 2640 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 2640 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 23:04:30.835 DEBUG 2640 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 23:04:30.837  INFO 2640 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 23:04:32.632  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$a1ac879a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:32.644  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:32.737  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:32.744  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e9430524] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:32.749  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:32.757  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:32.790  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:32.804  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:33.315  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:33.320  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:33.322  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:33.324  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:33.325  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:33.326  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:33.709  INFO 2640 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:04:34.078  INFO 2640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 23:04:34.090  INFO 2640 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 23:04:34.090  INFO 2640 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 23:04:34.220  INFO 2640 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 23:04:34.220  INFO 2640 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3255 ms
+2020-02-13 23:04:34.522  INFO 2640 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 23:04:34.619  INFO 2640 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 23:04:34.858  INFO 2640 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 23:04:34.865  INFO 2640 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.261 seconds (JVM running for 6.739)
+2020-02-13 23:04:37.870  INFO 2640 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 23:04:37.870  INFO 2640 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 23:04:37.879  INFO 2640 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-02-13 23:04:37.980  INFO 2640 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 23:04:38.161  INFO 2640 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 23:04:38.173 DEBUG 2640 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 23:04:38.204 DEBUG 2640 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 23:04:38.238 DEBUG 2640 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 23:04:38.252 DEBUG 2640 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 23:04:38.253 DEBUG 2640 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 23:04:38.256 DEBUG 2640 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 23:04:38.258 DEBUG 2640 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 23:04:38.258 DEBUG 2640 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 23:04:38.261 DEBUG 2640 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 23:04:42.564 DEBUG 2640 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 23:04:42.565 DEBUG 2640 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 23:04:42.567 DEBUG 2640 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 23:04:42.589 DEBUG 2640 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 23:04:42.590 DEBUG 2640 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 23:04:42.598 DEBUG 2640 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 23:04:42.602 DEBUG 2640 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 23:04:42.603 DEBUG 2640 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 23:04:42.605 DEBUG 2640 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 23:04:42.605 DEBUG 2640 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 23:04:42.606 DEBUG 2640 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 23:04:42.608 DEBUG 2640 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 23:14:31.836  INFO 11608 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 11608 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 23:14:31.836 DEBUG 11608 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 23:14:31.836  INFO 11608 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 23:14:33.705  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$823b429f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:33.721  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:33.815  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:33.815  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$c9d1c029] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:33.815  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:33.830  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:33.846  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:33.862  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:34.317  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:34.333  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:34.333  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:34.333  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:34.333  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:34.333  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:34.692  INFO 11608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:14:35.033  INFO 11608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 23:14:35.049  INFO 11608 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 23:14:35.049  INFO 11608 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 23:14:35.143  INFO 11608 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 23:14:35.158  INFO 11608 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3226 ms
+2020-02-13 23:14:35.462  INFO 11608 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 23:14:35.560  INFO 11608 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 23:14:35.890  INFO 11608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 23:14:35.894  INFO 11608 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 5.312 seconds (JVM running for 6.624)
+2020-02-13 23:14:41.150  INFO 11608 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 23:14:41.151  INFO 11608 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 23:14:41.160  INFO 11608 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-02-13 23:14:41.245  INFO 11608 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 23:14:41.392  INFO 11608 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 23:14:41.403 DEBUG 11608 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 23:14:41.435 DEBUG 11608 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 23:14:41.470 DEBUG 11608 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 23:14:41.473 DEBUG 11608 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 23:14:41.473 DEBUG 11608 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 23:14:41.473 DEBUG 11608 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 23:14:41.485 DEBUG 11608 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 23:14:41.487 DEBUG 11608 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 23:14:41.489 DEBUG 11608 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 23:14:59.285 DEBUG 11608 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 23:14:59.288 DEBUG 11608 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 23:14:59.290 DEBUG 11608 --- [http-nio-8088-exec-4] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 23:14:59.311 DEBUG 11608 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 23:14:59.311 DEBUG 11608 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 23:14:59.319 DEBUG 11608 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 23:14:59.323 DEBUG 11608 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 23:14:59.323 DEBUG 11608 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 23:14:59.325 DEBUG 11608 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 23:14:59.326 DEBUG 11608 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 23:14:59.326 DEBUG 11608 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 23:14:59.328 DEBUG 11608 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 23:18:39.185  INFO 12488 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 12488 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 23:18:39.185 DEBUG 12488 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 23:18:39.185  INFO 12488 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 23:18:40.963  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$69c21024] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:40.978  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:41.119  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:41.145  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$b1588dae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:41.151  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:41.169  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:41.281  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:41.319  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:42.332  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:42.344  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:42.349  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:42.355  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:42.358  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:42.360  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:42.975  INFO 12488 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:18:43.698  INFO 12488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 23:18:43.714  INFO 12488 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 23:18:43.715  INFO 12488 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 23:18:44.019  INFO 12488 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 23:18:44.019  INFO 12488 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4712 ms
+2020-02-13 23:18:44.635  INFO 12488 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 23:18:44.896  INFO 12488 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 23:18:45.260  INFO 12488 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 23:18:45.265  INFO 12488 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 7.138 seconds (JVM running for 8.354)
+2020-02-13 23:18:45.398  INFO 12488 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 23:18:45.399  INFO 12488 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 23:18:45.410  INFO 12488 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-02-13 23:18:45.536  INFO 12488 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 23:18:45.742  INFO 12488 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 23:18:45.753 DEBUG 12488 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 23:18:45.786 DEBUG 12488 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 23:18:45.824 DEBUG 12488 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 23:18:45.841 DEBUG 12488 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 23:18:45.841 DEBUG 12488 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 23:18:45.844 DEBUG 12488 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 23:18:45.846 DEBUG 12488 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 23:18:45.846 DEBUG 12488 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 23:18:45.849 DEBUG 12488 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 23:18:51.684 DEBUG 12488 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 23:18:51.685 DEBUG 12488 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 23:18:51.686 DEBUG 12488 --- [http-nio-8088-exec-3] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 23:18:51.712 DEBUG 12488 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 23:18:51.713 DEBUG 12488 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 23:18:51.719 DEBUG 12488 --- [http-nio-8088-exec-5] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 23:18:51.723 DEBUG 12488 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 23:18:51.724 DEBUG 12488 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 23:18:51.727 DEBUG 12488 --- [http-nio-8088-exec-5] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 23:18:51.729 DEBUG 12488 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 23:18:51.729 DEBUG 12488 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 23:18:51.731 DEBUG 12488 --- [http-nio-8088-exec-5] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 23:28:12.044  INFO 1740 --- [main] com.lx.leeblog.LeeblogApplication        : Starting LeeblogApplication on DESKTOP-C948I4V with PID 1740 (E:\code\leeblog\target\classes started by Carbon in E:\code\leeblog)
+2020-02-13 23:28:12.053 DEBUG 1740 --- [main] com.lx.leeblog.LeeblogApplication        : Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-02-13 23:28:12.054  INFO 1740 --- [main] com.lx.leeblog.LeeblogApplication        : No active profile set, falling back to default profiles: default
+2020-02-13 23:28:14.466  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'shiroConfig' of type [com.lx.leeblog.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$9e8c2ac6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:14.476  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:14.585  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mybatis-org.mybatis.spring.boot.autoconfigure.MybatisProperties' of type [org.mybatis.spring.boot.autoconfigure.MybatisProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:14.597  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration' of type [org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$e622a850] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:14.604  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:14.615  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:14.652  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'dataSource' of type [com.zaxxer.hikari.HikariDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:14.665  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:15.442  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:15.442  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:15.442  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:15.452  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userMapper' of type [com.sun.proxy.$Proxy64] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:15.452  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userImpl' of type [com.lx.leeblog.service.UserImpl] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:15.452  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'userRealm' of type [com.lx.leeblog.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:16.017  INFO 1740 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-13 23:28:16.702  INFO 1740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8088 (http)
+2020-02-13 23:28:16.712  INFO 1740 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-13 23:28:16.712  INFO 1740 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-02-13 23:28:16.842  INFO 1740 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-13 23:28:16.842  INFO 1740 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4677 ms
+2020-02-13 23:28:17.177  INFO 1740 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-13 23:28:17.292  INFO 1740 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-13 23:28:17.554  INFO 1740 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8088 (http) with context path ''
+2020-02-13 23:28:17.554  INFO 1740 --- [main] com.lx.leeblog.LeeblogApplication        : Started LeeblogApplication in 6.878 seconds (JVM running for 8.47)
+2020-02-13 23:28:19.797  INFO 1740 --- [http-nio-8088-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-13 23:28:19.797  INFO 1740 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-13 23:28:19.814  INFO 1740 --- [http-nio-8088-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-02-13 23:28:19.913  INFO 1740 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-13 23:28:20.062  INFO 1740 --- [http-nio-8088-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-13 23:28:20.071 DEBUG 1740 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 23:28:20.099 DEBUG 1740 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 23:28:20.127 DEBUG 1740 --- [http-nio-8088-exec-2] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 23:28:20.140 DEBUG 1740 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 23:28:20.141 DEBUG 1740 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 23:28:20.143 DEBUG 1740 --- [http-nio-8088-exec-2] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 23:28:20.144 DEBUG 1740 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 23:28:20.145 DEBUG 1740 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 23:28:20.148 DEBUG 1740 --- [http-nio-8088-exec-2] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 23:29:16.317 DEBUG 1740 --- [http-nio-8088-exec-3] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 23:29:16.317 DEBUG 1740 --- [http-nio-8088-exec-3] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 23:29:16.332 DEBUG 1740 --- [http-nio-8088-exec-3] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 23:29:16.336 DEBUG 1740 --- [http-nio-8088-exec-3] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 23:29:16.337 DEBUG 1740 --- [http-nio-8088-exec-3] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 23:29:16.339 DEBUG 1740 --- [http-nio-8088-exec-3] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 23:29:16.340 DEBUG 1740 --- [http-nio-8088-exec-3] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 23:29:16.340 DEBUG 1740 --- [http-nio-8088-exec-3] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 23:29:16.345 DEBUG 1740 --- [http-nio-8088-exec-3] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14
+2020-02-13 23:29:20.691 DEBUG 1740 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : ==>  Preparing: select id, avatar, create_time, email, nickname, password, type, update_time, username from t_user where username = ? 
+2020-02-13 23:29:20.694 DEBUG 1740 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : ==> Parameters: lixing(String)
+2020-02-13 23:29:20.696 DEBUG 1740 --- [http-nio-8088-exec-5] c.l.l.dao.UserMapper.selectByUsername    : <==      Total: 1
+2020-02-13 23:29:20.718 DEBUG 1740 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==>  Preparing: SELECT u.avatar, b.create_time, b.recommend, b.title, b.views, b.user_id from t_user u RIGHT JOIN t_blog b on u.id = b.user_id; 
+2020-02-13 23:29:20.718 DEBUG 1740 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : ==> Parameters: 
+2020-02-13 23:29:20.721 DEBUG 1740 --- [http-nio-8088-exec-6] c.l.l.d.B.selectAllBlogWithUser          : <==      Total: 8
+2020-02-13 23:29:20.722 DEBUG 1740 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==>  Preparing: select id, name from t_type; 
+2020-02-13 23:29:20.723 DEBUG 1740 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : ==> Parameters: 
+2020-02-13 23:29:20.724 DEBUG 1740 --- [http-nio-8088-exec-6] c.l.l.dao.TypeMapper.selectAllType       : <==      Total: 8
+2020-02-13 23:29:20.725 DEBUG 1740 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==>  Preparing: select id, name, Tagid from t_tag 
+2020-02-13 23:29:20.726 DEBUG 1740 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : ==> Parameters: 
+2020-02-13 23:29:20.729 DEBUG 1740 --- [http-nio-8088-exec-6] c.l.leeblog.dao.TagMapper.selectAllTags  : <==      Total: 14

@@ -9,6 +9,7 @@ import java.util.Date;
  */
 @Data
 public class BlogVo {
+    private Long id;
     private String avatar;
     private Date createTime;
     private Long recommend;

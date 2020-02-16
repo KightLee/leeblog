@@ -1,8 +1,12 @@
 package com.lx.leeblog.service;
 
 import com.lx.leeblog.dao.BlogMapper;
+import com.lx.leeblog.dao.TypeMapper;
+import com.lx.leeblog.dao.UserMapper;
 import com.lx.leeblog.pojo.Blog;
+import com.lx.leeblog.pojo.Type;
 import com.lx.leeblog.pojo.User;
+import com.lx.leeblog.util.MarkdownUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +21,7 @@ public class BlogServiceImpl implements BlogService {
 
     @Autowired
     private BlogMapper blogMapper;
+
     @Override
     public int save(Blog blog) {
         blog.setCreateTime(new Date());
@@ -41,5 +46,14 @@ public class BlogServiceImpl implements BlogService {
             users = blogMapper.selectAllBlogWithUser();
         }
         return users;
+    }
+
+    @Override
+    public Blog selectBlogByBlogId(Long id) {
+        Blog blog = blogMapper.selectByPrimaryKey(id);
+        String content = blog.getContent();
+        String contentChange = MarkdownUtil.markdownToHtmlExtensions(content);
+        blog.setContent(contentChange);
+        return blog;
     }
 }

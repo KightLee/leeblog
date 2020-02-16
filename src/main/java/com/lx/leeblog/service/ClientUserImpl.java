@@ -36,4 +36,10 @@ public class ClientUserImpl implements ClientUser {
         User user = userMapper.selectByUsername(username);
         return user;
     }
+
+    @Override
+    public User selectUserByUserId(Long id) {
+        User user = userMapper.selectByPrimaryKey(id);
+        return user;
+    }
 }

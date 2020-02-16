@@ -20,4 +20,9 @@ public class TypeServiceImpl implements TypeService {
     public List<Type> selectAllType() {
         return typeMapper.selectAllType();
     }
+
+    @Override
+    public Type selectTypeByTypeId(Long id) {
+        return typeMapper.selectByPrimaryKey(id);
+    }
 }
