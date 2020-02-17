@@ -1,4 +1,4 @@
-layui.use(['element', 'layer', 'jquery'], function () {
+/*layui.use(['element', 'layer', 'jquery'], function () {
     var element = layui.element;
     // var layer = layui.layer;
     var $ = layui.$;
@@ -54,4 +54,10 @@ layui.use(['element', 'layer', 'jquery'], function () {
     $(window).resize(function () {
         FrameWH();
     })
-});
+});*/
+
+$('.main-left a').on('click', function () {
+    var address = $(this).data('src');
+    // alert(address);
+    $("iframe").attr('src', address);
+})

@@ -175,6 +175,12 @@
     from t_blog
     where id = #{id,jdbcType=BIGINT}
   </select>
+  <select id="selectViewWithId" resultType="long" parameterType="long">
+    select views from t_blog where id = #{id}
+  </select>
+  <update id="updateByPrimaryKeyView">
+    update t_blog set views = views + 1 where id = #{id}
+  </update>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from t_blog
     where id = #{id,jdbcType=BIGINT}

@@ -69,7 +69,6 @@ public class UserRealm extends AuthorizingRealm {
         if (usercheck == null) {
             return null;
         }
-        return new SimpleAuthenticationInfo(usercheck,
-                usercheck.getPassword(), getName());
+        return new SimpleAuthenticationInfo(usercheck, usercheck.getPassword(), getName());
     }
 }

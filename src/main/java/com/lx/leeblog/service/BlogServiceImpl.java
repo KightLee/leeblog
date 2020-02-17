@@ -56,4 +56,11 @@ public class BlogServiceImpl implements BlogService {
         blog.setContent(contentChange);
         return blog;
     }
+
+    @Override
+    public Long addView(Long id) {
+        int i = blogMapper.updateByPrimaryKeyView(id);
+        Long aLong = blogMapper.selectViewWithId(id);
+        return aLong;
+    }
 }

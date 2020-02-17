@@ -41,7 +41,7 @@ public class UserController {
 
     @GetMapping("/registerAdd")
     public String register() {
-        return "register";
+        return "/register";
     }
     @Autowired
     private TypeService typeService;

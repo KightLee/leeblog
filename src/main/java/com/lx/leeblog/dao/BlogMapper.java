@@ -30,6 +30,10 @@ public interface BlogMapper {
 
     Blog selectByPrimaryKey(Long id);
 
+    Long selectViewWithId(Long id);
+
+    int updateByPrimaryKeyView(Long id);
+
     int updateByExampleSelective(@Param("record") Blog record, @Param("example") BlogExample example);
 
     int updateByExampleWithBLOBs(@Param("record") Blog record, @Param("example") BlogExample example);

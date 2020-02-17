@@ -76,6 +76,7 @@ public class BlogController {
      */
     @GetMapping("/detail")
     public String detail(Long blogid, Model model) {
+        Long aLong = blogService.addView(blogid);
         Blog blog = blogService.selectBlogByBlogId(blogid);
         Long userId = blog.getUserId();
         Long typeId = blog.getTypeId();

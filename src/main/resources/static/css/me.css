@@ -1,7 +1,23 @@
 html,
 body {
-	background: url("https://picsum.photos/id/1077/1920/900");
+	background: url("https://picsum.photos/id/141/1920/900");
 	background-size: cover;
+}
+.main {
+	margin: 30px;
+}@media screen and (max-width: 768px) {
+	.main {
+		margin: 0px;
+	}
+	.right-tag {
+		display: none;
+	}
+	.right-type {
+		display: none;
+	}
+	.sousuo {
+		display: inline-block;
+	}
 }
 .foot-class {
 	height: 150px;

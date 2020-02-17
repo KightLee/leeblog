@@ -19,7 +19,6 @@
             <h2>Leeblog</h2>
         </div>
         <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="">控制台</a></li>
             <li class="layui-nav-item"><a href="">查看用户</a></li>
             <li class="layui-nav-item"><a href="">权限查看</a></li>
         </ul>
@@ -30,31 +29,28 @@
                     <span class="layui-nav-more"></span>
                 </a>
                 <dl class="layui-nav-child">
-                    <dd><a href="javascript:;">修改信息</a></dd>
-                    <dd><a href="javascript:;">安全管理</a></dd>
-                    <dd><a href="javascript:;">退了</a></dd>
+                    <dd>
+                        <a th:href="@{/user/logout}"><i class="layui-icon" style="color: #009688;">&#xe682;</i>&nbsp;&nbsp;注销</a>
+                    </dd>
                 </dl>
             </li>
             <li class="layui-nav-item">
-                <a th:href="@{/user/logout}"><i class="layui-icon" style="color: #009688;">&#xe682;</i>&nbsp;&nbsp;注销</a>
+
             </li>
         </ul>
     </div>
     <!-- 侧边栏目 -->
     <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
-            <ul class="layui-nav layui-nav-tree layui-inline" lay-filter="demo">
+            <ul class="layui-nav layui-nav-tree layui-inline main-left" lay-filter="demo">
                 <li class="layui-nav-item layui-nav-itemed">
                     <a href="javascript:;"><i class="layui-icon" style="font-size: 15px;">&#xe68e;</i>&nbsp;&nbsp;主页</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">控制台</a></dd>
-                    </dl>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon"
                                               style="font-size: 16px;">&#xe66f;</i>&nbsp;&nbsp;用户管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="" data-url="@{/admin/useradmin}" data-title="用户信息" data-id="11" class="navActive" data-type="tabAdd">用户信息</a></dd>
+                        <dd><a href="" data-src="useradmin">用户信息</a></dd>
                         <dd><a href="">用户编辑</a></dd>
                         <dd><a href="">删除用户</a></dd>
                     </dl>
@@ -63,7 +59,7 @@
                     <a href="javascript:;"><i class="layui-icon"
                                               style="font-size: 16px;">&#xe656;</i>&nbsp;&nbsp;博客管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a th:href="@{/admin/blogadmin}" target="voiceList">博客内容</a></dd>
+                        <dd><a data-src="blogadmin" target="voiceList">博客内容</a></dd>
                         <dd><a href="">博客分类</a></dd>
                     </dl>
                 </li>
@@ -106,8 +102,8 @@
         "@计科165_14 李星"
     </div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <script type="text/javascript" src="../../static/admin/layui.all.js" th:src="@{/admin/layui.all.js}"></script>
-<!--<script type="text/javascript" th:src="@{/admin/index.js}"></script>-->
+<script type="text/javascript" th:src="@{/admin/index.js}"></script>
 </body>
 </html>

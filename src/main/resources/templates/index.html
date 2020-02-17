@@ -69,7 +69,7 @@
     <p th:text="${error}"></p>
 </div>-->
 
-<div class="container animated fadeIn">
+<div class="container-fluid main animated fadeIn">
     <div class="row">
         <!-- 左列 -->
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
@@ -117,14 +117,14 @@
         </div>
         <!-- 右列 -->
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
-            <div class="panel panel-default">
+            <div class="panel panel-default right-tag">
                 <div class="panel-body">
                     <h4>标签</h4>
                     <hr>
                     <a th:href="@{'/indextag?tag='+${tag.name}}" class="blog-tag" th:each="tag : ${tags}" th:text="${tag.name}">user</a>
                 </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default right-type">
                 <div class="panel-body">
                     <h4>分类</h4>
                     <hr>

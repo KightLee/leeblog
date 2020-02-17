@@ -76,7 +76,7 @@
             , toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
             , title: '用户数据表'
             , page: true
-            , limits: [2, 10, 20, 30]
+            , limits: [5, 10, 20, 30]
             , cols: [
                 [
                     {type: 'checkbox', fixed: 'left'}
@@ -140,6 +140,7 @@
                     if (data == 1) {
                         layer.msg('删除成功');
                         tableIns.reload();
+                        deleteArr.length = 0;
                     } else {
                         layer.msg('删除失败');
                     }
@@ -158,6 +159,7 @@
                     obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
                     layer.close(index);
                     //向服务端发送删除指令
+                    deleteOne(data);
                     layer.msg('del');
                 });
             } else if (layEvent === 'edit') { //编辑
@@ -167,6 +169,28 @@
                 openEditUser(data);
             }
         });
+        /* 单个id删除 */
+        function deleteOne(obj) {
+            let delid = obj.id;
+            $.ajax({
+                type: "post",
+                url: "http://localhost:8088/admin/blogdelete",
+                dataType: "JSON",
+                contentType: "application/json",
+                data : JSON.stringify({
+                    'num': delid
+                }),
+                success: function (data) {
+                    alert(data);
+                    if (data == 1) {
+                        layer.msg('删除成功');
+                        tableIns.reload();
+                    } else {
+                        layer.msg('删除失败');
+                    }
+                }
+            });
+        }
 
         var url;
         var mainIndex;

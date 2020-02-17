@@ -35,6 +35,7 @@ public class ShiroConfig {
         filtermap.put("/user/register", "anon");
         filtermap.put("/user/login", "anon");
         filtermap.put("/index", "anon");
+        filtermap.put("/callback", "anon");
         filtermap.put("/logout", "logout");
         filtermap.put("/user/test", "perms[user:add]");
         filtermap.put("/admin/*", "perms[admin:all]");
@@ -58,4 +59,5 @@ public class ShiroConfig {
     public UserRealm userRealm() {
         return new UserRealm();
     }
+
 }

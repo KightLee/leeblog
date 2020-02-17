@@ -15,4 +15,5 @@ public interface BlogService {
     public List<User> selectAllBlog();
     public List<User> selectBlogByTagId(String tag);
     public Blog selectBlogByBlogId(Long id);
+    public Long addView(Long id);
 }

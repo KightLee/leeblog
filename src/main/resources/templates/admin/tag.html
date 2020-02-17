@@ -66,27 +66,17 @@
         var table = layui.table;
         table.render({
             elem: '#userTable'
-            , url: 'http://localhost:8088/admin/users'
+            , url: 'http://localhost:8088/admin/tags'
             , toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
-            , title: '用户数据表'
+            , title: '用户标签表'
             , page: true
-            , limits: [2, 10, 20, 30]
+            , limits: [5, 10]
             , cols: [
                 [
                     {type: 'checkbox', fixed: 'left'}
                     , {field: 'id', title: 'ID', width: 80, fixed: 'left', unresize: true, sort: true}
-                    , {field: 'username', title: '用户名', width: 120, align: 'center'}
-                    , {field: 'password', title: '密码', width: 120, align: 'center'}
-                    , {field: 'nickname', title: '昵称', width: 120, align: 'center'}
-                    , {
-                    field: 'email', title: '邮箱', width: 150, templet: function (res) {
-                        return '<em>' + res.email + '</em>';
-                    }
-                }
-                    , {field: 'avatar', title: '首图', width: 150}
-                    , {field: 'type', title: '分类', width: 100}
-                    , {field: 'createTime', title: '创建时间', width: 120, sort: true}
-                    , {field: 'updateTime', title: '更新时间', width: 120, sort: true}
+                    , {field: 'name', title: '标签名', width: 120, align: 'center'}
+                    , {field: 'tagname', title: '标签分类', width: 120, align: 'center'}
                     , {fixed: 'right', title: '操作', width: 150, align: 'center', toolbar: '#barDemo'}
                 ]
             ]
@@ -100,15 +90,28 @@
                     break;
                 case
                 'batchDelete':
-                    layer.msg('delete');
+                    deleteSelect();
                     break;
             }
         });
+        var deleteArr = [];
         /* 监听checkbox*/
         table.on("checkbox(userTable)", function (obj) {
             console.log(obj.checked);
             console.log(obj.data);
             console.log(obj.type);
+            if (obj.type == "one") {
+                if (obj.checked) {
+                    deleteArr.push(obj.data.id);
+                    /*var b = JSON.stringify(deleteArr)
+                    console.log($.type(b));*/
+                } else {
+                    deleteArr.splice($.inArray(obj.data.id, deleteArr), 1);
+                    console.log(deleteArr);
+                }
+            } else {
+                layer.msg('不允许一次性清空数据库!');
+            }
         });
         /* 监听工具栏*/
         table.on('tool(userTable)', function (obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
@@ -121,6 +124,7 @@
                     obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
                     layer.close(index);
                     //向服务端发送删除指令
+                    console.log(data);
                     layer.msg('del');
                 });
             } else if (layEvent === 'edit') { //编辑
@@ -151,6 +155,26 @@
                 ,'密码必须6到12位，且不能出现空格'
             ]
         });
+
+        function deleteSelect() {
+            var arrdel = JSON.stringify(deleteArr);
+            $.ajax({
+                type: "post",
+                url: "http://localhost:8088/admin/tagdelete",
+                dataType: "JSON",
+                contentType: "application/json",
+                data : JSON.stringify(deleteArr),
+                success: function (data) {
+                    alert(data);
+                    if (data == 1) {
+                        layer.msg('删除成功');
+                        tableIns.reload();
+                    } else {
+                        layer.msg('删除失败');
+                    }
+                }
+            });
+        }
         /* 提交表单*/
         form.on('submit(dosubmit)',function(obj){
             // alert('ok');
