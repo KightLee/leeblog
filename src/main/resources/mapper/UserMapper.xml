@@ -162,7 +162,8 @@
       #{type,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP}, #{username,jdbcType=VARCHAR}
       )
   </insert>
-    <insert id="insertSelective" parameterType="com.lx.leeblog.pojo.User" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+    <insert id="insertSelective" parameterType="com.lx.leeblog.pojo.User" useGeneratedKeys="true" keyProperty="id"
+            keyColumn="id">
         insert into t_user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -223,6 +224,9 @@
             </if>
         </trim>
     </insert>
+    <select id="selectsCountWithNotCheck" resultType="int">
+        select count(*) from t_user where type = 0
+    </select>
     <select id="countByExample" parameterType="com.lx.leeblog.pojo.UserExample" resultType="java.lang.Integer">
         select count(*) from t_user
         <if test="_parameter != null">

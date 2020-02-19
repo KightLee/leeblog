@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>标签</title>
+    <link rel="stylesheet" href="../../static/admin/css/layui.css" th:href="@{/admin/css/layui.css}">
+</head>
+<body>
+<fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+    <legend>Welcome to leeblog !</legend>
+</fieldset>
+
+<div style="padding: 20px; background-color: #F2F2F2;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header">后台管理页面</div>
+                <div class="layui-card-body">
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header"><h3>审核用户</h3></div>
+                <div class="layui-card-body" style="margin: 20px;padding: 30px">
+                    <h1>待审</h1><br>
+                    <h1 th:text="${usercheck}+'人'"></h1>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-header"><h3>审核博客</h3></div>
+                <div class="layui-card-body" style="margin: 20px;padding:30px">
+                    <h1>待审</h1><br>
+                    <h1 th:text="${blogWithNoPublished}+'篇'"></h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

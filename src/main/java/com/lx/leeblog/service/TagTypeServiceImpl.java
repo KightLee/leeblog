@@ -19,4 +19,9 @@ public class TagTypeServiceImpl implements TagTypeService {
     public List<TagType> selectTypeAndTag() {
         return tagTypeMapper.selectTypeAndTag();
     }
+
+    @Override
+    public String selectTagTypeNamewithTagid(Long id) {
+        return tagTypeMapper.selectTagTypeNameWithTagid(id);
+    }
 }

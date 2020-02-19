@@ -44,31 +44,27 @@
         <div class="layui-side-scroll">
             <ul class="layui-nav layui-nav-tree layui-inline main-left" lay-filter="demo">
                 <li class="layui-nav-item layui-nav-itemed">
-                    <a href="javascript:;"><i class="layui-icon" style="font-size: 15px;">&#xe68e;</i>&nbsp;&nbsp;主页</a>
+                    <a data-src="welcome"><i class="layui-icon" style="font-size: 15px;">&#xe68e;</i>&nbsp;&nbsp;主页</a>
                 </li>
                 <li class="layui-nav-item">
                     <a href="javascript:;"><i class="layui-icon"
                                               style="font-size: 16px;">&#xe66f;</i>&nbsp;&nbsp;用户管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="" data-src="useradmin">用户信息</a></dd>
-                        <dd><a href="">用户编辑</a></dd>
+                        <dd><a data-src="useradmin">用户管理</a></dd>
                         <dd><a href="">删除用户</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;"><i class="layui-icon"
-                                              style="font-size: 16px;">&#xe656;</i>&nbsp;&nbsp;博客管理</a>
+                    <a href="javascript:;"><i class="layui-icon" style="font-size: 16px;">&#xe656;</i>&nbsp;&nbsp;博客管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a data-src="blogadmin" target="voiceList">博客内容</a></dd>
-                        <dd><a href="">博客分类</a></dd>
+                        <dd><a data-src="blogadmin">博客管理</a></dd>
+                        <dd><a data-src="typeadmin">博客分类</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;"><i class="layui-icon"
-                                              style="font-size: 16px;">&#xe655;</i>&nbsp;&nbsp;标签管理</a>
+                    <a href="javascript:;"><i class="layui-icon" style="font-size: 16px;">&#xe655;</i>&nbsp;&nbsp;标签管理</a>
                     <dl class="layui-nav-child">
-                        <dd><a href="">标签查看</a></dd>
-                        <dd><a href="">标签编辑</a></dd>
+                        <dd><a data-src="tagadmin">标签管理</a></dd>
                     </dl>
                 </li>
                 <li class="layui-nav-item"><a href=""><i class="layui-icon" style="font-size: 16px;">&#xe681;</i>&nbsp;&nbsp;云上访问</a>
@@ -91,7 +87,7 @@
                 <li data-type="closeall">关闭所有</li>
             </ul>-->
             <!--<div class="layui-tab-content">-->
-                <iframe src="user.html" th:src="@{/admin/useradmin}" name="voiceList" frameborder="0" class="layadmin-iframe"></iframe>
+                <iframe src="user.html" th:src="@{/admin/welcome}" name="voiceList" frameborder="0" class="layadmin-iframe"></iframe>
             <!--</div>-->
         <!--</div>-->
         <!--<div class="layadmin-tabsbody-item layui-show">

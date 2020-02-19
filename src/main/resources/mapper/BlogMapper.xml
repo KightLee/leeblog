@@ -308,6 +308,9 @@
       </if>
     </trim>
   </insert>
+  <select id="selectBlogWithNoPublished" resultType="int">
+    select count(*) from t_blog where published = 0
+  </select>
   <select id="countByExample" parameterType="com.lx.leeblog.pojo.BlogExample" resultType="java.lang.Integer" >
     select count(*) from t_blog
     <if test="_parameter != null" >

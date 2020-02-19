@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface TagTypeService {
     public List<TagType> selectTypeAndTag();
+
+    public String selectTagTypeNamewithTagid(Long id);
 }

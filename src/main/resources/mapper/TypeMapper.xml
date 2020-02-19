@@ -85,7 +85,7 @@
   <select id="selectAllType" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
-    from t_type;
+    from t_type
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select

@@ -63,4 +63,10 @@ public class BlogServiceImpl implements BlogService {
         Long aLong = blogMapper.selectViewWithId(id);
         return aLong;
     }
+
+    @Override
+    public int selectBlogWithNoPublished() {
+        int i = blogMapper.selectBlogWithNoPublished();
+        return i;
+    }
 }

@@ -109,6 +109,11 @@
         from t_tagtype
         where id = #{id,jdbcType=BIGINT}
     </select>
+    <select id="selectTagTypeNameWithTagid" parameterType="long" resultType="string">
+        select DISTINCT tt.tagTypeDesc
+        from t_tagtype tt
+        LEFT JOIN t_tag t on tt.id = t.Tagid where t.Tagid = #{id,jdbcType=BIGINT}
+    </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from t_tagtype
     where id = #{id,jdbcType=BIGINT}

@@ -9,7 +9,6 @@
 <table class="layui-hide" id="userTable" lay-filter="userTable"></table>
 <div id="toolbarDemo" style="display: none">
     <button class="layui-btn layui-btn-sm" lay-event="add">新增</button>
-    <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="batchDelete">删除</button>
 </div>
 <div id="barDemo" style="display: none">
     <button class="layui-btn layui-btn-sm" lay-event="edit">编辑</button>
@@ -17,37 +16,14 @@
 </div>
 <div id="saveAndUpdateDiv" style="display: none; padding: 20px">
     <form action="" class="layui-form" method="post" lay-filter="datafrm" id="datafrm">
+        <input type="hidden" name="id" />
         <div class="layui-inline">
-            <label class="layui-form-label">用户名</label>
+            <label class="layui-form-label">类型名</label>
             <div class="layui-input-inline">
-                <input type="text" name="username" autocomplete="off" class="layui-input" lay-verify="username">
+                <input type="text" name="name" autocomplete="off" class="layui-input" lay-verify="username">
             </div>
         </div>
-        <div class="layui-inline">
-            <label class="layui-form-label">密码</label>
-            <div class="layui-input-inline">
-                <input type="text" name="password" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-inline">
-            <label class="layui-form-label">首图</label>
-            <div class="layui-input-inline">
-                <input type="text" name="avatar" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-inline">
-            <label class="layui-form-label">邮箱</label>
-            <div class="layui-input-inline">
-                <input type="text" name="email" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-inline">
-            <label class="layui-form-label">分类</label>
-            <div class="layui-input-inline">
-                <input type="radio" name="type" value="0" title="普通用户">
-                <input type="radio" name="type" value="1" title="注册用户">
-            </div>
-        </div>
+
         <div class="layui-form-item" style="text-align: center">
             <div class="layui-input-block">
                 <button class="layui-btn layui-icon layui-icon-release" type="button" id="do-update" lay-submit lay-filter="dosubmit">修改</button>
@@ -64,32 +40,39 @@
         var layer = layui.layer;
         var form = layui.form;
         var table = layui.table;
-        table.render({
+        tableIns = table.render({
             elem: '#userTable'
-            , url: 'http://localhost:8088/admin/users'
+            , url: 'http://localhost:8088/admin/type'
             , toolbar: '#toolbarDemo' //开启头部工具栏，并为其绑定左侧模板
             , title: '用户数据表'
             , page: true
-            , limits: [2, 10, 20, 30]
+            , limits: [2, 5, 10]
             , cols: [
                 [
                     {type: 'checkbox', fixed: 'left'}
-                    , {field: 'id', title: 'ID', width: 80, fixed: 'left', unresize: true, sort: true}
-                    , {field: 'username', title: '用户名', width: 120, align: 'center'}
-                    , {field: 'password', title: '密码', width: 120, align: 'center'}
-                    , {field: 'nickname', title: '昵称', width: 120, align: 'center'}
-                    , {
-                    field: 'email', title: '邮箱', width: 150, templet: function (res) {
-                        return '<em>' + res.email + '</em>';
-                    }
-                }
-                    , {field: 'avatar', title: '首图', width: 150}
-                    , {field: 'type', title: '分类', width: 100}
-                    , {field: 'createTime', title: '创建时间', width: 120, sort: true}
-                    , {field: 'updateTime', title: '更新时间', width: 120, sort: true}
-                    , {fixed: 'right', title: '操作', width: 150, align: 'center', toolbar: '#barDemo'}
+                    , {field: 'id', title: 'ID', width: 180, align: 'center', unresize: true, sort: true}
+                    , {field: 'name', title: '用户名', width: 180, align: 'center'}
+                    , {fixed: 'right', title: '操作', width: 180, align: 'center', toolbar: '#barDemo'}
                 ]
             ]
+        });
+        table.on('tool(userTable)', function (obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+            var data = obj.data; //获得当前行数据
+            var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+            var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
+            if (layEvent === 'del') { //删除
+                layer.confirm('确定删除?', function (index) {
+                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                    layer.close(index);
+                    //向服务端发送删除指令
+                    deleteOne(data);
+                });
+            } else if (layEvent === 'edit') { //编辑
+                //do something
+                layer.msg('edit');
+                //同步更新缓存对应的值
+                openEditUser(data);
+            }
         });
         table.on("toolbar(userTable)", function (obj) {
             switch (obj.event) {
@@ -100,36 +83,32 @@
                     break;
                 case
                 'batchDelete':
-                    layer.msg('delete');
                     break;
             }
         });
-        /* 监听checkbox*/
-        table.on("checkbox(userTable)", function (obj) {
-            console.log(obj.checked);
-            console.log(obj.data);
-            console.log(obj.type);
-        });
-        /* 监听工具栏*/
-        table.on('tool(userTable)', function (obj) { //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
-            var data = obj.data; //获得当前行数据
-            var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
-            var tr = obj.tr; //获得当前行 tr 的 DOM 对象（如果有的话）
-
-            if (layEvent === 'del') { //删除
-                layer.confirm('确定删除?', function (index) {
-                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
-                    layer.close(index);
-                    //向服务端发送删除指令
-                    layer.msg('del');
-                });
-            } else if (layEvent === 'edit') { //编辑
-                //do something
-                layer.msg('edit');
-                //同步更新缓存对应的值
-                openEditUser(data);
-            }
-        });
+        var deleteArr = [];
+        var url;
+        var mainIndex;
+        function deleteOne(obj) {
+            var delid = obj.id;
+            $.ajax({
+                type: "post",
+                url: "http://localhost:8088/admin/typedelete",
+                dataType: "JSON",
+                data : {
+                    'arrDel': delid
+                },
+                success: function (data) {
+                    alert(data);
+                    if (data == 1) {
+                        layer.msg('删除成功');
+                        tableIns.reload();
+                    } else {
+                        layer.msg('删除失败');
+                    }
+                }
+            });
+        }
         // 验证
         form.verify({
             username: function(value, item){ //value：表单的值、item：表单的DOM对象
@@ -153,15 +132,25 @@
         });
         /* 提交表单*/
         form.on('submit(dosubmit)',function(obj){
-            // alert('ok');
-            // 序列化表单数据
-            var param = $('#datafrm').serialize();
-            alert(param);
+            var params = $('#datafrm').serialize();
+            $.post(
+                url,
+                params,
+                function (data) {
+                    if (data == 1) {
+                        layer.msg('更新成功');
+                    } else {
+                        layer.msg('更新失败');
+                    }
+                    layer.close(mainIndex);
+                    tableIns.reload();
+                }
+            )
         });
         /* 新增功能*/
         function openAddUser() {
             // alert('test');
-            layer.open({
+            mainIndex = layer.open({
                 type:1,
                 title:'添加用户',
                 content:$("#saveAndUpdateDiv"),
@@ -169,35 +158,21 @@
                 success: function(index) {
                     // 清空表单数据 !!! 记得转jquery对象 js对象
                     $("#datafrm")[0].reset();
+                    url = "http://localhost:8088/admin/typeadd";
                 }
-                /*btn:[],
-                yes:function(index, layero){
-                    layer.msg('save');
-                },
-                btn2:function(index, layero){
-                    layer.msg('close');
-                    return true;
-                }*/
             });
         }
         /* 编辑功能 */
         function openEditUser(data) {
-            layer.open({
+            mainIndex = layer.open({
                 type:1,
                 title:'编辑用户',
                 content:$("#saveAndUpdateDiv"),
                 area:['800px'],
                 success: function(index) {
                     form.val("datafrm", data);
+                    url = "http://localhost:8088/admin/typeedit";
                 }
-                /*btn:[],
-                yes:function(index, layero){
-                    layer.msg('save');
-                },
-                btn2:function(index, layero){
-                    layer.msg('close');
-                    return true;
-                }*/
             });
         }
     });

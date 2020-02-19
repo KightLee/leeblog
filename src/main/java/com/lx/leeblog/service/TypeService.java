@@ -10,4 +10,7 @@ import java.util.List;
 public interface TypeService {
     public List<Type> selectAllType();
     public Type selectTypeByTypeId(Long id);
+    public int deleteTypeFromids(Integer ids);
+    public int addType(Type type);
+    public int editType(Type type);
 }

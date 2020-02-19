@@ -9,5 +9,8 @@ import java.util.List;
  */
 public interface TagService {
     public List<Tag> selectAllTag();
-    
+    public int updatetagByClass(Tag tag);
+    public int addTag(Tag tag);
+    public int deleteTag(Integer[] ids);
+    public int deleteTagOne(Integer id);
 }

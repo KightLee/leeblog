@@ -6,6 +6,7 @@ import jdk.nashorn.internal.codegen.TypeMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.security.acl.LastOwnerException;
 import java.util.List;
 
 /**
@@ -24,5 +25,22 @@ public class TypeServiceImpl implements TypeService {
     @Override
     public Type selectTypeByTypeId(Long id) {
         return typeMapper.selectByPrimaryKey(id);
+    }
+
+    @Override
+    public int deleteTypeFromids(Integer ids) {
+        return typeMapper.deleteByPrimaryKey(Long.valueOf(ids));
+    }
+
+    @Override
+    public int addType(Type type) {
+        int i = typeMapper.insertSelective(type);
+        return i;
+    }
+
+    @Override
+    public int editType(Type type) {
+        int i = typeMapper.updateByPrimaryKeySelective(type);
+        return i;
     }
 }

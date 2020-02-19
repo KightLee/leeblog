@@ -18,6 +18,8 @@ public interface BlogMapper {
 
     int insertSelective(Blog record);
 
+    int selectBlogWithNoPublished();
+
     List<Blog> selectByExampleWithBLOBs(BlogExample example);
 
     List<Blog> selectByExample(BlogExample example);

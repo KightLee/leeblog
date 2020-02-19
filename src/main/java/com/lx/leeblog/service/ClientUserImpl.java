@@ -42,4 +42,10 @@ public class ClientUserImpl implements ClientUser {
         User user = userMapper.selectByPrimaryKey(id);
         return user;
     }
+
+    @Override
+    public int selectCountNotCheck() {
+        int i = userMapper.selectsCountWithNotCheck();
+        return i;
+    }
 }

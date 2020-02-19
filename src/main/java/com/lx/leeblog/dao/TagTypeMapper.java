@@ -22,6 +22,8 @@ public interface TagTypeMapper {
 
     TagType selectByPrimaryKey(Long id);
 
+    String selectTagTypeNameWithTagid(Long id);
+
     int updateByExampleSelective(@Param("record") TagType record, @Param("example") TagTypeExample example);
 
     int updateByExample(@Param("record") TagType record, @Param("example") TagTypeExample example);

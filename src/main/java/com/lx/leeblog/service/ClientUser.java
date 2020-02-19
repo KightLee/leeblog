@@ -9,4 +9,5 @@ public interface ClientUser {
     Integer addUser(User user);
     User selectUserByUsername(String username);
     User selectUserByUserId(Long id);
+    int selectCountNotCheck();
 }

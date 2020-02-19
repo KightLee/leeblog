@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:shiro="http://www.w3.org/1999/xhtml">
 <head th:fragment="head(title)">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title th:replace="${title}">模板</title>
@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" th:href="@{/css/common.css}"/>
 </head>
 <body>
-<nav th:fragment="menu" class="navbar navbar-default" style="box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);">
+<nav th:fragment="menu" class="navbar navbar-default"
+     style="box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -32,7 +33,10 @@
                 <button type="submit" class="btn btn-default">搜索</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#" th:href="@{/user/edit}">写博客</a></li>
+                <li shiro:hasPermission="admin:all"><a href="#" th:href="@{/admin/index}">后台管理</a></li>
+                <li><a href="#" th:href="@{/user/edit}">
+                    <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;写博客
+                </a></li>
                 <!-- 跳转登录页, 同时做session判断 -->
                 <li th:if="${session.user}==null" class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -52,8 +56,13 @@
                              style="width: 25px;height: 25px;border-radius: 50%"/>
                         <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="#" th:href="@{/user/loginIndex}">我的空间</a></li>
-                        <li><a href="#" th:href="@{/user/logout}">退出</a></li>
+                        <li><a href="#" th:href="@{/user/loginIndex}">
+                            <span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;我的空间
+                        </a></li>
+                        <li><a href="#" th:href="@{/user/logout}">
+                            <span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;退出
+                        </a>
+                        </li>
                     </ul>
                 </li>
             </ul>

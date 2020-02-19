@@ -17,6 +17,8 @@ public interface UserMapper {
 
     int insertSelective(User record);
 
+    int selectsCountWithNotCheck();
+
     List<User> selectByExample(UserExample example);
 
     List<User> selectAll();
