@@ -1,8 +1,11 @@
 package com.lx.leeblog.controller;
 
 import com.lx.leeblog.dto.CommentDto;
+import com.lx.leeblog.pojo.Blog;
 import com.lx.leeblog.pojo.Comment;
 import com.lx.leeblog.pojo.User;
+import com.lx.leeblog.service.BlogService;
+import com.lx.leeblog.service.ClientUser;
 import com.lx.leeblog.service.CommentService;
 import com.lx.leeblog.vo.ResultVo;
 import org.apache.shiro.web.session.HttpServletSession;
@@ -12,6 +15,7 @@ import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
+import javax.jws.WebParam;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -23,6 +27,43 @@ public class CommentController {
 
     @Autowired
     private CommentService commentService;
+
+    @Autowired
+    private BlogService blogService;
+
+    @Autowired
+    private ClientUser clientUser;
+
+    @PostMapping("/thumbs")
+    public String thumbs(Long id, Model model) {
+        Integer updatethumbs = commentService.updatethumbs(id);
+        Blog blog = blogService.selectBlogByBlogId(id);
+        model.addAttribute("blog", blog);
+        return "detail :: mouzhi";
+    }
+
+    /**
+     * 关注功能
+     * @return
+     */
+    @PostMapping("/focuon")
+    @ResponseBody
+    public String focuon(Long uid, HttpSession session, Model model) {
+        User user = (User) session.getAttribute("user");
+        int i = clientUser.insertFocuOn(user.getId(), uid);
+        if (i == 1) {
+           return "success";
+        }
+        return "error";
+    }
+
+    /**
+     * 评论功能， 使用parentId判断二级评论
+     * @param commentDto
+     * @param session
+     * @param model
+     * @return
+     */
     @PostMapping("/comment")
     public String commentSave(CommentDto commentDto, HttpSession session, Model model) {
         if (StringUtils.isEmpty(commentDto.getContent())) {

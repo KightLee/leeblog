@@ -10,4 +10,6 @@ public interface ClientUser {
     User selectUserByUsername(String username);
     User selectUserByUserId(Long id);
     int selectCountNotCheck();
+    Boolean selectFocuOn(Long id,Long userid);
+    int insertFocuOn(Long id,Long userid);
 }

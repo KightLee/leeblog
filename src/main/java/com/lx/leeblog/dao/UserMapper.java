@@ -17,11 +17,15 @@ public interface UserMapper {
 
     int insertSelective(User record);
 
+    int insertFocuOn(@Param("fid") Long id, @Param("uid") Long uid);
+
     int selectsCountWithNotCheck();
 
     List<User> selectByExample(UserExample example);
 
     List<User> selectAll();
+
+    List<Long> selectFocuon(Long id);
 
     int selectPageCount();
 
@@ -38,4 +42,5 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
 }

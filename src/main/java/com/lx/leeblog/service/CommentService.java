@@ -11,5 +11,5 @@ public interface CommentService {
     List<Comment> findAllComment();
     List<Comment> findAllCommentByUserBlogId(Long id);
     Integer insertComment(Comment comment);
-
+    Integer updatethumbs(Long id);
 }

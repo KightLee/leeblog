@@ -2,10 +2,14 @@ package com.lx.leeblog.dao;
 
 import com.lx.leeblog.pojo.Blog;
 import com.lx.leeblog.pojo.BlogExample;
+
+import java.awt.image.ByteLookupTable;
 import java.util.List;
 
 import com.lx.leeblog.pojo.User;
 import org.apache.ibatis.annotations.Param;
+
+import javax.annotation.security.PermitAll;
 
 public interface BlogMapper {
     int countByExample(BlogExample example);
@@ -26,6 +30,8 @@ public interface BlogMapper {
 
     List<Blog> selectAllBlog();
 
+    List<Blog> findLike(@Param("flagname") String flag, @Param("uid") Long id);
+
     List<User> selectAllBlogWithUser();
 
     List<User> selectAllBlogWithUserAndTagName(String tag);
@@ -33,6 +39,8 @@ public interface BlogMapper {
     Blog selectByPrimaryKey(Long id);
 
     Long selectViewWithId(Long id);
+
+    int updatethumbs(Long id);
 
     int updateByPrimaryKeyView(Long id);
 

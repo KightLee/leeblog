@@ -1,5 +1,6 @@
 package com.lx.leeblog.service;
 
+import com.lx.leeblog.dao.BlogMapper;
 import com.lx.leeblog.dao.CommentMapper;
 import com.lx.leeblog.pojo.Comment;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,9 @@ public class CommentServiceImpl implements CommentService {
 
     @Autowired
     private CommentMapper commentMapper;
+
+    @Autowired
+    private BlogMapper blogMapper;
 
     @Override
     public List<Comment> findAllComment() {
@@ -35,5 +39,11 @@ public class CommentServiceImpl implements CommentService {
         comment.setLikeCount(new Long(0));
         int i = commentMapper.insertSelective(comment);
         return i;
+    }
+
+    @Override
+    public Integer updatethumbs(Long id) {
+        int updatethumbs = blogMapper.updatethumbs(id);
+        return updatethumbs;
     }
 }

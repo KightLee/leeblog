@@ -1,7 +1,6 @@
 html,
 body {
-	background: url("https://picsum.photos/id/141/1920/900");
-	background-size: cover;
+	background: url("../img/hypnotize.png");
 }
 .main {
 	margin: 30px;

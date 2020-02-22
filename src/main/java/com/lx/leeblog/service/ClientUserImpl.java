@@ -48,4 +48,21 @@ public class ClientUserImpl implements ClientUser {
         int i = userMapper.selectsCountWithNotCheck();
         return i;
     }
+
+    @Override
+    public Boolean selectFocuOn(Long id,Long userid) {
+        List<Long> longs = userMapper.selectFocuon(id);
+        for (Long aLong : longs) {
+            if (aLong.equals(userid)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int insertFocuOn(Long id, Long userid) {
+        int i = userMapper.insertFocuOn(id, userid);
+        return i;
+    }
 }

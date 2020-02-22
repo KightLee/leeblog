@@ -157,6 +157,12 @@
     <include refid="Blob_Column_List" />
     from t_blog
   </select>
+  <select id="findLike" resultType="Blog">
+    select
+    *
+    from t_blog
+    where flag REGEXP #{flagname} and id != #{uid};
+  </select>
   <select id="selectAllBlogWithUser" resultMap="ResultMapWithBlogUser">
     SELECT <include refid="Blog_User_List" />
     from t_user u RIGHT JOIN t_blog b
@@ -178,6 +184,9 @@
   <select id="selectViewWithId" resultType="long" parameterType="long">
     select views from t_blog where id = #{id}
   </select>
+  <update id="updatethumbs">
+    update t_blog set recommend = recommend + 1 where id = #{id}
+  </update>
   <update id="updateByPrimaryKeyView">
     update t_blog set views = views + 1 where id = #{id}
   </update>

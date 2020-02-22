@@ -34,6 +34,9 @@ public class BlogController {
     private TypeService typeService;
 
     @Autowired
+    private YourLike yourLike;
+
+    @Autowired
     private CommentService commentService;
 
     /**
@@ -75,18 +78,25 @@ public class BlogController {
      * @return
      */
     @GetMapping("/detail")
-    public String detail(Long blogid, Model model) {
+    public String detail(Long blogid, Model model, HttpSession session) {
         Long aLong = blogService.addView(blogid);
         Blog blog = blogService.selectBlogByBlogId(blogid);
+        List<Blog> yourlike = yourLike.yourlike(blog);
+        User user = (User) session.getAttribute("user");
         Long userId = blog.getUserId();
         Long typeId = blog.getTypeId();
+        //本博客博主信息， 与下面关注博主列表区分开
         User user1 = clientUser.selectUserByUserId(userId);
+        //查询是否在已关注的列表中
+        Boolean aBoolean = clientUser.selectFocuOn(user.getId(), userId);
         Type type = typeService.selectTypeByTypeId(typeId);
         List<Comment> comments = commentService.findAllCommentByUserBlogId(blogid);
         model.addAttribute("blog", blog);
         model.addAttribute("comm", comments);
         model.addAttribute("bloguser", user1);
         model.addAttribute("blogtype", type);
+        model.addAttribute("isFocu", aBoolean);
+        model.addAttribute("yourlike", yourlike);
         return "detail";
     }
 }
