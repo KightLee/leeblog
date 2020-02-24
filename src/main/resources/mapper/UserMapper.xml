@@ -118,6 +118,10 @@
         <include refid="Base_Column_List"/>
         from t_user
     </select>
+    <select id="selectUserFocuon" parameterType="long" resultMap="BaseResultMap">
+        SELECT u2.* from t_user u1 LEFT JOIN fans f ON u1.id = f.user_id
+        RIGHT JOIN t_user u2 ON u2.id = f.like_id where u1.id = 1
+    </select>
     <select id="selectFocuon" resultType="long" parameterType="long">
         SELECT t2.id as likename from t_user t1
         RIGHT JOIN fans f1 on f1.user_id = t1.id

@@ -69,15 +69,38 @@
     <p th:text="${error}"></p>
 </div>-->
 
-<div class="container-fluid main animated fadeInUp">
+<div class="container-fluid main animated fadeIn">
     <div class="row">
         <!-- 左列 -->
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3>BLOG</h3>
-                    <ul class="nav nav-tabs">
+                    <h3><span class="glyphicon glyphicon-list"></span> BLOG</h3>
+                    <!--<ul class="nav nav-tabs">
                         <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-home"></span>&nbsp;主页</a></li>
+                    </ul>-->
+                    <br>
+                    <ul class="nav nav-tabs">
+                        <li role="presentation" th:class="${sort == 'no' ? 'active':''}">
+                            <a th:href="@{/index}" class="red">
+                                <span class="glyphicon glyphicon-home"></span> 默认</a>
+                        </li>
+                        <li role="presentation" th:class="${sort == 'new' || sort == '' ? 'active':''}">
+                            <a th:href="@{/indexsort(sort='new')}">
+                                <span class="glyphicon glyphicon-leaf"></span> 最新博客</a>
+                        </li>
+                        <li role="presentation" th:class="${sort == 'hot' ? 'active':''}">
+                            <a th:href="@{/indexsort(sort='hot')}">
+                                <span class="glyphicon glyphicon-eye-open"></span> 最热</a>
+                        </li>
+                        <li role="presentation" th:class="${sort == 'no' ? 'active':''}">
+                            <a th:href="@{/indexsort(sort='most')}" class="red">
+                                <span class="glyphicon glyphicon-fire"></span> 回复</a>
+                        </li>
+                        <li role="presentation" th:class="${sort == 'no' ? 'active':''}">
+                            <a th:href="@{/indexsort(sort='recommend')}" class="red">
+                                <span class="glyphicon glyphicon-thumbs-up"></span> 点赞</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- 内容-->
@@ -93,7 +116,8 @@
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading head-title">
-                                <a href="" th:href="@{'/detail?blogid='+${blog.id}}" th:text="${blog.title}">博客标题测试。。。。</a>
+                                <a href="" th:href="@{'/detail?blogid='+${blog.id}}"
+                                   th:text="${blog.title}">博客标题测试。。。。</a>
                             </h4>
                             <span class="tiny-title">
                                 <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
@@ -112,6 +136,12 @@
                             </span>
                         </div>
                     </div>
+                    <nav>
+                        <ul class="pager">
+                            <li><a th:href="@{/index(page=${pages}-1)}">Previous</a></li>
+                            <li><a th:href="@{/index(page=${pages}+1)}">Next</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </div>
@@ -121,7 +151,8 @@
                 <div class="panel-body">
                     <h4>标签</h4>
                     <hr>
-                    <a th:href="@{'/indextag?tag='+${tag.name}}" class="blog-tag" th:each="tag : ${tags}" th:text="${tag.name}">user</a>
+                    <a th:href="@{'/indextag?tag='+${tag.name}}" class="blog-tag" th:each="tag : ${tags}"
+                       th:text="${tag.name}">user</a>
                 </div>
             </div>
             <div class="panel panel-default right-type">
@@ -129,7 +160,11 @@
                     <h4>分类</h4>
                     <hr>
                     <ul class="list-group">
-                        <li class="list-group-item" th:each="type : ${types}" th:text="${type.name}" th:href="${type.id}">技术</li>
+                        <a href="" th:href="@{'/indetype?typeid='+${type.id}}" th:each="type : ${types}" >
+                            <li class="list-group-item" th:text="${type.name}">
+                                技术
+                            </li>
+                        </a>
                     </ul>
                 </div>
             </div>

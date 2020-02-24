@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="../static/css/animate.css" th:href="@{/css/animate.css}"/>
     <link rel="stylesheet" type="text/css" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}"/>
     <link rel="stylesheet" type="text/css" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/me.css}"/>
     <title>详情页</title>
 </head>
 <body>
@@ -38,6 +39,15 @@
         <div id="content" th:utext="${blog.content}" class="typo typo-selection">
 
         </div>
+        <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <span class="label label-info question-tag" th:each="tag : ${blog.flag.split(',')}">
+                        <span class="glyphicon glyphicon-tags"></span>
+                        <span class="label label-info" th:text="${tag}"></span>
+                    </span>
+        </div>
+        <br>
+        <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <button type="button" class="btn btn-danger" data-toggle="popover" id="good" data-img="../img/wechat.jpg"
                 th:attr="data-img=${blog.appreciation}">
             赞赏
@@ -56,9 +66,7 @@
                         </a>
                     </div>
                     <div class="media-body" th:id="${comms.id}">
-                        <h5 class="media-heading" th:text="${comms.content}"></h5>
-                        <span class="glyphicon glyphicon-thumbs-up"></span>
-                        <span th:text="${comms.likeCount}"></span>&nbsp;&nbsp;
+                        <h5 class="media-heading" th:text="${comms.content}"></h5>&nbsp;
                         <span class="glyphicon glyphicon-comment" onclick="replay(this)"
                               th:attr="data-id=${comms.id},data-nickname=${comms.nickname}" data-id=""
                               data-nickname=""></span>&nbsp;&nbsp;
@@ -73,9 +81,7 @@
                                 </a>
                             </div>
                             <div class="media-body">
-                                <h5 class="media-heading" th:text="${commchild.content}"></h5>
-                                <span class="glyphicon glyphicon-thumbs-up"></span>
-                                <span th:text="${commchild.likeCount}"></span>&nbsp;&nbsp;&nbsp;
+                                <h5 class="media-heading" th:text="${commchild.content}"></h5>&nbsp;&nbsp;
                                 <span th:text="${#dates.format(commchild.createTime, 'yyyy-MM-dd')}"></span>
                             </div>
                             <hr class="col-md-12 col-lg-12">
@@ -108,7 +114,7 @@
 
     <!--点赞按钮-->
     <button class="btn btn-success goodfix" onclick="thumb()">
-        <span class="glyphicon glyphicon-thumbs-up"  id="thumbsid"
+        <span class="glyphicon glyphicon-thumbs-up" id="thumbsid"
               th:attr="data-ids = ${blog.id}" data-ids=""></span>
         <div th:fragment="mouzhi">
             <span id="thumbs" th:text="${blog.recommend}">3</span>
@@ -124,7 +130,9 @@
         </small>
         <hr class="col-mds-12">
         <div id="guanzhu">
-            <button th:if="${isFocu}==false" class="col-md-12 btn btn-large btn-primary" onclick="fucuon(this)" th:attr="data-uid=${bloguser.id}" data-uid="">关注</button>
+            <button th:if="${isFocu}==false" class="col-md-12 btn btn-large btn-primary" onclick="fucuon(this)"
+                    th:attr="data-uid=${bloguser.id}" data-uid="">关注
+            </button>
             <button th:if="${isFocu}==true" class="col-md-12 btn btn-large disabled">已关注</button>
         </div>
     </div>
@@ -252,18 +260,19 @@
 
     function thumb() {
         let id = $('#thumbsid').data("ids");
-        $('#thumbs').load("/thumbs",{
-            id:id
+        $('#thumbs').load("/thumbs", {
+            id: id
         });
     }
+
     /* 获取关注按钮的作者id,到后台添加关注再动态回显 */
     function fucuon(obj) {
         let objclick = $(obj);
         let uid = objclick.data("uid");
         // alert(uid);
-        $('#guanzhu').load("/focuon",{
-            uid:uid
-        },function(response,status,xhr){
+        $('#guanzhu').load("/focuon", {
+            uid: uid
+        }, function (response, status, xhr) {
             if (response == "success") {
                 window.location.reload();
             }

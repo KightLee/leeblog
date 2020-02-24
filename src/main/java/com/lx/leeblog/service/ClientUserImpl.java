@@ -65,4 +65,10 @@ public class ClientUserImpl implements ClientUser {
         int i = userMapper.insertFocuOn(id, userid);
         return i;
     }
+
+    @Override
+    public List<User> selectUserFocuon(Long id) {
+        List<User> users = userMapper.selectUserFocuon(id);
+        return users;
+    }
 }

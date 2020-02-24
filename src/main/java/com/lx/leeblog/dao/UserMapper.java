@@ -25,6 +25,8 @@ public interface UserMapper {
 
     List<User> selectAll();
 
+    List<User> selectUserFocuon(Long id);
+
     List<Long> selectFocuon(Long id);
 
     int selectPageCount();

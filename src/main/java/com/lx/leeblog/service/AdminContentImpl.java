@@ -86,5 +86,11 @@ public class AdminContentImpl implements AdminContent {
         return 1;
     }
 
+    @Override
+    public int deleteBlogOneById(Long ids) {
+        int i = blogMapper.deleteByPrimaryKey(ids);
+        return i;
+    }
+
 
 }

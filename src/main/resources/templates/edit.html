@@ -55,8 +55,8 @@
                     <div role="tabpanel" id="bc"
                          th:id="${tt.id}" th:class="${ttStat.first?'tab-pane fade in active':'tab-pane fade'}"
                          th:each="tt,ttStat : ${tagType}">
-								<span>
-									<span class="label label-primary" th:each="tag : ${tt.tags}">
+								<span style="margin-right: 20px" th:each="tag : ${tt.tags}">
+									<span class="label label-primary">
                                         <span class="glyphicon glyphicon-tags" th:text="${' '+tag.name}"
                                               th:data-tag="${tag.name}"
                                               onclick="selectTag(this)"></span>

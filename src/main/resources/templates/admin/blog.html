@@ -174,12 +174,11 @@
             let delid = obj.id;
             $.ajax({
                 type: "post",
-                url: "http://localhost:8088/admin/blogdelete",
+                url: "http://localhost:8088/admin/blogdeleteone",
                 dataType: "JSON",
-                contentType: "application/json",
-                data : JSON.stringify({
-                    'num': delid
-                }),
+                data : {
+                    'arrDel': delid
+                },
                 success: function (data) {
                     alert(data);
                     if (data == 1) {

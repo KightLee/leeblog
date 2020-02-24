@@ -30,15 +30,31 @@ public interface BlogMapper {
 
     List<Blog> selectAllBlog();
 
+    List<User> selectAllBlogNew();
+
+    List<User> selectAllBlogHot();
+
+    List<User> selectAllBlogMore();
+
+    List<User> selectAllBlogRecommend();
+
     List<Blog> findLike(@Param("flagname") String flag, @Param("uid") Long id);
 
     List<User> selectAllBlogWithUser();
 
     List<User> selectAllBlogWithUserAndTagName(String tag);
 
+    List<User> selectAllBlogWithTypeId(Long id);
+
+    List<Blog> selectAllBlogWithUserId(Long id);
+
     Blog selectByPrimaryKey(Long id);
 
     Long selectViewWithId(Long id);
+
+    int selectUserFocuon(Long id);
+
+    int selectUserBeFocuon(Long id);
 
     int updatethumbs(Long id);
 

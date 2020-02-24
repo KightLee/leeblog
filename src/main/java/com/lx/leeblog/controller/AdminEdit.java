@@ -96,4 +96,11 @@ public class AdminEdit {
         int i = adminContent.deleteBlogById(arrDel);
         return i;
     }
+
+    @PostMapping("/blogdeleteone")
+    @ResponseBody
+    public Integer BlogDelete(Long arrDel) {
+        int i = adminContent.deleteBlogOneById(arrDel);
+        return i;
+    }
 }

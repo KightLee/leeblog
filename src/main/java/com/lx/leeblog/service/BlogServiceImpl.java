@@ -40,12 +40,48 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
+    public List<User> selectAllBlogHot() {
+        List<User> users = blogMapper.selectAllBlogHot();
+        return users;
+    }
+
+    @Override
+    public List<User> selectAllBlogNew() {
+        List<User> users = blogMapper.selectAllBlogNew();
+        return users;
+    }
+
+    @Override
+    public List<User> selectAllBlogMost() {
+        List<User> users = blogMapper.selectAllBlogMore();
+        return users;
+    }
+
+    @Override
+    public List<User> selectAllBlogRecommend() {
+        List<User> users = blogMapper.selectAllBlogRecommend();
+        return users;
+    }
+
+    @Override
     public List<User> selectBlogByTagId(String tag) {
         List<User> users = blogMapper.selectAllBlogWithUserAndTagName('%'+tag+'%');
         if (users.size() == 0) {
             users = blogMapper.selectAllBlogWithUser();
         }
         return users;
+    }
+
+    @Override
+    public List<User> selectBlogByTypeId(Long id) {
+        List<User> users = blogMapper.selectAllBlogWithTypeId(id);
+        return users;
+    }
+
+    @Override
+    public List<Blog> selectBlogByUserId(Long id) {
+        List<Blog> blog = blogMapper.selectAllBlogWithUserId(id);
+        return blog;
     }
 
     @Override
@@ -68,5 +104,15 @@ public class BlogServiceImpl implements BlogService {
     public int selectBlogWithNoPublished() {
         int i = blogMapper.selectBlogWithNoPublished();
         return i;
+    }
+
+    @Override
+    public int selectUserFocuon(Long id) {
+        return blogMapper.selectUserFocuon(id);
+    }
+
+    @Override
+    public int selectUserBeFocuon(Long id) {
+        return blogMapper.selectUserBeFocuon(id);
     }
 }

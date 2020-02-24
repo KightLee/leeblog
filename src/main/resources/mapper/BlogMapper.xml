@@ -117,6 +117,9 @@
   <sql id="Blob_Column_List" >
     content
   </sql>
+  <sql id="BlogComment">
+
+  </sql>
   <sql id="Blog_User_List">
     u.id, u.avatar, b.create_time, b.id as bid, b.recommend, b.title, b.views, b.user_id
   </sql>
@@ -157,6 +160,28 @@
     <include refid="Blob_Column_List" />
     from t_blog
   </select>
+  <select id="selectAllBlogNew" resultMap="ResultMapWithBlogUser">
+    select
+    <include refid="Blog_User_List" />
+    from t_user u LEFT JOIN t_blog b ON u.id = b.user_id ORDER BY b.create_time desc
+  </select>
+  <select id="selectAllBlogHot" resultMap="ResultMapWithBlogUser">
+    select
+    <include refid="Blog_User_List" />
+    from t_user u LEFT JOIN t_blog b ON u.id = b.user_id ORDER BY b.views desc
+  </select>
+  <select id="selectAllBlogMore" resultMap="ResultMapWithBlogUser">
+    select
+    <include refid="Blog_User_List" />
+    from t_user u
+    RIGHT JOIN t_blog b ON u.id = b.user_id
+    LEFT JOIN t_comment c ON b.id = c.blog_id ORDER BY c.id desc
+  </select>
+  <select id="selectAllBlogRecommend" resultMap="ResultMapWithBlogUser">
+    select
+    <include refid="Blog_User_List" />
+    from t_user u LEFT JOIN t_blog b on u.id = b.user_id ORDER BY recommend desc
+  </select>
   <select id="findLike" resultType="Blog">
     select
     *
@@ -166,12 +191,23 @@
   <select id="selectAllBlogWithUser" resultMap="ResultMapWithBlogUser">
     SELECT <include refid="Blog_User_List" />
     from t_user u RIGHT JOIN t_blog b
-    on u.id = b.user_id;
+    on u.id = b.user_id
   </select>
   <select id="selectAllBlogWithUserAndTagName" parameterType="string" resultMap="ResultMapWithBlogUser">
     SELECT <include refid="Blog_User_List" />
     from t_user u RIGHT JOIN t_blog b
     on u.id = b.user_id where b.flag LIKE #{tag}
+  </select>
+  <select id="selectAllBlogWithTypeId" parameterType="long" resultMap="ResultMapWithBlogUser">
+    SELECT <include refid="Blog_User_List" />
+    from t_user u RIGHT JOIN t_blog b
+    on u.id = b.user_id where b.type_id = #{id}
+  </select>
+  <select id="selectAllBlogWithUserId" parameterType="long" resultMap="ResultMapWithBLOBs">
+    select
+    <include refid="Base_Column_List" />,
+    <include refid="Blob_Column_List" />
+    from t_blog where user_id = #{id}
   </select>
   <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Long" >
     select
@@ -183,6 +219,16 @@
   </select>
   <select id="selectViewWithId" resultType="long" parameterType="long">
     select views from t_blog where id = #{id}
+  </select>
+  <select id="selectUserFocuon" parameterType="long" resultType="int">
+    SELECT COUNT(t2.id) as likename from t_user t1
+    RIGHT JOIN fans f1 on f1.user_id = t1.id
+    INNER JOIN t_user t2 on t2.id = f1.like_id where f1.user_id = #{id}
+  </select>
+  <select id="selectUserBeFocuon" parameterType="long" resultType="int">
+    SELECT count(t2.id) as fansname from t_user t1
+    RIGHT JOIN fans f1 on f1.user_id = t1.id
+    INNER JOIN t_user t2 on t2.id = f1.fans_id where t1.id = #{id};
   </select>
   <update id="updatethumbs">
     update t_blog set recommend = recommend + 1 where id = #{id}
