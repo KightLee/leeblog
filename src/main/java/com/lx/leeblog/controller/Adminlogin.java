@@ -20,7 +20,7 @@ public class Adminlogin {
     @PostMapping("/login")
     public String validUser(User user){
         userCheck.checkAdminUser(user);
-        return "/admin/index";
+        return "admin/index";
     }
 
     @GetMapping("/login")

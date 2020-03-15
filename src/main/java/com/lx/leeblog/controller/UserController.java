@@ -41,7 +41,7 @@ public class UserController {
 
     @GetMapping("/registerAdd")
     public String register() {
-        return "/register";
+        return "register";
     }
     @Autowired
     private TypeService typeService;
@@ -58,7 +58,7 @@ public class UserController {
         model.addAttribute("user", u1);
         model.addAttribute("type", types);
         model.addAttribute("tagType", tagTypes);
-        return "/edit";
+        return "edit";
     }
     /**
      * 网站的注册用户
@@ -94,7 +94,7 @@ public class UserController {
             model.addAttribute("msg", "用户名密码错误");
             e.printStackTrace();
         }
-        return "/user/loginIndex";
+        return "user/loginIndex";
     }
 
     /**

@@ -15,11 +15,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import sun.plugin.com.PropertyGetDispatcher;
+import org.springframework.web.bind.annotation.*;
 
 import javax.jws.WebParam;
 import java.util.ArrayList;
@@ -41,9 +37,35 @@ public class IndexController {
     @Autowired
     private TagService tagService;
 
-    @GetMapping("/")
-    public String index() {
+    @RequestMapping("/")
+    public String view() {
         return "redirect:/index";
+    }
+
+    @GetMapping("/search")
+    public String search(@RequestParam(value = "page", defaultValue = "1") Integer pageNum,
+                         @RequestParam(value = "limit", defaultValue = "10") Integer pageSize,
+                         Model model, String str) {
+        PageHelper.startPage(pageNum, pageSize);
+        Page<User> users = (Page<User>) blogService.selectBlogBySearch(str);
+        List<User> result = users.getResult();
+        List<BlogVo> blogVos = new ArrayList<>();
+        for (User user : result) {
+            List<Blog> blogs = user.getBlogs();
+            for (Blog blog : blogs) {
+                BlogVo blogVo = new BlogVo();
+                BeanUtils.copyProperties(blog, blogVo);
+                blogVo.setAvatar(user.getAvatar());
+                blogVos.add(blogVo);
+            }
+        }
+        List<Type> types = typeService.selectAllType();
+        List<Tag> tags = tagService.selectAllTag();
+        model.addAttribute("blogs", blogVos);
+        model.addAttribute("types", types);
+        model.addAttribute("tags", tags);
+        model.addAttribute("pages", users.getPageNum());
+        return "index";
     }
     @GetMapping("/index")
     public String index(@RequestParam(value = "page", defaultValue = "1") Integer pageNum,
@@ -158,7 +180,7 @@ public class IndexController {
             model.addAttribute("pages", users.getPageNum());
             return "index";
         }
-        return "redirect:index";
+        return "redirect:/index";
     }
     /**
      * 根据标签跳转
@@ -217,7 +239,7 @@ public class IndexController {
     }
     @GetMapping("/unAuth")
     public String unAuth() {
-        return "/unAuth";
+        return "unAuth";
     }
     @GetMapping("/logout")
     public String logout() {

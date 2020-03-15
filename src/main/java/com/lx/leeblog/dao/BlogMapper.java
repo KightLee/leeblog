@@ -46,6 +46,8 @@ public interface BlogMapper {
 
     List<User> selectAllBlogWithTypeId(Long id);
 
+    List<User> selectBlogBySearch(String str);
+
     List<Blog> selectAllBlogWithUserId(Long id);
 
     Blog selectByPrimaryKey(Long id);

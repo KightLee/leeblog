@@ -54,13 +54,13 @@ public class BlogController {
         blog.setAppreciation(pathName);
         int save = blogService.save(blog);
         if (save != 0) {
-            return "redirect:index";
+            return "redirect:/index";
         }
         ErrorResponse errorResponse = new ErrorResponse(
                 ErrorCode.ERRORBLOG_CODE.getStatus(),
                 ErrorCode.ERRORBLOG_CODE.getMsg());
         model.addAttribute("error", errorResponse);
-        return "/user/edit";
+        return "user/edit";
     }
 
     /**

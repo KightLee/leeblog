@@ -71,8 +71,8 @@
         <table tableName="user_role" domainObjectName="UserRole"></table>
         <table tableName="permission" domainObjectName="Permission"></table>
         <table tableName="role" domainObjectName="Role"></table>
-        <table tableName="rol_permission" domainObjectName="RPermission"></table>-->
         <table tableName="t_comment" domainObjectName="Comment"></table>
+        <table tableName="rol_permission" domainObjectName="RPermission"></table>-->
         <!-- geelynote mybatis插件的搭建 -->
     </context>
 </generatorConfiguration>

@@ -203,6 +203,11 @@
     from t_user u RIGHT JOIN t_blog b
     on u.id = b.user_id where b.type_id = #{id}
   </select>
+  <select id="selectBlogBySearch" parameterType="string" resultMap="ResultMapWithBlogUser">
+    SELECT <include refid="Blog_User_List" />
+    from t_user u RIGHT JOIN t_blog b
+    on u.id = b.user_id where b.title like #{str}
+  </select>
   <select id="selectAllBlogWithUserId" parameterType="long" resultMap="ResultMapWithBLOBs">
     select
     <include refid="Base_Column_List" />,

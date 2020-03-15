@@ -78,6 +78,18 @@ public class BlogServiceImpl implements BlogService {
         return users;
     }
 
+    /**
+     * 搜索
+     * @param str
+     * @return
+     */
+    @Override
+    public List<User> selectBlogBySearch(String str) {
+        String str1 = '%'+str+'%';
+        List<User> users = blogMapper.selectBlogBySearch(str1);
+        return users;
+    }
+
     @Override
     public List<Blog> selectBlogByUserId(Long id) {
         List<Blog> blog = blogMapper.selectAllBlogWithUserId(id);

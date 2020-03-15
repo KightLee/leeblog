@@ -19,6 +19,7 @@ public interface BlogService {
     List<User> selectAllBlogRecommend();
     List<User> selectBlogByTagId(String tag);
     List<User> selectBlogByTypeId(Long id);
+    List<User> selectBlogBySearch(String str);
     List<Blog> selectBlogByUserId(Long id);
     Blog selectBlogByBlogId(Long id);
     Long addView(Long id);

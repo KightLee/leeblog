@@ -27,11 +27,11 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <form class="navbar-form navbar-left">
+            <form class="navbar-form navbar-left" method="get" th:action="@{/search}" id="searchform">
                 <div class="form-group sousuo">
-                    <input type="text" class="form-control ffc" placeholder="Search">
+                    <input type="text" class="form-control ffc" placeholder="Search" name="str">
                 </div>
-                <button type="submit" class="btn btn-default btnsou">搜索</button>
+                <button type="submit" class="btn btn-default btnsou" id="search">搜索</button>
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li shiro:hasPermission="admin:all"><a href="#" th:href="@{/admin/index}">后台管理</a></li>
